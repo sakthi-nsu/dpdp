@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DPDPA TN</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --body-bg: #f8faff;
+            --text: #0a0f1d;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9;
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--body-bg);
+            color: var(--text);
+            padding-top: 90px;
+            line-height: 1.7;
+            transition: all 0.4s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main { flex: 1; }
+
+        .navbar {
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        [data-bs-theme="dark"] .navbar {
+            background: rgba(10,15,29,0.94);
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .nav-link {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--slate) !important;
+            margin: 0 12px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        .theme-toggle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(0,0,0,0.07);
+            color: var(--slate);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        [data-bs-theme="dark"] .theme-toggle {
+            background: rgba(255,255,255,0.1);
+            color: #f8fafc;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #003366 100%);
+            color: white;
+            padding: 9rem 0 7rem;
+            text-align: center;
+        }
+
+        [data-bs-theme="dark"] .hero-section {
+            background: linear-gradient(135deg, #4d9aff 0%, #0052cc 100%);
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(var(--primary), 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 0 auto 1.2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: -40px;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .timeline-item:last-child::before { bottom: 0; }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid white;
+        }
+
+        [data-bs-theme="dark"] .timeline-dot {
+            border-color: var(--card-bg);
+        }
+
+        footer {
+            background: #070b14;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+            transform: translateX(6px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            DPDPA <span class="text-primary">TN</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="rules.html">DPDP Rules</a></li>
+                <li class="nav-item"><a class="nav-link" href="templates.html">DPDP Templates</a></li>
+                <li class="nav-item"><a class="nav-link" href="implementation.html">Implementation Guide</a></li>
+                <li class="nav-item"><a class="nav-link" href="checklists.html">2026 Checklists</a></li>
+            </ul>
+
+            
+                <a href="contact.html" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4 fade-in">About NSU Secure Solutions</h1>
+            <p class="lead mb-0 opacity-90 fade-in-delay-1">
+                DPDPA compliance + expert VAPT services — delivering complete data security and privacy protection<br>
+                from Chennai to every corner of India's digital economy.
+            </p>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <!-- Who We Are -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="fw-bold mb-4 fade-in">Who We Are</h2>
+                <p class="lead text-slate mb-4 fade-in-delay-1">
+                    NSU Secure Solutions is a Chennai-headquartered cybersecurity and data privacy firm 
+                    specializing in both <strong>DPDPA compliance advisory</strong> and <strong>VAPT (Vulnerability Assessment & Penetration Testing)</strong>.
+                </p>
+                <p class="fade-in-delay-2">
+                    Through our flagship platform <strong>DPDPA TN</strong>, we help businesses in Tamil Nadu and across India 
+                    achieve robust compliance with the Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025. 
+                    At the same time, our VAPT services identify and eliminate technical vulnerabilities — ensuring 
+                    that your data protection strategy is not just legally compliant, but also technically secure.
+                </p>
+                <p class="fade-in-delay-3">
+                    <strong>DPDPA + VAPT = True Security.</strong> We combine legal precision with hands-on penetration testing 
+                    to deliver end-to-end protection — from policy and process design to real-world attack surface hardening.
+                </p>
+            </div>
+        </div>
+
+        <!-- Our Values -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4 fade-in">
+                <div class="about-card text-center">
+                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h5 class="fw-bold mb-3">Precision & Security</h5>
+                    <p class="text-slate mb-0">
+                        Legal compliance meets technical resilience — DPDPA frameworks backed by proven VAPT expertise.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 fade-in-delay-1">
+                <div class="about-card text-center">
+                    <div class="value-icon"><i class="fas fa-users-cog"></i></div>
+                    <h5 class="fw-bold mb-3">Chennai-Rooted Expertise</h5>
+                    <p class="text-slate mb-0">
+                        Deep understanding of Tamil Nadu's IT, manufacturing, fintech, healthcare, and logistics ecosystems.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 fade-in-delay-2">
+                <div class="about-card text-center">
+                    <div class="value-icon"><i class="fas fa-forward"></i></div>
+                    <h5 class="fw-bold mb-3">Future-Proof Protection</h5>
+                    <p class="text-slate mb-0">
+                        Preparing organizations today for 2027 enforcement and tomorrow's evolving threats.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Journey -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="fw-bold text-center mb-5 fade-in">Our Journey</h2>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h5 class="fw-bold">2023</h5>
+                    <p class="text-slate mb-1">DPDPA enacted — NSU Secure Solutions begins combining privacy advisory with VAPT services in Chennai.</p>
+                </div>
+                <div class="timeline-item fade-in-delay-1">
+                    <div class="timeline-dot"></div>
+                    <h5 class="fw-bold">2025</h5>
+                    <p class="text-slate mb-1">DPDP Rules notified — launch of DPDPA TN platform + expanded VAPT offerings for full-stack security.</p>
+                </div>
+                <div class="timeline-item fade-in-delay-2">
+                    <div class="timeline-dot"></div>
+                    <h5 class="fw-bold">2026</h5>
+                    <p class="text-slate mb-1">Integrated DPDPA + VAPT solutions rolled out — helping Tamil Nadu businesses achieve both compliance and technical resilience.</p>
+                </div>
+                <div class="timeline-item fade-in-delay-3">
+                    <div class="timeline-dot"></div>
+                    <h5 class="fw-bold">2027 & Beyond</h5>
+                    <p class="text-slate mb-0">Supporting full DPDPA enforcement + continuous security testing for long-term trust and protection.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center py-5 fade-in">
+            <h3 class="fw-bold mb-4">Secure Your Data & Infrastructure with NSU</h3>
+            <p class="lead text-slate mb-4">
+                DPDPA compliance + professional VAPT — get complete protection for your business.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 fw-bold">
+                Contact NSU Secure Solutions <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <span class="footer-logo">
+                    DPDPA <span class="text-primary">TN</span>
+                </span>
+                <p class="small">
+                    Powered by NSU Secure Solutions — Combining DPDPA compliance advisory with expert VAPT services.
+                    Securing India's digital economy through precision governance and technical resilience.
+                </p>
+            </div>
+
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="text-white fw-bold mb-3">Resources</h6>
+                <a href="rules.html" class="footer-link">DPDP Rules</a>
+                <a href="templates.html" class="footer-link">DPDP Templates</a>
+                <a href="checklists.html" class="footer-link">Audit Checklist</a>
+            </div>
+
+            <div class="col-lg-2">
+                <h6 class="text-white fw-bold mb-3">Company</h6>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="ourteam.html" class="footer-link">Advisory Team</a>
+                <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+            </div>
+
+            <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-secondary my-5">
+
+        <div class="text-center small opacity-50">
+            © 2026 NSU Secure Solutions. Built for the Indian Digital Economy.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

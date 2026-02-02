@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPDPA Compliance | NSU Secure Solutions</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --light-bg: #f8faff;
+            --body-bg: var(--light-bg);
+            --text: var(--dark);
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --light-bg: #0f172a;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9; /* Fixed: was too dark */
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--body-bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255,255,255,0.94) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background: rgba(10,15,29,0.94) !important;
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 42px; height: 42px; border-radius: 50%;
+            background: rgba(0,0,0,0.07); border: none;
+            color: var(--slate); display: flex; align-items: center;
+            justify-content: center; transition: all 0.3s;
+        }
+        [data-bs-theme="dark"] .theme-toggle { background: rgba(255,255,255,0.1); color: #f8fafc; }
+        .theme-toggle:hover { transform: scale(1.1); background: var(--primary); color: white; }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 255, 255, 1) 48%, rgba(19, 136, 8, 0.1) 100%);
+            position: relative;
+        }
+        [data-bs-theme="dark"] .hero {
+            background: linear-gradient(135deg, rgba(200, 100, 40, 0.15) 0%, rgba(10, 15, 29, 1) 48%, rgba(20, 110, 70, 0.15) 100%);
+        }
+        .hero-title {
+            font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1.1;
+            margin-bottom: 1.5rem; color: var(--text);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #0052CC, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Features */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+
+        /* Footer */
+        footer { background: #070b14; color: #94a3b8; padding: 60px 0 30px; margin-top: 80px; }
+        .footer-logo { font-size: 1.8rem; font-weight: 900; color: white; margin-bottom: 28px; }
+        .footer-link { color: #94a3b8; text-decoration: none; transition: all 0.3s; display: block; margin-bottom: 14px; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="rules.html">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="templates.html">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="implementation.html">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checklists.html">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                    <a href="contact.html" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1 class="hero-title">Master India's <span class="text-gradient">DPDPA 2023</span> Compliance</h1>
+                    <p class="lead mb-4 opacity-75">Navigate the Digital Personal Data Protection Act with expert precision. We provide the tools, templates, and advisory needed for the 2025 roadmap.</p>
+                    <div class="d-flex gap-3">
+                        <a href="asses.html" class="btn btn-primary btn-lg px-4 shadow-sm">Start Assessment</a>
+                        <a href="tem.html" class="btn btn-outline-secondary btn-lg px-4">View Templates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100">
+                        <i class="fas fa-shield-halved fa-2x text-primary mb-3"></i>
+                        <h4>Data Audits</h4>
+                        <p class="small opacity-75">Complete gap analysis of your current data processing activities against DPDPA mandates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <i class="fas fa-file-signature fa-2x text-primary mb-3"></i>
+                        <h4>Consent Frameworks</h4>
+                        <p class="small opacity-75">Automated notice and consent management systems built for Indian regional languages.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <i class="fas fa-user-check fa-2x text-primary mb-3"></i>
+                        <h4>DPO as a Service</h4>
+                        <p class="small opacity-75">Expert Data Protection Officers to handle grievances and Board interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">DPDPA <span class="text-primary">TN</span></span>
+                    <p class="small">Securing India's digital economy through precision governance and expert advisory. We help businesses navigate the DPDPA 2023 landscape with confidence.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="rules.html" class="footer-link">DPDP Rules</a>
+                    <a href="templates.html" class="footer-link">DPDP Templates</a>
+                    <a href="checklists.html" class="footer-link">Audit Checklist</a>
+                </div>
+                <div class="col-lg-2">F
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="ourteam.html" class="footer-link">Advisory Team</a>
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-5">
+            <div class="text-center small opacity-50">© 2026 NSU Secure Solutions. Built for the Indian Digital Economy.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ duration: 800, once: true });
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-bs-theme', newTheme);
+            
+            // Update Icon
+            icon.className = newTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            
+            // Save preference
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-bs-theme', savedTheme);
+            icon.className = savedTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+    </script>
+</body>
+</html>
