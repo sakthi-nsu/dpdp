@@ -142,6 +142,7 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="contact.html" class="btn btn-dark btn-sm fw-bold px-4">GET ADVISORY</a>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
                 </div>
             </div>
         </div>
@@ -306,7 +307,63 @@
         // --- ASSESSMENT DATA ---
         const roleQuestions = {
             dpo: [
-                { type: 'yesno', text: "Is a Data Protection Impact Assessment (DPIA) conducted for high-risk processing?" },
+               
+               [
+    { 
+        type: 'yesno', 
+        text: "Is a Data Protection Impact Assessment (DPIA) conducted for high-risk processing?",
+        correct: "Yes"   // Required for significant data fiduciaries + high-risk processing
+    },
+    { 
+        type: 'mcq', 
+        text: "Personal data should be processed only when:", 
+        options: ["A. For any business purpose", "B. When convenient", "C. For lawful, specific, and clearly defined purposes", "D. For marketing unless objected"], 
+        correct: "C" 
+    },
+    { 
+        type: 'yesno', 
+        text: "Is DPO contact information publicly available and up-to-date?",
+        correct: "Yes"   // Mandatory under DPDPA s.8(9) & Rules
+    },
+    { 
+        type: 'mcq', 
+        text: "Records of Processing Activities (RoPA) should be maintained by:", 
+        options: ["A. Only Significant Data Fiduciaries", "B. Every Data Fiduciary", "C. Only government entities", "D. Only foreign companies"], 
+        correct: "B" 
+    },
+    { 
+        type: 'yesno', 
+        text: "Are periodic internal compliance audits of personal data processing performed?",
+        correct: "Yes"   // Strongly recommended & expected under accountability principle (s.8)
+    },
+    { 
+        type: 'mcq', 
+        text: "Who is primarily accountable for demonstrating compliance?", 
+        options: ["A. IT department", "B. Data Protection Officer", "C. Marketing team", "D. HR department"], 
+        correct: "B" 
+    },
+    { 
+        type: 'yesno', 
+        text: "Is there a documented process for handling Data Principal rights requests?",
+        correct: "Yes"   // Required under s.6 (rights) + s.8 (accountability)
+    },
+    { 
+        type: 'mcq', 
+        text: "Grievance redressal should be completed within:", 
+        options: ["A. 30 days", "B. 60 days", "C. As soon as possible", "D. No specific timeline"], 
+        correct: "A"     // Draft Rules specify timeline – generally ≤30 days
+    },
+    { 
+        type: 'yesno', 
+        text: "Does the DPO have direct reporting line to senior management/board?",
+        correct: "Yes"   // Expected under independence & effectiveness of DPO (s.8(9) spirit)
+    },
+    { 
+        type: 'yesno', 
+        text: "Is accountability demonstrated to the Data Protection Board when required?",
+        correct: "Yes"   // Core principle of the Act (s.8 – duty to demonstrate compliance)
+    }
+], { type: 'yesno', text: "Is a Data Protection Impact Assessment (DPIA) conducted for high-risk processing?" },
                 { type: 'mcq', text: "Personal data should be processed only when:", options: ["A. For any business purpose", "B. When convenient", "C. For lawful, specific, and clearly defined purposes", "D. For marketing unless objected"], correct: "C" },
                 { type: 'yesno', text: "Is DPO contact information publicly available and up-to-date?" },
                 { type: 'mcq', text: "Records of Processing Activities (RoPA) should be maintained by:", options: ["A. Only Significant Data Fiduciaries", "B. Every Data Fiduciary", "C. Only government entities", "D. Only foreign companies"], correct: "B" },
@@ -552,4 +609,3 @@
     </script>
 </body>
 </html>
-
