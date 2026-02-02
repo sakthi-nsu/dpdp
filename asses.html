@@ -142,7 +142,7 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="contact.html" class="btn btn-dark btn-sm fw-bold px-4">GET ADVISORY</a>
-                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    
                 </div>
             </div>
         </div>
@@ -241,198 +241,152 @@
         </div>
     </main>
 
-<footer>
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <span class="footer-logo">
-                    DPDPA <span class="text-primary">TN</span>
-                </span>
-                <p class="small">
-                    Securing India's digital economy through precision governance and expert advisory.
-                    We help businesses navigate the DPDPA 2023 landscape with confidence.
-                </p>
-            </div>
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">
+                        DPDPA <span class="text-primary">TN</span>
+                    </span>
+                    <p class="small">
+                        Securing India's digital economy through precision governance and expert advisory.
+                        We help businesses navigate the DPDPA 2023 landscape with confidence.
+                    </p>
+                </div>
 
-            <div class="col-lg-2 offset-lg-1">
-                <h6 class="text-white fw-bold mb-3">Resources</h6>
-                <a href="rules.html" class="footer-link">DPDP Rules</a>
-                <a href="templates.html" class="footer-link">DPDP Templates</a>
-                <a href="checklists.html" class="footer-link">Audit Checklist</a>
-            </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="rules.html" class="footer-link">DPDP Rules</a>
+                    <a href="templates.html" class="footer-link">DPDP Templates</a>
+                    <a href="checklists.html" class="footer-link">Audit Checklist</a>
+                </div>
 
-            <div class="col-lg-2">
-                <h6 class="text-white fw-bold mb-3">Company</h6>
-                <a href="about.html" class="footer-link">About Us</a>
-                <a href="ourteam.html" class="footer-link">Advisory Team</a>
-                <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-            </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="ourteam.html" class="footer-link">Advisory Team</a>
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                </div>
 
-            <div class="col-lg-3">
-                <h6 class="text-white fw-bold mb-3">Newsletter</h6>
-                <div class="input-group">
-                    <input type="email" class="form-control" placeholder="Email Address">
-                    <button class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <hr class="border-secondary my-5">
+            <hr class="border-secondary my-5">
 
-        <div class="text-center small opacity-50">
-            © 2026  DPDPA TN. Built for the Indian Digital Economy.
+            <div class="text-center small opacity-50">
+                © 2026  DPDPA TN. Built for the Indian Digital Economy.
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         // --- THEME LOGIC ---
-        const themeBtn = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        function updateIcon(theme) { themeBtn.querySelector('i').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'; }
-        themeBtn.addEventListener('click', () => {
-            const newTheme = html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-bs-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeBtn = document.getElementById('themeToggle');
+            if (!themeBtn) return;
+            const html = document.documentElement;
+
+            function updateIcon(theme) {
+                const icon = themeBtn.querySelector('i');
+                if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+
+            themeBtn.addEventListener('click', () => {
+                const current = html.getAttribute('data-bs-theme') || 'light';
+                const newTheme = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateIcon(newTheme);
+            });
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-bs-theme', savedTheme);
+            updateIcon(savedTheme);
         });
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-bs-theme', savedTheme);
-        updateIcon(savedTheme);
 
         // --- ASSESSMENT DATA ---
         const roleQuestions = {
             dpo: [
-               
-               [
-    { 
-        type: 'yesno', 
-        text: "Is a Data Protection Impact Assessment (DPIA) conducted for high-risk processing?",
-        correct: "Yes"   // Required for significant data fiduciaries + high-risk processing
-    },
-    { 
-        type: 'mcq', 
-        text: "Personal data should be processed only when:", 
-        options: ["A. For any business purpose", "B. When convenient", "C. For lawful, specific, and clearly defined purposes", "D. For marketing unless objected"], 
-        correct: "C" 
-    },
-    { 
-        type: 'yesno', 
-        text: "Is DPO contact information publicly available and up-to-date?",
-        correct: "Yes"   // Mandatory under DPDPA s.8(9) & Rules
-    },
-    { 
-        type: 'mcq', 
-        text: "Records of Processing Activities (RoPA) should be maintained by:", 
-        options: ["A. Only Significant Data Fiduciaries", "B. Every Data Fiduciary", "C. Only government entities", "D. Only foreign companies"], 
-        correct: "B" 
-    },
-    { 
-        type: 'yesno', 
-        text: "Are periodic internal compliance audits of personal data processing performed?",
-        correct: "Yes"   // Strongly recommended & expected under accountability principle (s.8)
-    },
-    { 
-        type: 'mcq', 
-        text: "Who is primarily accountable for demonstrating compliance?", 
-        options: ["A. IT department", "B. Data Protection Officer", "C. Marketing team", "D. HR department"], 
-        correct: "B" 
-    },
-    { 
-        type: 'yesno', 
-        text: "Is there a documented process for handling Data Principal rights requests?",
-        correct: "Yes"   // Required under s.6 (rights) + s.8 (accountability)
-    },
-    { 
-        type: 'mcq', 
-        text: "Grievance redressal should be completed within:", 
-        options: ["A. 30 days", "B. 60 days", "C. As soon as possible", "D. No specific timeline"], 
-        correct: "A"     // Draft Rules specify timeline – generally ≤30 days
-    },
-    { 
-        type: 'yesno', 
-        text: "Does the DPO have direct reporting line to senior management/board?",
-        correct: "Yes"   // Expected under independence & effectiveness of DPO (s.8(9) spirit)
-    },
-    { 
-        type: 'yesno', 
-        text: "Is accountability demonstrated to the Data Protection Board when required?",
-        correct: "Yes"   // Core principle of the Act (s.8 – duty to demonstrate compliance)
-    }
-], { type: 'yesno', text: "Is a Data Protection Impact Assessment (DPIA) conducted for high-risk processing?" },
                 { type: 'mcq', text: "Personal data should be processed only when:", options: ["A. For any business purpose", "B. When convenient", "C. For lawful, specific, and clearly defined purposes", "D. For marketing unless objected"], correct: "C" },
-                { type: 'yesno', text: "Is DPO contact information publicly available and up-to-date?" },
                 { type: 'mcq', text: "Records of Processing Activities (RoPA) should be maintained by:", options: ["A. Only Significant Data Fiduciaries", "B. Every Data Fiduciary", "C. Only government entities", "D. Only foreign companies"], correct: "B" },
-                { type: 'yesno', text: "Are periodic internal compliance audits of personal data processing performed?" },
                 { type: 'mcq', text: "Who is primarily accountable for demonstrating compliance?", options: ["A. IT department", "B. Data Protection Officer", "C. Marketing team", "D. HR department"], correct: "B" },
-                { type: 'yesno', text: "Is there a documented process for handling Data Principal rights requests?" },
                 { type: 'mcq', text: "Grievance redressal should be completed within:", options: ["A. 30 days", "B. 60 days", "C. As soon as possible", "D. No specific timeline"], correct: "A" },
-                { type: 'yesno', text: "Does the DPO have direct reporting line to senior management/board?" },
-                { type: 'yesno', text: "Is accountability demonstrated to the Data Protection Board when required?" }
+                { type: 'mcq', text: "The DPO should report directly to:", options: ["A. The IT Manager", "B. The senior management or board", "C. The marketing department", "D. No one"], correct: "B" },
+                { type: 'mcq', text: "DPIA is required for:", options: ["A. All data processing", "B. High-risk processing", "C. Low-risk processing", "D. No processing"], correct: "B" },
+                { type: 'mcq', text: "Accountability under DPDP means:", options: ["A. Ignoring compliance", "B. Demonstrating compliance", "C. Only collecting data", "D. Deleting data"], correct: "B" },
+                { type: 'mcq', text: "The DPO must be involved in:", options: ["A. Sales meetings", "B. Data processing assessments", "C. Product design only", "D. HR hiring"], correct: "B" },
+                { type: 'mcq', text: "Internal audits should be conducted:", options: ["A. Never", "B. Periodically", "C. Only after breach", "D. Once in 10 years"], correct: "B" },
+                { type: 'mcq', text: "Data Principal rights include:", options: ["A. Access and correction", "B. Only access", "C. Only deletion", "D. No rights"], correct: "A" }
             ],
             legal: [
-                { type: 'yesno', text: "Have all processor contracts been updated with mandatory DPDPA clauses?" },
-                { type: 'mcq', text: "Legitimate uses can be relied upon when processing is necessary for:", options: ["A. Any internal purpose", "B. Employment and corporate affairs", "C. Any future business expansion", "D. Marketing campaigns"], correct: "B" },
-                { type: 'yesno', text: "Is there a documented legitimate use assessment for non-consent processing?" },
-                { type: 'mcq', text: "Children's data requires:", options: ["A. No consent at all", "B. Verifiable parental consent", "C. Only notice", "D. Consent from the child only"], correct: "B" },
-                { type: 'yesno', text: "Are international data transfer mechanisms compliant?" },
-                { type: 'mcq', text: "Purpose limitation principle means data should be collected for:", options: ["A. Marketing and analytics only", "B. Any future business use", "C. Lawful, specific, and clearly defined purposes", "D. Unlimited organizational use"], correct: "C" },
-                { type: 'yesno', text: "Is there a process for handling consent withdrawal and data portability?" },
-                { type: 'mcq', text: "Data breach notification to affected Data Principals is required when:", options: ["A. Any breach occurs", "B. Breach is likely to cause harm", "C. Only major breaches", "D. Never required"], correct: "B" },
-                { type: 'yesno', text: "Are limitation-of-liability clauses DPDPA-compliant?" },
-                { type: 'yesno', text: "Is privacy notice update process defined when purposes change?" }
+                { type: 'mcq', text: "Data Processor contracts must include:", options: ["A. No clauses", "B. DPDP compliance clauses", "C. Only payment terms", "D. Marketing details"], correct: "B" },
+                { type: 'mcq', text: "Legitimate uses for processing are for:", options: ["A. Any purpose", "B. Employment and corporate affairs", "C. Marketing only", "D. Future use only"], correct: "B" },
+                { type: 'mcq', text: "Children's data requires:", options: ["A. No consent", "B. Verifiable parental consent", "C. Only notice", "D. Child consent only"], correct: "B" },
+                { type: 'mcq', text: "Purpose limitation means data collected for:", options: ["A. Any future use", "B. Lawful, specific purposes", "C. Unlimited use", "D. Marketing only"], correct: "B" },
+                { type: 'mcq', text: "Data breach notification is required when:", options: ["A. Any breach", "B. Likely to cause harm", "C. Only major breaches", "D. Never"], correct: "B" },
+                { type: 'mcq', text: "International data transfers require:", options: ["A. No mechanism", "B. Compliant mechanisms", "C. Only notice", "D. Consent only"], correct: "B" },
+                { type: 'mcq', text: "Data Principal rights include:", options: ["A. Access, correction, erasure", "B. Only access", "C. Only correction", "D. No rights"], correct: "A" },
+                { type: 'mcq', text: "Liability clauses in contracts should be:", options: ["A. Ignored", "B. DPDP-compliant", "C. Unlimited liability", "D. No liability"], correct: "B" },
+                { type: 'mcq', text: "Privacy notice must be updated when:", options: ["A. Purposes change", "B. Never", "C. Annually only", "D. Only on request"], correct: "A" },
+                { type: 'mcq', text: "Non-consent processing requires:", options: ["A. Legitimate use assessment", "B. No assessment", "C. Marketing consent", "D. All consent"], correct: "A" }
             ],
             hr: [
-                { type: 'yesno', text: "Is explicit consent obtained for processing employee sensitive data?" },
-                { type: 'mcq', text: "Employee monitoring is allowed when:", options: ["A. Secretly", "B. With prior clear notice", "C. Only during work hours", "D. Without any notice"], correct: "B" },
-                { type: 'yesno', text: "Are privacy notices provided in language employees understand?" },
-                { type: 'mcq', text: "Employee data retention should be based on:", options: ["A. Indefinite period", "B. Documented retention schedule", "C. Manager's decision", "D. No retention needed"], correct: "B" },
-                { type: 'yesno', text: "Is there a documented retention schedule with deletion mechanism?" },
-                { type: 'mcq', text: "Background verification requires:", options: ["A. No consent", "B. Explicit consent & disclosure", "C. Only verbal consent", "D. Consent only from referee"], correct: "B" },
-                { type: 'yesno', text: "Can employees easily exercise access/correction/erasure rights?" },
-                { type: 'mcq', text: "HR data minimization means collecting:", options: ["A. All possible data", "B. Only necessary data", "C. Data for future use", "D. Marketing data"], correct: "B" },
-                { type: 'yesno', text: "Is employee monitoring accompanied by clear notice?" },
-                { type: 'yesno', text: "Is HR staff trained on DPDPA obligations?" }
+                { type: 'mcq', text: "Employee sensitive data processing requires:", options: ["A. No consent", "B. Explicit consent", "C. Implied consent", "D. No data"], correct: "B" },
+                { type: 'mcq', text: "Employee monitoring is allowed with:", options: ["A. No notice", "B. Prior clear notice", "C. Secretly", "D. After work hours"], correct: "B" },
+                { type: 'mcq', text: "Employee data retention should be:", options: ["A. Indefinite", "B. Based on documented schedule", "C. Manager decision", "D. No retention"], correct: "B" },
+                { type: 'mcq', text: "Background verification requires:", options: ["A. No consent", "B. Explicit consent & disclosure", "C. Verbal consent", "D. Referee consent only"], correct: "B" },
+                { type: 'mcq', text: "HR data minimization means collecting:", options: ["A. All data", "B. Only necessary data", "C. Future use data", "D. Marketing data"], correct: "B" },
+                { type: 'mcq', text: "Privacy notices for employees should be in:", options: ["A. English only", "B. Language employees understand", "C. Legal jargon", "D. No notice"], correct: "B" },
+                { type: 'mcq', text: "Employee rights exercise should be:", options: ["A. Difficult", "B. Easy", "C. Impossible", "D. Fee-based"], correct: "B" },
+                { type: 'mcq', text: "HR staff should be trained on:", options: ["A. DPDPA obligations", "B. Sales skills", "C. Cooking", "D. No training"], correct: "A" },
+                { type: 'mcq', text: "Retention schedule should include:", options: ["A. Deletion mechanism", "B. No deletion", "C. Indefinite storage", "D. Manager choice"], correct: "A" },
+                { type: 'mcq', text: "Monitoring notice should be:", options: ["A. Clear", "B. Hidden", "C. Verbal only", "D. No notice"], correct: "A" }
             ],
             it: [
-                { type: 'yesno', text: "Is personal data encrypted at rest and in transit?" },
-                { type: 'mcq', text: "Data minimization should be implemented:", options: ["A. Only at collection", "B. At database & application level", "C. Only for marketing", "D. Never required"], correct: "B" },
-                { type: 'yesno', text: "Is role-based access control (RBAC) enforced?" },
+                { type: 'mcq', text: "Personal data should be encrypted:", options: ["A. Never", "B. At rest and in transit", "C. Only at rest", "D. Only in transit"], correct: "B" },
+                { type: 'mcq', text: "Data minimization should be implemented at:", options: ["A. Collection only", "B. Database & application level", "C. Marketing only", "D. Never"], correct: "B" },
+                { type: 'mcq', text: "Role-based access control (RBAC) should be:", options: ["A. Optional", "B. Enforced", "C. Ignored", "D. For admins only"], correct: "B" },
                 { type: 'mcq', text: "Breach notification system should be:", options: ["A. Manual only", "B. Automated where possible", "C. Optional", "D. Only for major breaches"], correct: "B" },
-                { type: 'yesno', text: "Are regular vulnerability scans and pen-tests conducted?" },
-                { type: 'mcq', text: "Access logs for personal data should be:", options: ["A. Never kept", "B. Maintained and reviewed", "C. Kept only 30 days", "D. Shared publicly"], correct: "B" },
-                { type: 'yesno', text: "Are third-party vendors bound by DPDPA security clauses?" },
-                { type: 'mcq', text: "Secure disposal of personal data should be:", options: ["A. Optional", "B. Documented and enforced", "C. Only for paper", "D. Not required"], correct: "B" },
-                { type: 'yesno', text: "Is there an incident response plan for data breaches?" },
-                { type: 'yesno', text: "Are security audits conducted regularly?" }
+                { type: 'mcq', text: "Vulnerability scans and pen-tests should be:", options: ["A. Never", "B. Regular", "C. Once a year", "D. After breach"], correct: "B" },
+                { type: 'mcq', text: "Access logs for personal data should be:", options: ["A. Never kept", "B. Maintained and reviewed", "C. 30 days only", "D. Public"], correct: "B" },
+                { type: 'mcq', text: "Third-party vendors should be bound by:", options: ["A. No clauses", "B. DPDPA security clauses", "C. Payment terms only", "D. Marketing agreements"], correct: "B" },
+                { type: 'mcq', text: "Secure disposal of data should be:", options: ["A. Optional", "B. Documented and enforced", "C. Paper only", "D. Not required"], correct: "B" },
+                { type: 'mcq', text: "Incident response plan for breaches is:", options: ["A. Optional", "B. Required", "C. For IT only", "D. No plan"], correct: "B" },
+                { type: 'mcq', text: "Security audits should be:", options: ["A. Never", "B. Regular", "C. After breach", "D. Optional"], correct: "B" }
             ],
             marketing: [
-                { type: 'yesno', text: "Can users withdraw marketing consent with one simple action?" },
+                { type: 'mcq', text: "Marketing consent withdrawal should be:", options: ["A. Difficult", "B. One simple action", "C. Fee-based", "D. Impossible"], correct: "B" },
                 { type: 'mcq', text: "Behavioral advertising requires:", options: ["A. No consent", "B. Explicit informed consent", "C. Only notice", "D. Implied consent"], correct: "B" },
-                { type: 'yesno', text: "Are all trackers/cookies/pixels disclosed in privacy notice?" },
-                { type: 'mcq', text: "Promotional messages must include:", options: ["A. No unsubscribe", "B. Clear unsubscribe/opt-out", "C. Only company name", "D. Price only"], correct: "B" },
-                { type: 'yesno', text: "Do lead forms collect minimal data with clear notice?" },
-                { type: 'mcq', text: "Do Not Call / Do Not Contact requests should be:", options: ["A. Ignored", "B. Honoured promptly", "C. Delayed", "D. Optional"], correct: "B" },
-                { type: 'yesno', text: "Is granular consent collected for different channels?" },
-                { type: 'mcq', text: "Consent evidence for marketing should be:", options: ["A. Not stored", "B. Stored and retrievable", "C. Shared with third parties", "D. Only verbal"], correct: "B" },
-                { type: 'yesno', text: "Is cookie/consent banner properly implemented?" },
-                { type: 'yesno', text: "Are new ad-tech vendors reviewed for compliance?" }
+                { type: 'mcq', text: "Trackers/cookies must be disclosed in:", options: ["A. No disclosure", "B. Privacy notice", "C. Emails only", "D. Ads only"], correct: "B" },
+                { type: 'mcq', text: "Promotional messages must include:", options: ["A. No unsubscribe", "B. Clear unsubscribe/opt-out", "C. Company name only", "D. Price only"], correct: "B" },
+                { type: 'mcq', text: "Lead forms should collect:", options: ["A. All data", "B. Minimal data with notice", "C. Future use data", "D. No data"], correct: "B" },
+                { type: 'mcq', text: "Do Not Call requests should be:", options: ["A. Ignored", "B. Honoured promptly", "C. Delayed", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "Granular consent for channels is:", options: ["A. Optional", "B. Required", "C. Not needed", "D. For email only"], correct: "B" },
+                { type: 'mcq', text: "Consent evidence should be:", options: ["A. Not stored", "B. Stored and retrievable", "C. Shared", "D. Verbal only"], correct: "B" },
+                { type: 'mcq', text: "Cookie banner should be:", options: ["A. Not implemented", "B. Properly implemented", "C. Hidden", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "New ad-tech vendors should be:", options: ["A. Not reviewed", "B. Reviewed for compliance", "C. Ignored", "D. Immediate use"], correct: "B" }
             ],
             support: [
-                { type: 'yesno', text: "Is grievance officer contact publicly available?" },
-                { type: 'mcq', text: "Grievances should be acknowledged within:", options: ["A. 7 days", "B. 24–72 hours (as per rules)", "C. 30 days", "D. No timeline"], correct: "B" },
-                { type: 'yesno', text: "Is there a documented timeline for grievance resolution?" },
+                { type: 'mcq', text: "Grievance officer contact should be:", options: ["A. Hidden", "B. Publicly available", "C. Email only", "D. No contact"], correct: "B" },
+                { type: 'mcq', text: "Grievances should be acknowledged within:", options: ["A. 7 days", "B. 24–72 hours", "C. 30 days", "D. No timeline"], correct: "B" },
                 { type: 'mcq', text: "Data Principal rights requests should be handled:", options: ["A. Only by email", "B. Through clear mechanism", "C. Ignored if inconvenient", "D. After 60 days"], correct: "B" },
-                { type: 'yesno', text: "Are grievance records maintained for review?" },
-                { type: 'mcq', text: "Escalation path for unresolved grievances should be:", options: ["A. Non-existent", "B. Clearly defined", "C. Only to CEO", "D. Optional"], correct: "B" },
-                { type: 'yesno', text: "Is staff trained on handling data rights requests?" },
-                { type: 'mcq', text: "Language support for grievances should include:", options: ["A. Only English", "B. Tamil & other scheduled languages where needed", "C. No support", "D. Only Hindi"], correct: "B" },
-                { type: 'yesno', text: "Is grievance data analyzed for recurring issues?" },
-                { type: 'yesno', text: "Is grievance redressal integrated with DPO oversight?" }
+                { type: 'mcq', text: "Escalation path for grievances should be:", options: ["A. Non-existent", "B. Clearly defined", "C. Only to CEO", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "Language support for grievances should include:", options: ["A. Only English", "B. Scheduled languages as needed", "C. No support", "D. Only Hindi"], correct: "B" },
+                { type: 'mcq', text: "Grievance records should be:", options: ["A. Not maintained", "B. Maintained for review", "C. Deleted immediately", "D. Shared publicly"], correct: "B" },
+                { type: 'mcq', text: "Staff should be trained on:", options: ["A. No training", "B. Handling data rights requests", "C. Sales", "D. Cooking"], correct: "B" },
+                { type: 'mcq', text: "Grievance resolution timeline should be:", options: ["A. No timeline", "B. Documented", "C. Infinite", "D. Manager choice"], correct: "B" },
+                { type: 'mcq', text: "Grievance data should be analyzed for:", options: ["A. No analysis", "B. Recurring issues", "C. Marketing", "D. Deletion"], correct: "B" },
+                { type: 'mcq', text: "Grievance redressal should be integrated with:", options: ["A. No integration", "B. DPO oversight", "C. Sales team", "D. IT only"], correct: "B" }
             ]
         };
 
@@ -440,8 +394,7 @@
         let currentRole = null;
         let totalQuestions = 0;
         const QUESTIONS_PER_STEP = 5;
-
-        // --- CORE FUNCTIONS ---
+        let answers = {};  // Stores selected answers
 
         function loadAssessment(role, element) {
             document.querySelectorAll('.role-card').forEach(c => c.classList.remove('active'));
@@ -449,6 +402,7 @@
 
             currentRole = role;
             totalQuestions = roleQuestions[role].length;
+            answers = {};
 
             document.getElementById('formTitle').textContent = 
                 role === 'support' ? 'Grievance Officer Assessment' : role.toUpperCase() + ' Assessment';
@@ -459,7 +413,6 @@
             currentStep = 0;
             renderStep(currentStep);
             
-            // Auto-scroll to form
             setTimeout(() => {
                 document.getElementById('assessmentSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
@@ -480,34 +433,28 @@
                     <div class="question-block">
                         <span class="question-text">${i+1}. ${q.text}</span>`;
 
-                if (q.type === 'yesno') {
+                html += '<div class="mt-2">';
+                q.options.forEach((opt) => {
+                    const letter = opt.trim().charAt(0).toUpperCase();
+                    const checked = answers[i] === letter ? ' checked' : '';
                     html += `
-                        <div class="d-flex flex-column gap-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q${i}" id="q${i}y" value="10" required>
-                                <label class="form-check-label" for="q${i}y">Yes, fully implemented</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q${i}" id="q${i}n" value="0" required>
-                                <label class="form-check-label" for="q${i}n">No / Partial / In progress</label>
-                            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q${i}" id="q${i}_${letter}" value="${letter}"${checked}>
+                            <label class="form-check-label" for="q${i}_${letter}">${opt}</label>
                         </div>`;
-                } else { // mcq
-                    html += '<div class="mt-2">';
-                    q.options.forEach((opt) => {
-                        const letter = opt.trim().charAt(0).toUpperCase();
-                        html += `
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q${i}" id="q${i}_${letter}" value="${letter}" required>
-                                <label class="form-check-label" for="q${i}_${letter}">${opt}</label>
-                            </div>`;
-                    });
-                    html += '</div>';
-                }
-
+                });
+                html += '</div>';
                 html += '</div>';
                 container.innerHTML += html;
             }
+
+            // Add event listeners to save answers
+            container.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    const index = parseInt(e.target.name.replace('q', ''));
+                    answers[index] = e.target.value;
+                });
+            });
 
             const totalSteps = Math.ceil(totalQuestions / QUESTIONS_PER_STEP);
             const progress = ((step + 1) / totalSteps) * 100;
@@ -528,9 +475,7 @@
 
             let allAnswered = true;
             for (let i = start; i < end; i++) {
-                const radios = document.getElementsByName(`q${i}`);
-                let answered = Array.from(radios).some(r => r.checked);
-                if (!answered) {
+                if (!answers[i]) {
                     allAnswered = false;
                     break;
                 }
@@ -544,31 +489,37 @@
             renderStep(currentStep + 1);
         });
 
-        document.getElementById('submitBtn').addEventListener('click', calculateScore);
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const start = currentStep * QUESTIONS_PER_STEP;
+            const end = Math.min(start + QUESTIONS_PER_STEP, totalQuestions);
+
+            let allAnswered = true;
+            for (let i = start; i < end; i++) {
+                if (!answers[i]) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allAnswered) {
+                alert("Please answer all questions on this page before calculating the score.");
+                return;
+            }
+
+            calculateScore();
+        });
 
         function calculateScore() {
             let score = 0;
             const questions = roleQuestions[currentRole];
 
             for (let i = 0; i < totalQuestions; i++) {
-                const radios = document.getElementsByName(`q${i}`);
-                let selectedValue = null;
+                const selected = answers[i];
+                if (!selected) continue;
 
-                for (let radio of radios) {
-                    if (radio.checked) {
-                        selectedValue = radio.value;
-                        break;
-                    }
-                }
-
-                if (!selectedValue) continue;
-
-                if (questions[i].type === 'yesno') {
-                    score += (selectedValue === '10') ? 10 : 0;
-                } else {
-                    const correct = questions[i].correct.trim().toUpperCase();
-                    const selected = selectedValue.trim().toUpperCase();
-                    score += (selected === correct) ? 10 : 0;
+                const correct = questions[i].correct.trim().toUpperCase();
+                if (selected.trim().toUpperCase() === correct) {
+                    score += 10;
                 }
             }
 
