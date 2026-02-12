@@ -1,0 +1,17 @@
+{
+  "name": "DPDPA TN",
+  "short_name": "DPDPA TN",
+  "description": "DPDPA compliance resources and advisory by NSU Secure Solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8faff",
+  "theme_color": "#0052CC",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

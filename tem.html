@@ -1,0 +1,1498 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Download and adapt DPDPA policy templates for notices, consent language, grievance processes, and internal privacy governance.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/tem">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/tem">
+    <meta property="og:title" content="DPDPA Policy Templates | DPDPA TN">
+    <meta property="og:description" content="Download and adapt DPDPA policy templates for notices, consent language, grievance processes, and internal privacy governance.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDPA Policy Templates | DPDPA TN">
+    <meta name="twitter:description" content="Download and adapt DPDPA policy templates for notices, consent language, grievance processes, and internal privacy governance.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDPA Policy Templates | DPDPA TN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --light-bg: #f8faff;
+            --body-bg: var(--light-bg);
+            --text: var(--dark);
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --light-bg: #0f172a;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9;
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--body-bg);
+            line-height: 1.7;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        /* --- MODIFIED HEADER STYLES --- */
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+/* --- CONTENT STYLES (NO CHANGES) --- */
+        .template-header {
+            padding: 140px 0 40px;
+            background: linear-gradient(135deg, rgba(0, 82, 204, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .sidebar-menu {
+            position: sticky;
+            top: 100px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .sidebar-header-btn {
+            width: 100%; text-align: left; padding: 15px 20px;
+            background: none; border: none; border-bottom: 1px solid var(--border);
+            color: var(--text); font-weight: 700; font-size: 0.85rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .sidebar-header-btn:not(.collapsed) { color: var(--primary); background: rgba(0,82,204,0.02); }
+        
+        .submenu-list { list-style: none; padding: 10px 0; margin: 0; background: var(--light-bg); }
+        .submenu-item a {
+            display: block; padding: 8px 25px; color: var(--slate);
+            text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: 0.3s;
+        }
+        .submenu-item a:hover, .submenu-item a.active { color: var(--primary); padding-left: 30px; }
+
+        .template-content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            min-height: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        [data-bs-theme="dark"] .landing-cta {
+            background: #0f172a !important;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #e2e8f0;
+        }
+        [data-bs-theme="dark"] .landing-cta .text-muted {
+            color: #cbd5e1 !important;
+        }
+        [data-bs-theme="dark"] .template-content-card .bg-light,
+        [data-bs-theme="dark"] .template-content-card .card.bg-light {
+            background-color: #0f172a !important;
+            color: #e2e8f0 !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        }
+        [data-bs-theme="dark"] .template-content-card .bg-light .text-muted,
+        [data-bs-theme="dark"] .template-content-card .card.bg-light .text-muted {
+            color: #94a3b8 !important;
+        }
+
+        .policy-section-title { font-weight: 700; color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+        /* --- MODIFIED FOOTER STYLES --- */
+        footer { background: #070b14; color: #94a3b8; padding: 60px 0 30px; margin-top: 80px; }
+        .footer-logo { font-size: 1.5rem; font-weight: 900; color: white; margin-bottom: 20px; display: block; }
+        .footer-link { color: #94a3b8; text-decoration: none; transition: 0.3s; display: block; margin-bottom: 12px; font-size: 0.9rem; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+        footer h6 { color: white; font-weight: bold; margin-bottom: 1.5rem; }
+
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 991.98px) {
+            .template-header { padding: 60px 0 20px; }
+            .template-content-card { padding: 20px; min-height: auto; }
+            .sidebar-menu { position: static; top: auto; border-radius: 12px; box-shadow: none; margin-bottom: 1rem; }
+            .submenu-list { background: transparent; padding: 0; }
+            .submenu-item a { padding: 12px 16px; }
+            .navbar { padding: 0.5rem 0; }
+            .navbar-brand { font-size: 1.25rem; }
+            .template-header h1 { font-size: 1.5rem; }
+            footer { padding: 40px 0; margin-top: 40px; }
+        }
+
+        .mobile-sidebar-toggle { width: 100%; text-align: left; padding: 10px 12px; border-radius: 8px; }
+
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="template-header">
+        <div class="container">
+            <h1 class="fw-900 mb-0">DPDPA <span class="text-primary">Templates</span></h1>
+        </div>
+    </section>
+
+    <div class="container pb-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-3">
+                <div class="collapse d-lg-block" id="mobileSidebar">
+                    <div class="sidebar-menu" id="templateSidebar">
+                        <button class="sidebar-header-btn collapsed" data-bs-toggle="collapse" data-bs-target="#policiesMenu" aria-expanded="false">
+                            POLICIES <i class="fas fa-chevron-down small"></i>
+                        </button>
+                        <div class="collapse" id="policiesMenu" data-bs-parent="#templateSidebar">
+                            <ul class="submenu-list">
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('dataRetention')" id="link-retention">Data Retention Policy</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('employeePolicy')" id="link-employee">Employee Data Protection Policy</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('cookiePolicy')" id="link-cookie">Cookie Policy</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('privacyPolicy')" id="link-privacy">Website Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <button class="sidebar-header-btn collapsed" data-bs-toggle="collapse" data-bs-target="#agreementsMenu" aria-expanded="false">
+                            AGREEMENTS <i class="fas fa-chevron-down small"></i>
+                        </button>
+                        <div class="collapse" id="agreementsMenu" data-bs-parent="#templateSidebar">
+                            <ul class="submenu-list">
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('crossBorderAgreement')" id="link-crossborder">Cross-Border Data Transfer Agreement</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('dataProcessingAgreement')" id="link-processing">Data Processing Agreement</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('vendorAgreement')" id="link-vendor">Third-Party Vendor Agreement</a></li>
+                            </ul>
+                        </div>
+                        <button class="sidebar-header-btn collapsed" data-bs-toggle="collapse" data-bs-target="#formsMenu">
+                            FORMS <i class="fas fa-chevron-down small"></i>
+                        </button>
+                        <div class="collapse" id="formsMenu" data-bs-parent="#templateSidebar">
+                            <ul class="submenu-list">
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('dataSubjectRequest')" id="link-dsr">Data Subject Rights Request Form</a></li>
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('consentForm')" id="link-consent">Consent Form for Data Processing</a></li>
+                            </ul>
+                        </div>
+                        <button class="sidebar-header-btn collapsed" data-bs-toggle="collapse" data-bs-target="#noticesMenu">
+                            NOTICES <i class="fas fa-chevron-down small"></i>
+                        </button>
+                        <div class="collapse" id="noticesMenu" data-bs-parent="#templateSidebar">
+                            <ul class="submenu-list">
+                                <li class="submenu-item"><a href="javascript:void(0)" onclick="showTemplate('dataBreachNotice')" id="link-breach">Notice of Data Breach</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-9">
+                <!-- Mobile: toggle sidebar -->
+                <button class="btn btn-outline-primary d-lg-none mb-3 mobile-sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSidebar" aria-expanded="false" aria-controls="mobileSidebar">
+                    <i class="fas fa-bars me-2"></i>Categories
+                </button>
+
+                <div id="landingPage" class="template-content-card" data-aos="fade-up">
+                    <div class="mb-4">
+                        <h2 class="fw-800 display-6">Download <span class="text-primary">DPDPA Compliance Templates</span></h2>
+                        <p class="mt-4">
+                            Ensure your organization stays compliant with the Digital Personal Data Protection Act, 2023 (DPDPA) by accessing our expertly crafted compliance templates. These ready-to-use documents help you establish a robust data governance framework with ease.
+                        </p>
+                    </div>
+
+                    <div class="bg-light p-5 rounded-4 text-center mt-5 landing-cta">
+                        <h4 class="fw-800 mb-3">Ready to build a secure organization?</h4>
+                        <p class="mb-4 text-muted">Select a category from the left menu to start browsing our repository.</p>
+                        <button class="btn btn-primary px-5 py-3 fw-bold shadow-sm" onclick="document.querySelector('.sidebar-header-btn').click()">EXPLORE REPOSITORY</button>
+                    </div>
+                </div>
+
+                <div id="dataRetention" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">[Company Letterhead / Logo]</div>
+        <h2 class="fw-800">Data Retention Policy</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+            <span><strong>Last Revised:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1.1 Introduction</h4>
+    <p>This Data Retention Policy ("Policy") is established by <strong>[Insert Organisation Name]</strong> to ensure the lawful, fair, and transparent handling of personal data in compliance with the <strong>Digital Personal Data Protection Act, 2023 ("DPDPA")</strong>, the Information Technology Act, 2000, and other applicable laws and regulations. This Policy sets out the principles and procedures governing the retention and secure disposal of data processed by the Organisation.</p>
+
+    <h4 class="policy-section-title">1.2 Objectives</h4>
+    <ul>
+        <li>Ensure compliance with legal, regulatory, and contractual obligations related to data retention.</li>
+        <li>Protect the privacy and security of personal data throughout its lifecycle.</li>
+        <li>Provide clear guidelines for the retention, archiving, and destruction of data.</li>
+        <li>Minimise risks associated with over-retention, such as legal liabilities and security breaches.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.3 Scope</h4>
+    <p>This Policy applies to:</p>
+    <ul>
+        <li><strong>Data Types:</strong> Personal data, sensitive personal data, business records, operational data, and other information processed by the Organisation, regardless of format (electronic or physical).</li>
+        <li><strong>Entities Covered:</strong> All employees, contractors, vendors, and third parties processing data on behalf of the Organisation.</li>
+        <li><strong>Systems:</strong> Applications, databases, storage media, and systems used by the Organisation.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.4 Data Retention Principles</h4>
+    <ul>
+        <li><strong>Purpose Limitation:</strong> Retain data only for as long as necessary to fulfill its original purpose, as outlined in privacy notices or agreements.</li>
+        <li><strong>Retention Periods:</strong> Retention periods are based on legal, regulatory, contractual, and operational requirements, as detailed in the Data Retention Schedule (Annexure A).</li>
+        <li><strong>Data Minimisation:</strong> Retain only data necessary for specific purposes.</li>
+        <li><strong>Access Controls:</strong> Limit access to retained data to authorised personnel.</li>
+        <li><strong>Secure Disposal:</strong> Ensure secure destruction or anonymisation of data no longer required.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.5 Responsibilities</h4>
+    <p><strong>1. Data Protection Officer (DPO):</strong></p>
+    <ul>
+        <li>Oversee Policy compliance and periodic reviews of the Data Retention Schedule.</li>
+        <li>Address queries related to data retention and disposal.</li>
+    </ul>
+    <p><strong>2. Department Heads:</strong></p>
+    <ul>
+        <li>Ensure departmental compliance with the Policy.</li>
+        <li>Identify and classify data within their areas of responsibility.</li>
+    </ul>
+    <p><strong>3. Employees and Contractors:</strong></p>
+    <ul>
+        <li>Adhere to data retention guidelines.</li>
+        <li>Report non-compliance or data incidents to the DPO.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.6 Data Retention Schedule</h4>
+    <p>The Data Retention Schedule (Annexure A) specifies:</p>
+    <ul>
+        <li>Categories of data.</li>
+        <li>Retention periods for each category.</li>
+        <li>Legal or regulatory justification for retention.</li>
+        <li>Procedures for data archiving, retrieval, and secure disposal.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.7 Data Destruction and Disposal</h4>
+    <p><strong>1. Disposal Methods:</strong></p>
+    <ul>
+        <li><strong>Physical Records:</strong> Shredded, incinerated, or securely destroyed.</li>
+        <li><strong>Electronic Data:</strong> Permanently deleted using industry-standard techniques.</li>
+    </ul>
+    <p><strong>2. Destruction Documentation:</strong></p>
+    <ul>
+        <li>Maintain records of data destruction, including the date, method, and responsible personnel.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.8 Audit and Monitoring</h4>
+    <ul>
+        <li><strong>Internal Audits:</strong> Conduct regular audits to ensure adherence to the Policy and Data Retention Schedule.</li>
+        <li><strong>Non-Compliance:</strong> Report instances of non-compliance to the DPO and address them promptly, with potential disciplinary actions.</li>
+        <li><strong>Policy Reviews:</strong> Review the Policy annually or as required by legal or operational changes.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.9 Exceptions</h4>
+    <p>Any exceptions to retention or disposal requirements must be:</p>
+    <ul>
+        <li>Approved by the DPO.</li>
+        <li>Documented with a rationale for the exception.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.10 Contact Information</h4>
+    <p>For questions or concerns regarding this Policy, contact:</p>
+    <div class="card bg-light border-0 mb-4">
+        <div class="card-body">
+            <p class="mb-1"><strong>Data Protection Officer:</strong> [Insert Name]</p>
+            <p class="mb-1"><strong>Email:</strong> [Insert Email Address]</p>
+            <p class="mb-1"><strong>Phone:</strong> [Insert Phone Number]</p>
+            <p class="mb-0"><strong>Address:</strong> [Insert Organisation Address]</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1.11 Acknowledgement and Acceptance</h4>
+    <p>All employees, contractors, and third parties processing data on behalf of the Organisation must acknowledge and accept this Policy as part of their responsibilities.</p>
+    <div 
+    class="card bg-light border-0 mb-4">
+        <div class="card-body">
+            <p class="mb-1"> <strong>Approved by:</strong> [Insert Approver Name] </p>
+            <p class="mb-1"><strong>Title:</strong> [Insert Approver Title]</p>
+            <p class="mb-1"><strong>Date:</strong> [Insert Approval Date]</p>
+            
+        </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-pdf me-2"></i>Official Document Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Data Retention Policy for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_data_retention_policy.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+
+</div> <div id="employeePolicy" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">[Company Letterhead / Logo]</div>
+        <h2 class="fw-800">Employee Data Protection Policy</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+            <span><strong>Last Revised:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1.1 Introduction</h4>
+    <p>This Employee Data Protection Policy ("Policy") is established by <strong>[Company Name]</strong> ("Company") to ensure the lawful, fair, and transparent processing of employee personal data in compliance with the <strong>Digital Personal Data Protection Act, 2023 ("DPDP Act")</strong> and other applicable laws. The Company is committed to safeguarding employee privacy and ensuring data protection while fulfilling legal and operational requirements.</p>
+
+    <h4 class="policy-section-title">1.2 Objectives</h4>
+    <ul>
+        <li>Ensure compliance with the DPDP Act and related regulations.</li>
+        <li>Protect the confidentiality, integrity, and availability of employee personal data.</li>
+        <li>Provide guidelines for the collection, use, storage, and secure disposal of employee personal data.</li>
+        <li>Outline the rights of employees regarding their personal data and the Company's obligations.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.3 Scope</h4>
+    <p>This Policy applies to:</p>
+    <ul>
+        <li><strong>Individuals:</strong> Current, former, and prospective employees, interns, contractors, consultants, and temporary workers.</li>
+        <li><strong>Data Types:</strong> Personal and sensitive personal data processed in any format (electronic, physical, or verbal).</li>
+        <li><strong>Processing Activities:</strong> All activities related to the collection, use, storage, sharing, and deletion of employee personal data.</li>
+    </ul>
+    <h4 class="policy-section-title">1.4 Definitions</h4>
+    <ul>
+        <li><strong>Personal Data:</strong> Information identifying an individual, such as name, address, contact details, and identification numbers.</li>
+        <li><strong>Sensitive Personal Data:</strong> Data related to health, financial status, biometrics, or other categories defined under the DPDP Act.</li>
+        <li><strong>Processing:</strong> Any operation on personal data, including collection, recording, storage, sharing, or deletion</li>
+        <li><strong>Data Subject:</strong> An employee whose personal data is processed.</li>
+        <li><strong>Data Protection Officer (DPO):</strong> The individual responsible for overseeing data protection compliance within the Company.</li>
+    </ul>
+    <h4 class="policy-section-title">1.5 Principles of Data Processing</h4>
+    <ul>
+        <li><strong>Lawfulness, Fairness, and Transparency:</strong> Inform employees about the purpose and use of their data.</li>
+        <li><strong>Purpose Limitation:</strong> Collect and use data only for specified, legitimate purposes.</li>
+        <li><strong>Data Minimization:</strong> Collect only data necessary for specific purposes.</li>
+        <li><strong>Accuracy:</strong> Ensure data is accurate and updated promptly.</li>
+        <li><strong>Storage Limitation:</strong> Retain data only as long as necessary for its original purpose.</li>
+        <li><strong>Security:</strong> Protect data against unauthorized access, loss, or damage.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.6 Categories of Data Collected</h4>
+    <p>The Company may collect the following data from employees:</p>
+    <ul>
+        <li><strong>Identification & Contact:</strong> Name, DOB, employee ID, address, and email.</li>
+        <li><strong>Contact Information:</strong> Address, phone number, and email.</li>
+        <li><strong>Employment Information:</strong> Job title, department, performance evaluations, and work history.</li>
+        <li><strong>Financial Information:</strong> Bank account details, salary information, tax identification numbers.</li>
+        <li><strong>Sensitive Data:</strong> Health records, fitness assessments, and biometric data where applicable.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.7 Data Protection Measures</h4>
+    <ul>
+        <li><strong>Access Controls:</strong> Limit access to employee data to authorized personnel.</li>
+        <li><strong>Encryption:</strong> Encrypt data stored electronically to prevent unauthorized access.</li>
+        <li><strong>Physical Security:</strong> Store physical records securely in locked cabinets.</li>
+        <li><strong>Breach Management:</strong> Implement an incident management framework for prompt response.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.8 Employee Rights</h4>
+    <p>Employees have the right to access, rectify, or request the erasure of their personal data. They also hold the right to restrict processing, request data portability, and withdraw consent at any time.</p>
+
+    <h4 class="policy-section-title">1.9 Contact Information</h4>
+    <div class="card bg-light border-0 mb-4">
+        <div class="card-body">
+            <p class="mb-1"><strong>Data Protection Officer (DPO):</strong> [Insert Name]</p>
+            <p class="mb-1"><strong>Email:</strong> [Insert DPO Email Address]</p>
+            <p class="mb-0"><strong>Phone:</strong> [Insert DPO Phone Number]</p>
+        </div>
+    </div>
+
+    <div class="p-3 border rounded-3 bg-light small mb-4">
+        <strong>Approved by:</strong> [Insert Approver Name] | 
+        <strong>Title:</strong> [Insert Approver Title] | 
+        <strong>Date:</strong> [Insert Approval Date]
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-pdf me-2"></i>Official Document Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Employee Data Protection Policy for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_employee_data_protection_policy.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+
+<div id="cookiePolicy" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">[Company Letterhead / Logo]</div>
+        <h2 class="fw-800">Cookie Policy</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+            <span><strong>Last Revised:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1.1 Introduction</h4>
+    <p>At <strong>[Company Name]</strong>, we value your privacy and are committed to being transparent about the technologies we use. This Cookie Policy ("Policy") explains how cookies and similar technologies are employed on our website(s) to recognize visitors and analyze interactions with content and advertisements. It is essential that you read this Policy carefully before using our website(s) or services.</p>
+    <p>For a complete understanding of how we collect, use, and protect your data, we recommend reviewing our Privacy Policy. By continuing to browse or use our website(s) and services, you consent to our use of cookies and similar technologies in accordance with this Policy.</p>
+
+    <h4 class="policy-section-title">1.2 What are Cookies?</h4>
+    <p>Cookies are small text files stored on your device to enhance website functionality and user experience. We classify cookies as follows:</p>
+    <ul>
+        <li><strong>Essential Cookies:</strong> Required for website functionality.</li>
+        <li><strong>Performance Cookies:</strong> Used for analytics and improving usability.</li>
+        <li><strong>Marketing Cookies:</strong> Used for targeted advertising.</li>
+    </ul>
+    <p>Cookies can either be session-based, lasting only for the duration of your visit, or persistent, remaining on your device for future visits. Cookies may be set directly by the website (first-party) or by external services (third-party).</p>
+
+    <h4 class="policy-section-title">1.3 Why Do We Use Cookies?</h4>
+    <p>The use of cookies serves several purposes, including:</p>
+    <ul>
+        <li><strong>Functionality:</strong> Remembering login information to save you from entering it repeatedly.</li>
+        <li><strong>Security:</strong> Helping to identify and mitigate potential security threats.</li>
+        <li><strong>Personalization:</strong> Understanding user preferences to tailor content and products.</li>
+        <li><strong>Marketing:</strong> Serving relevant advertisements and monitoring their effectiveness.</li>
+        <li><strong>Analytics:</strong> Conducting performance assessments to improve website usability.</li>
+    </ul>
+
+    <h4 class="policy-section-title">1.4 Managing Your Cookie Preferences</h4>
+    <p>You have the right to manage your cookie preferences, including refusing certain types of cookies, by accessing the "Cookie Preferences" tab available on our website(s). You may also withdraw any previously granted consent at any time.</p>
+    <p>Additionally, you can delete cookies from your device by adjusting your browser settings. Please note that blocking cookies may impact your ability to access certain features or functionalities of our website(s).</p>
+
+    <h4 class="policy-section-title">1.5 Contact Information</h4>
+    <p>Should you have any questions, concerns, or requests related to this Cookie Policy or the use of cookies on our website(s), please feel free to contact us.</p>
+    <div class="card bg-light border-0 mb-4">
+        <div class="card-body">
+            <p class="mb-1"><strong>Company Name:</strong> [Insert Company Name]</p>
+            <p class="mb-1"><strong>Email:</strong> [Insert Email Address]</p>
+            <p class="mb-0"><strong>Phone:</strong> [Insert Phone Number]</p>
+        </div>
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-pdf me-2"></i>Official Document Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Cookie Policy for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_cookie_policy_template.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+    
+<div id="privacyPolicy" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">[Company Letterhead / Logo]</div>
+        <h2 class="fw-800">Website Privacy Policy</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+            <span><strong>Last Revised:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1. Introduction</h4>
+    <p>This Privacy Policy ("Policy") explains how <strong>[Your Company Name]</strong> ("Company," "we," "us," or "our") collects, uses, shares, and protects personal data obtained through our websites, applications, and related services. It is designed to comply with the <strong>Digital Personal Data Protection Act, 2023 ("DPDP Act")</strong> and other applicable laws. By accessing our website or using our services, you consent to the practices described in this Policy.</p>
+
+    <h4 class="policy-section-title">2. Scope of the Policy</h4>
+    <p>This Policy applies to:</p>
+    <ul>
+        <li>Personal data collected through websites, applications, and online platforms.</li>
+        <li>Data provided by customers, employees, vendors, and business partners.</li>
+        <li>Information gathered during recruitment or operational processes.</li>
+        <li>Automatically collected data via digital platforms.</li>
+    </ul>
+
+    <h4 class="policy-section-title">3. Definitions</h4>
+    <ul>
+        <li><strong>Personal Data:</strong> Information that identifies or can identify an individual, such as name, contact details, and online identifiers.</li>
+        <li><strong>Sensitive Personal Data:</strong> Information such as financial data, biometric data, health information, or other data classified as sensitive under applicable laws.</li>
+    </ul>
+
+    <h4 class="policy-section-title">4. Collection of Personal Data</h4>
+    <p><strong>4.1 Direct Collection:</strong> Personal data is collected directly during contractual engagements, use of services, or communications through customer service channels.</p>
+    <p><strong>4.2 Automatic Collection:</strong> Data such as device identifiers, IP addresses, geolocation, and user preferences are collected via cookies and similar technologies. Refer to our Cookie Policy for more details.</p>
+    <p><strong>4.3 Other Sources:</strong> We also collect data from business contacts, recruitment applications (educational/professional records), and visitors to our premises (including CCTV footage for security).</p>
+
+    <h4 class="policy-section-title">5. Purpose and Use of Personal Data</h4>
+    <p>The Company processes personal data for purposes including:</p>
+    <ul>
+        <li>Fulfilling contractual obligations and KYC compliance.</li>
+        <li>Complying with legal and regulatory requirements.</li>
+        <li>Improving website functionality and personalizing user experiences.</li>
+        <li>Marketing and promotional communications (with consent).</li>
+        <li>Recruitment, employment, and operational management.</li>
+    </ul>
+
+
+<h4 class="policy-section-title">6. Sharing of Personal Data</h4>
+    <p><strong>6.1 Regulatory and Legal Compliance:</strong> Personal data may be disclosed to regulatory authorities and law enforcement agencies as required by law.</p>
+    <p><strong>6.2 Third-Party Service Providers:</strong> We share data with trusted service providers for IT support, payment processing, and marketing services. Contracts ensure that data is used only for intended purposes.</p>
+    <p><strong>6.3 Business Transfers:</strong> Personal data may be transferred during mergers, acquisitions, or asset sales.</p>
+    </ul>
+    <h4 class="policy-section-title">7. Data Security</h4>
+    <p>We implement robust measures to protect personal data, including:</p>
+    <ul>
+        <li><strong>Encryption:</strong> AES-256 encryption for sensitive data.</li>
+        <li><strong>Access Controls:</strong> Restricted access based on role and necessity.</li>
+        <li><strong>Audits:</strong> Regular security assessments and compliance reviews.</li>
+        <li><strong>Incident Response:</strong> Procedures to address potential data breaches promptly.</li>
+    </ul>
+
+    <h4 class="policy-section-title">8. Retention of Personal Data</h4>
+    <p>Personal data is retained only as long as necessary to fulfill its purpose or comply with legal obligations. After the retention period, data is securely deleted or anonymized.</p>
+
+    <h4 class="policy-section-title">9. Children’s Privacy</h4>
+    <p>Our services are not directed at individuals under 18. If you believe we have collected data from a minor, contact us immediately.</p>
+
+
+    <h4 class="policy-section-title">10. Your Rights</h4>
+    <p>Under the DPDP Act, you have the following rights:</p>
+    <ul>
+        <li><strong>Access & Rectification:</strong> Request a copy of your data or correct inaccuracies.</li>
+        <li><strong>Erasure:</strong> Request deletion of data no longer required.</li>
+        <li><strong>Withdrawal of Consent:</strong> Revoke your consent at any time.</li>
+    
+    </ul>
+    <p>To exercise these rights, contact <strong>[Privacy Officer Email Address]</strong>. Requests will be processed within <strong>[Insert Timeline, e.g., 30 days]</strong> or as required by law</p>
+
+    <h4 class="policy-section-title">11. Contact Information</h4>
+    <div class="card bg-light border-0 mb-4">
+        <div class="card-body">
+            <p class="mb-1"><strong>Privacy Officer:</strong> [Insert Name]</p>
+            <p class="mb-1"><strong>Company:</strong> [Your Company Name]</p>
+            <p class="mb-1"><strong>Address:</strong> [Contact Address]</p>
+            <p class="mb-0"><strong>Email:</strong> [Privacy Officer Email Address]</p>
+        </div>
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-pdf me-2"></i>Official Document Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Website Privacy Policy for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_website_privacy_policy_template.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+
+
+<div id="crossBorderAgreement" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">Standard Contractual Agreement</div>
+        <h2 class="fw-800">Cross-Border Data Transfer Agreement</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p>This Cross-Border Data Transfer Agreement ("Agreement") is entered into as of [Insert Date] ("Effective Date") by and between:</p>
+            <h5 class="fw-bold mb-3">Parties to the Agreement</h5>
+            <p><strong>[Data Exporter Name]</strong> , a company incorporated under the laws of India, having its registered office at [Insert Address], hereinafter referred to as the "Data Exporter";</p>
+            <p class="mb-0"><strong>[Data Importer Name]</strong>, a company incorporated under the laws of [Insert Country], having its registered office at [Insert Address], hereinafter referred to as the "Data Importer".</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1. Definitions</h4>
+    <ul>
+        <li><strong>Personal Data:</strong> Any data about an individual transferred under this Agreement as defined by the DPDP Act.</li>
+        <li><strong>Processing:</strong> Any operation performed on Personal Data, including collection, storage, or sharing.</li>
+        <li><strong>Notified Countries:</strong> Countries where the transfer of personal data may be restricted or prohibited by the Central Government.</li>
+        <li><strong>Applicable Laws:</strong> The laws of India, including the DPDP Act, and relevant regulations governing cross-border data transfers.</li>
+    </ul>
+
+    <h4 class="policy-section-title">2. Scope and Purpose</h4>
+    <p>The Data Exporter intends to transfer certain categories of personal data to the Data Importer for the purpose of [Insert Purpose]. This Agreement ensures that such transfers comply with the <strong>Digital Personal Data Protection Act, 2023</strong>.</p>
+
+    <h4 class="policy-section-title">3. Obligations of the Data Importer</h4>
+    <ul>
+        <li><strong>Compliance:</strong> Process data strictly in accordance with the DPDP Act and this Agreement.</li>
+        <li><strong>Data Security:</strong> Implement encryption during transfer and storage, access controls, and regular audits.</li>
+        <li><strong>Breach Notification:</strong> Notify the Data Exporter of any data breach within [Insert Timeframe, e.g., 24 hours].</li>
+        <li><strong>Sub-Processors:</strong> Obtain prior written consent before engaging any sub-processors.</li>
+    </ul>
+
+    <h4 class="policy-section-title">4. Obligations of the Data Exporter</h4>
+    <ul>
+        <li>Ensure a legal basis for the transfer of Personal Data.</li>
+        <li>Provide lawful instructions for data processing to the Importer.</li>
+        <li>Audit the Data Importer's compliance with reasonable notice.</li>
+    </ul>
+
+    <h4 class="policy-section-title">5. Data Subject Rights</h4>
+    <p>The Parties shall facilitate the rights of data subjects, including access, correction, and deletion of their Personal Data. The Data Importer must assist the Data Exporter in addressing requests and maintain records of consent.</p>
+
+    <h4 class="policy-section-title">6. Term and Termination</h4>
+    <p>This Agreement remains in effect until terminated with [Insert Notice Period]. Upon termination, the Data Importer must return or securely delete all Personal Data transferred under this Agreement.</p>
+
+    <h4 class="policy-section-title">7. Governing Law and Dispute Resolution</h4>
+    <p>This Agreement is governed by the laws of India, including the DPDP Act, 2023. Disputes shall be resolved via arbitration in [Insert Location] under the Arbitration and Conciliation Act, 1996.</p>
+
+   
+    <p><strong>IN WITNESS WHEREOF</strong>, the Parties have executed this Agreement as of the Effective Date.</p>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Data Exporter</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Title: _____________________</p>
+                <p class="small mb-0">Signature: __________________</p>
+                <p class="small mb-0">Date: _____________________</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Data Importer</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Title: _____________________</p>
+                <p class="small mb-0">Signature: __________________</p>
+                <p class="small mb-0">Date: _____________________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-contract me-2"></i>Official Agreement Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this  Cross-Border Data Transfer Agreement for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_cross_border_data_transfer_agreement.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+
+
+<div id="dataProcessingAgreement" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">Standard Service Agreement</div>
+        <h2 class="fw-800">Data Processing Agreement</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p>This Data Processing Agreement ("Agreement") is entered into as of [Insert Date] ("Effective Date") by and between:</p>
+            <p><strong>[Data Controller Name],</strong>a company incorporated under the laws of India, registered at [Insert Address].</p>
+            <p class="mb-0"><strong>[Data Processor Name],</strong>a company incorporated under the laws of India, registered at [Insert Address].</p>
+        </div>
+    </div>
+    <h4 class="policy-section-title">RECITALS</h4>
+    <p><strong>WHEREAS:</strong></p>
+    <ol>
+        <li>The Controller has engaged the Processor to perform certain services, which involve the processing of personal data as defined under the <strong>Digital Personal Data Protection Act, 2023 ("DPDPA").</strong></li>
+        <li>The Parties intend to ensure compliance with their respective obligations under the DPDPA and related rules.</li>
+    </ol>
+
+    <h4 class="policy-section-title">TERMS AND CONDITIONS</h4>
+    <h4 class="policy-section-title">1. Definitions</h4>
+    <ul>
+        <li><strong>Personal Data:</strong> Data about an individual processed under this Agreement, as defined under the Digital Personal Data Protection Act, 2023 (DPDPA).</li>
+        <li><strong>Processing:</strong> Any operation on Personal Data, including collection, storage, use, transfer, or deletion.</li>
+        <li><strong>Sub-Processor:</strong> Any third party engaged by the Processor for processing Personal Data on behalf of the Controller.</li>
+    </ul>
+
+    <h4 class="policy-section-title">2. Scope and Purpose</h4>
+    <p>The Controller has engaged the Processor to perform services involving the processing of personal data. The Processor shall process data solely for <strong>[Insert Purpose]</strong>. The categories of data subjects include <strong>[Insert categories, e.g., customers, employees]</strong>.</p>
+
+    <h4 class="policy-section-title">3. Processor Obligations</h4>
+    <ul>
+        <li><strong>Compliance:</strong> Process Personal Data strictly per the Controller's instructions and DPDPA requirements.</li>
+        <li><strong>Confidentiality:</strong> Ensure all authorized personnel are bound by confidentiality agreements.</li>
+        <li><strong>Security Measures:</strong> Implement technical safeguards including encryption, pseudonymization, and regular security audits.</li>
+        <li><strong>Breach Notification:</strong> Notify the Controller of any data breach within [Insert Timeframe, e.g., 24 hours].</li>
+        <li><strong>Assistance:</strong> Assist the Controller in responding to data subject requests and conducting privacy impact assessments.</li>
+    </ul>
+
+    <h4 class="policy-section-title">4. Controller Obligations</h4>
+    <ul>
+        <li>Provide lawful instructions for all data processing activities.</li>
+        <li>Ensure a valid legal basis exists for processing the personal data.</li>
+        <li>Reserve and exercise the right to audit the Processor's compliance with this Agreement.</li>
+    </ul>
+
+    <h4 class="policy-section-title">5. Sub-Processors and Cross-Border Transfers</h4>
+    <p>The Processor must obtain prior written consent from the Controller before engaging any sub-processors. Similarly, any data transfers outside of India require written consent and must comply with Sections 16 and 17 of the DPDPA.</p>
+
+    <h4 class="policy-section-title">6. Term and Termination</h4>
+    <p>This Agreement remains effective until the completion of services or termination with [Insert Notice Period]. Upon termination, the Processor must ensure the secure return or deletion of all personal data as instructed by the Controller.</p>
+
+    <p><strong>IN WITNESS WHEREOF</strong>, the Parties have executed this Agreement as of the Effective Date.</p>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Controller</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Designation: _______________</p>
+                <p class="small mb-0">Signature: _________________</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Processor</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Designation: _______________</p>
+                <p class="small mb-0">Signature: _________________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-contract me-2"></i>Official Agreement Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Data Processing Agreement for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_data_processing_agreement.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+
+<div id="vendorAgreement" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">Standard Business Agreement</div>
+        <h2 class="fw-800">Third-Party Vendor Agreement</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p>This Third-Party Vendor Agreement ("Agreement") is entered into as of <strong>[Insert Date]</strong> ("Effective Date") by and between:</p>
+            <p><strong>[Company Name]</strong>, a company incorporated under the laws of India, registered at [Insert Address], hereinafter referred to as the "Company";</p>
+            <p class="mb-0"><strong>[Vendor Name]</strong>, a company incorporated under the laws of India, registered at [Insert Address], hereinafter referred to as the "Vendor."</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">RECITALS</h4>
+    <p><strong>WHEREAS:</strong></p>
+    <ol>
+        <li>The Company engages the Vendor to provide certain services that may involve the processing of personal data as defined under the <strong>Digital Personal Data Protection Act, 2023 ("DPDPA").</strong> </li>
+        <li>The Parties intend to ensure compliance with their respective obligations under applicable data protection laws and regulations, including the DPDPA.</li>
+    </ol>
+
+    <h4 class="policy-section-title">1. DEFINITIONS</h4>
+    <ul>
+        <li><strong>Personal Data:</strong> Any data about an individual processed by the Vendor on behalf of the Company under the DPDPA.</li>
+        <li><strong>Processing:</strong> Any operation performed on Personal Data, including collection, recording, storage, use, sharing, or deletion.</li>
+        <li><strong>Sub-Processor:</strong> Any third party engaged by the Vendor to process Personal Data on behalf of the Company.</li>
+        <li><strong>Confidential Information:</strong> All information disclosed by one Party to the other that is marked confidential or reasonably expected to be treated as such.</li>
+    </ul>
+
+    <h4 class="policy-section-title">2. SCOPE OF SERVICES</h4>
+    <p>The Vendor agrees to provide the following services: <strong>[Insert detailed description of services]</strong>. The Vendor acknowledges these services may involve processing Personal Data and agrees to comply with this Agreement and applicable laws.</p>
+
+    <h4 class="policy-section-title">3. OBLIGATIONS OF THE VENDOR</h4>
+    <ul>
+        <li><strong>Compliance:</strong> Process Personal Data in accordance with this Agreement, the Company's instructions, and the DPDPA.</li>
+        <li><strong>Confidentiality:</strong> Ensure all authorized personnel are bound by confidentiality obligations.</li>
+        <li><strong>Security Measures:</strong> Implement encryption, access control mechanisms, and regular security audits.</li>
+        <li><strong>Breach Notification:</strong> Notify the Company within [Insert Timeframe, e.g., 24 hours] of any data breach.</li>
+        <li><strong>Sub-Processors:</strong> Do not engage sub-processors without prior written consent and ensuring their compliance.</li>
+        <li><strong>Assistance:</strong> Assist the Company in fulfilling data protection obligations, including responding to data subject requests and audits.</li>
+    </ul>
+
+    <h4 class="policy-section-title">4. OBLIGATIONS OF THE COMPANY</h4>
+    <ul>
+        <li>Provide clear, written instructions for processing Personal Data.</li>
+        <li>Warrant that necessary consents or legal bases for processing have been obtained.</li>
+        <li>Exercise the right to audit the Vendor's compliance upon reasonable notice.</li>
+    </ul>
+
+    <h4 class="policy-section-title">5. INDEMNIFICATION AND LIABILITY</h4>
+    <p>The Vendor shall indemnify the Company against claims arising from the Vendor's breach of this Agreement. Except in cases of gross negligence, total liability for either Party shall not exceed <strong>[Insert Amount]</strong>.</p>
+
+    <h4 class="policy-section-title">6. GOVERNING LAW</h4>
+    <p>This Agreement is governed by the laws of India. Disputes shall be resolved under the exclusive jurisdiction of the courts in <strong>[Insert Jurisdiction]</strong>.</p>
+
+    <p><strong>IN WITNESS WHEREOF</strong>, the Parties have executed this Agreement as of the Effective Date.</p>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Company</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Title: _____________________</p>
+                <p class="small mb-0">Date: _____________________</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="fw-bold border-bottom pb-2">For the Vendor</p>
+                <p class="small mb-1">Name: ____________________</p>
+                <p class="small mb-1">Title: _____________________</p>
+                <p class="small mb-0">Date: _____________________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-contract me-2"></i>Official Agreement Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Third-Party Vendor Agreement for offline use and physical signatures.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_third_party_vendor_agreement.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD TEMPLATE
+        </a>
+    </div>
+</div>
+<div id="dataSubjectRequest" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">DPDP Act Compliance Form</div>
+        <h2 class="fw-800">Data Subject Rights Request Form</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Effective Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p>This Data Subject Rights Request Form ("Form") is provided by <strong>[Company Name]</strong> ("Company") to enable individuals ("Data Subjects") to exercise their rights under the <strong>Digital Personal Data Protection Act, 2023 ("DPDP Act")</strong> and other applicable laws.</p>
+            <p class="mb-0">The Company is committed to safeguarding your privacy and processing your requests promptly and transparently.</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">SECTION 1: CONTACT INFORMATION</h4>
+    <p class="small text-muted mb-3">Please provide your contact details to enable us to process your request.</p>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <label class="small fw-bold">Full Name:</label>
+            <div class="border-bottom py-2">____________________</div>
+        </div>
+        <div class="col-md-6">
+            <label class="small fw-bold">Email Address:</label>
+            <div class="border-bottom py-2">____________________</div>
+        </div>
+        <div class="col-md-6">
+            <label class="small fw-bold">Phone Number:</label>
+            <div class="border-bottom py-2">____________________</div>
+        </div>
+        <div class="col-md-6">
+            <label class="small fw-bold">Preferred Contact Method:</label>
+            <div class="col-md-12">
+    <label class="small fw-bold mb-2 d-block">Preferred Contact Method:</label>
+    <div class="d-flex flex-wrap gap-4">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="contactEmail">
+            <label class="form-check-label small" for="contactEmail">Email</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="contactPhone">
+            <label class="form-check-label small" for="contactPhone">Phone</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="contactMail">
+            <label class="form-check-label small" for="contactMail">Postal Mail</label>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="col-12">
+            <label class="small fw-bold">Postal Address:</label>
+            <div class="border-bottom py-2">____________________________________________________________</div>
+        </div>
+    </div>
+
+   <h4 class="policy-section-title">SECTION 2: RELATIONSHIP WITH THE COMPANY</h4>
+<p class="small text-muted mb-2">Please indicate your relationship with the Company: </p>
+<div class="mb-4">
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="relEmployee">
+        <label class="form-check-label" for="relEmployee">Employee </label>
+    </div>
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="relFormerEmployee">
+        <label class="form-check-label" for="relFormerEmployee">Former Employee</label>
+    </div>
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="relCustomer">
+        <label class="form-check-label" for="relCustomer">Customer </label>
+    </div>
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="relVendor">
+        <label class="form-check-label" for="relVendor">Vendor/Contractor </label>
+    </div>
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="relOther">
+        <label class="form-check-label" for="relOther">Other: ____________________ </label>
+    </div>
+</div>
+
+ <h4 class="policy-section-title">SECTION 3: RIGHTS REQUESTED</h4>
+<p class="small text-muted mb-3">Under the DPDP Act, you have the following rights. Please mark the rights you wish to exercise: </p>
+<div class="mb-4">
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightAccess">
+        <label class="form-check-label" for="rightAccess">
+            <strong>Right to Access:</strong> Obtain a copy of your personal data processed by the Company. 
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightRectification">
+        <label class="form-check-label" for="rightRectification">
+            <strong>Right to Rectification:</strong> Correct or update inaccurate or incomplete personal data.
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightErasure">
+        <label class="form-check-label" for="rightErasure">
+            <strong>Right to Erasure:</strong> Request deletion of your personal data where applicable. 
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightRestrict">
+        <label class="form-check-label" for="rightRestrict">
+            <strong>Right to Restrict Processing:</strong> Limit the processing of your personal data in specific circumstances.
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightPortability">
+        <label class="form-check-label" for="rightPortability">
+            <strong>Right to Data Portability:</strong> Receive your personal data in a structured, commonly used, and machine-readable format.
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rightWithdraw">
+        <label class="form-check-label" for="rightWithdraw">
+            <strong>Right to Withdraw Consent:</strong> Revoke consent for specific data processing activities.
+        </label>
+    </div>
+</div>
+    <h4 class="policy-section-title">SECTION 4: DETAILS OF THE REQUEST</h4>
+    <p class="small text-muted">Please provide details of your request to help us process it efficiently. Specify the data you wish to access, rectify, or delete, and include relevant dates, reference numbers, or additional context.</p>
+    <div class="p-4 border rounded mb-4" style="min-height: 100px; background-color: #fcfcfc;"></div>
+
+    <h4 class="policy-section-title">SECTION 5: VERIFICATION OF IDENTITY</h4>
+    <p class="small text-muted">To protect your privacy, we may need to verify your identity. Please attach:</p>
+    <ul>
+        <p>If you are submitting this request on behalf of another individual, please provide:</p>
+        <li>Government-issued photo ID (e.g., Aadhaar, Passport, Driver's License).</li>
+        <li>Note: Documents are used for verification only and securely deleted afterward.</li>
+    </ul>
+
+    <h4 class="policy-section-title">SECTION 6: AUTHORIZED REPRESENTATIVE (IF APPLICABLE)</h4>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <label class="small fw-bold">Full Name of Data Subject:</label>
+            <div class="border-bottom py-2">____________________</div>
+        </div>
+        <div class="col-md-6">
+            <label class="small fw-bold">Your Relationship:</label>
+            <div class="border-bottom py-2">____________________</div>
+        </div>
+        <p class="small mt-2"><em>*Attach a signed letter or legal document authorizing you to act on their behalf.</em></p>
+    </div>
+
+    <h4 class="policy-section-title">SECTION 7: DECLARATION</h4>
+    <p>I confirm that the information provided is accurate and that I am the Data Subject or authorized to act on their behalf. I understand the Company may contact me for further clarification.</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <p class="small mb-1">Signature: ____________________</p>
+                <p class="small mb-1">Name: _______________________</p>
+                <p class="small mb-0">Date: ________________________</p>
+            </div>
+        </div>
+    </div>
+<h4 class="policy-section-title">SECTION 8: SUBMISSION DETAILS</h4>
+    <p class="small text-muted mb-3">Please submit this form and the required documents through one of the following methods:</p>
+    <ul class="list-unstyled mb-4">
+        <li class="mb-2"><strong>Email:</strong> [Insert DPO Email Address] </li>
+        <li class="mb-2"><strong>Postal Mail:</strong> [Insert Company Address]</li>
+        <li class="mb-2"><strong>In-Person:</strong> [Insert Office Address, if applicable]</li>
+    </ul>
+
+    <h4 class="policy-section-title">SECTION 9: FOR COMPANY USE ONLY</h4>
+    <div class="mb-4 ps-2">
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Date Received:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Request Reference Number: </label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Action Taken: </label>
+            <div class="border-bottom py-2">_____________________________________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Processed By:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Date of Completion:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-4 border-top pt-4">
+        <p class="small text-muted mb-4 text-center">This form ensures that your data rights are respected and requests are handled diligently.</p>
+        <p class="fw-bold mb-3 text-center">For questions or assistance, contact our Data Protection Officer at:</p>
+        <div class="ps-2">
+            <div class="mb-2"><strong>Email:</strong> [Insert DPO Email Address]</div>
+            <div class="mb-2"><strong>Phone:</strong> [Insert DPO Phone Number]</div>
+            <div class="mb-2"><strong>Address:</strong> [Insert Company Address] </div>
+        </div>
+    </div>
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-download me-2"></i>Official Request Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Data Subject Rights Request Form for submission to the DPO.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_data_principal_rights_request_form.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD FORM
+        </a>
+    </div>
+</div>
+<div id="consentForm" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">DPDPA Compliance Document</div>
+        <h2 class="fw-800">Consent Form for Data Processing</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p><strong>Subject: Consent for Processing of Personal Data</strong></p>
+            <p>Dear [Recipient Name],</p>
+            <p class="mb-0">This consent form is issued to inform you of the purposes for which your personal data will be processed and to obtain your explicit consent, in compliance with the <strong>Digital Personal Data Protection Act, 2023 ("DPDPA")</strong> and the <strong>DPDP Rules</strong>.</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">1. INFORMATION WE WILL COLLECT</h4>
+    <p class="small text-muted mb-3">We may collect and process the following categories of personal data:</p>
+    <div class="mb-4 ps-2">
+        <div class="mb-2">
+            <strong>Basic Information:</strong> Name, Contact Information, Address, Date of Birth.
+        </div>
+        <div class="mb-2">
+            <strong>Sensitive Personal Data:</strong> Financial Details, Health Information, Biometric Data, etc.
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">2. PURPOSE OF PROCESSING</h4>
+    <p class="small text-muted mb-3">Your personal data will be processed for the following purposes:</p>
+    <div class="mb-4 ps-2">
+        <div class="mb-2"><strong>1. Service Provision:</strong> To provide the services or products you have requested.</div>
+        <div class="mb-2"><strong>2. Legal Compliance:</strong> To comply with applicable laws and regulatory requirements.</div>
+        <div class="mb-2"><strong>3. Marketing Communications:</strong> To send you marketing materials (only with explicit consent).</div>
+        <div class="mb-2"><strong>4. Data Analytics:</strong> For improving our services, products, and user experience.</div>
+    </div>
+
+    <h4 class="policy-section-title">3. RIGHTS AVAILABLE TO YOU</h4>
+    <p class="small text-muted mb-3">Under the DPDPA, you have the following rights:</p>
+    <div class="mb-4 ps-2 small">
+        <div class="mb-2">• <strong>Right to Access:</strong> Obtain access to your data.</div>
+        <div class="mb-2">• <strong>Right to Rectification:</strong> Request corrections to any inaccuracies in your data.</div>
+        <div class="mb-2">• <strong>Right to Erasure:</strong> Request deletion of your personal data.</div>
+        <div class="mb-2">• <strong>Right to Restriction:</strong> Restrict or object to certain types of data processing.</div>
+        <div class="mb-2">• <strong>Right to Data Portability:</strong> Request transfer of your personal data to another entity.</div>
+        <div class="mb-2">• <strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time.</div>
+        <div class="mb-2">• <strong>Right to Nominate:</strong> Nominate someone to exercise your rights on your behalf.</div>
+    </div>
+
+    <h4 class="policy-section-title">4. CONSENT DECLARATION</h4>
+    <p class="small mb-4">By signing below, you confirm that you have read and understood the terms and voluntarily agree to the processing of your personal data as described herein. I hereby give my explicit consent to <strong>[Insert Organisation Name]</strong> for the purposes mentioned above.</p>
+    
+    <div class="mb-4 ps-2">
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Signature:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Name:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Date:</label>
+            <div class="border-bottom py-2 w-50">____________________</div>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">5. CONTACT INFORMATION</h4>
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 border border-primary border-opacity-25">
+        <p class="small text-muted mb-3">If you have any questions or concerns regarding this consent form, please contact our Data Protection Officer (DPO):</p>
+        <div class="small">
+            <div class="mb-1"><strong>Name:</strong> [Insert DPO Name]</div>
+            <div class="mb-1"><strong>Email:</strong> [Insert DPO Email Address]</div>
+            <div class="mb-0"><strong>Phone:</strong> [Insert DPO Phone Number]</div>
+            <div class="mt-1"><strong>Address:</strong> [Insert Organisation Address]</div>
+        </div>
+    </div>
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-download me-2"></i>Official Request Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Consent Form for Data Processing for submission to the DPO.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_consent_form_for_data_processing.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD FORM
+ 
+    
+        </a>
+    </div>
+</div>      
+
+<div id="dataBreachNotice" class="template-content-card" style="display: none;">
+    <div class="text-center mb-5 border-bottom pb-4">
+        <div class="mb-2 text-uppercase fw-bold text-muted small">DPDPA Incident Notification</div>
+        <h2 class="fw-800">Notice of Data Breach</h2>
+        <div class="d-flex justify-content-center gap-4 mt-3 text-muted small">
+            <span><strong>Date:</strong> [Insert Date]</span>
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 bg-light">
+        <div class="card-body">
+            <p><strong>Subject: Notification of Data Security Breach</strong></p>
+            <p>Dear [Recipient Name],</p>
+            <p class="mb-0">We are writing to inform you about a data security breach that occurred on [date of breach], which may have impacted your personal data. Safeguarding your information is of utmost importance to us, and we deeply regret any inconvenience caused by this incident.</p>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">CIRCUMSTANCES OF THE DATA BREACH</h4>
+    <div class="mb-4 ps-2">
+        <p class="small text-muted mb-2">Details regarding the incident identified on [specific date]:</p>
+        <div class="p-3 border rounded bg-white small mb-3">
+            [Describe how unauthorized access occurred and the immediate remedial actions taken to contain the breach].
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">NATURE OF COMPROMISED INFORMATION</h4>
+    <p class="small text-muted mb-2">Our investigation indicates that the following categories of personal data may have been affected:</p>
+    <div class="mb-4 ps-2">
+        <div class="mb-2">• [Type of information, e.g., name, email address, phone number].</div>
+        <div class="mb-2">• [Type of sensitive information, if applicable, e.g., financial details].</div>
+        <div class="mt-3 small py-2 px-3 bg-light rounded border">
+            <strong>Confirmation:</strong> [Specify data NOT compromised, e.g., credit card information].
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">REMEDIAL MEASURES UNDERTAKEN</h4>
+    <div class="mb-4 ps-2 small">
+        <p>To address this incident, we have implemented the following corrective actions:</p>
+        <div class="mb-3">
+            <strong>1. Containment and Remediation:</strong> Immediate steps were taken to secure affected systems and prevent further unauthorized access.
+        </div>
+        <div class="mb-3">
+            2. The breach has been reported to the Data Protection Board of India, as mandated by the Digital Personal Data Protection Act, 2023 ("DPDPA").
+        </div>
+        <div class="mb-2">
+            <strong>3. Enhanced Security:</strong> Additional protocols have been implemented, including:
+            <div class="ps-3 mt-1">
+                • [System updates and patches].<br>
+                • [Increased system monitoring].<br>
+                • [Enhanced employee training].
+            </div>
+        </div>
+    </div>
+
+    <h4 class="policy-section-title">RECOMMENDED ACTIONS FOR AFFECTED INDIVIDUALS</h4>
+    <p class="small text-muted mb-3">To minimize potential risk, we recommend the following steps:</p>
+    <div class="mb-4 ps-2">
+        <div class="mb-2"><strong>1. Change Your Passwords:</strong> Update passwords for accounts associated with this breach.</div>
+        <div class="mb-2"><strong>2. Monitor Financial Accounts:</strong> Regularly check for unusual activity.</div>
+        <div class="mb-2"><strong>3. Beware of Phishing:</strong> Be cautious of unsolicited requests for personal information.</div>
+    </div>
+
+    <h4 class="policy-section-title">CONTACT DETAILS FOR ASSISTANCE</h4>
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 border border-primary border-opacity-25 mb-4">
+        <p class="small text-muted mb-3">If you have any questions or require support, please contact us:</p>
+        <div class="small mb-3">
+            <div class="mb-1"><strong>Email:</strong> [Insert contact email] </div>
+            <div class="mb-1"><strong>Phone:</strong> [Insert contact number]</div>
+            <div class="mb-0"><strong>Address:</strong> [Insert company address]</div>
+        </div>
+        <p class="x-small text-muted mb-0">Note: You are entitled to lodge a complaint with the Data Protection Board of India if you believe your rights have been infringed.</p>
+    </div>
+
+   
+<h4 class="policy-section-title">ASSURANCE OF COMPLIANCE AND FUTURE ACTIONS</h4>
+    <div class="mb-4 ps-2">
+        <div class="mb-3">
+            <p class="small text-muted">We take this incident very seriously and are committed to safeguarding your data. Rest assured that we are implementing additional measures to strengthen our security framework and prevent similar occurrences in the future.</p>
+        </div>
+        <div class="mb-4">
+            <p class="small text-muted">We sincerely apologize for any inconvenience this may have caused and appreciate your understanding.</p>
+        </div>
+    </div>
+
+    <div class="mt-3 mb-4 ps-2">
+        <div class="mb-2">
+            <p class="small text-muted mb-1">Sincerely,</p>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Name:</label>
+            <div class="border-bottom py-2 w-50">[Your Name]</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Title:</label>
+            <div class="border-bottom py-2 w-50">[Your Title]</div>
+        </div>
+        <div class="mb-3">
+            <label class="small fw-bold d-block">Company:</label>
+            <div class="border-bottom py-2 w-50">[Company Name]</div>
+        </div>
+    </div>
+    <div class="bg-primary bg-opacity-10 p-4 rounded-4 text-center border border-primary border-opacity-25 mt-5">
+        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-download me-2"></i>Official Request Template</h5>
+        <p class="small text-muted mb-4">Download the formal PDF version of this Notice of Data Breach to the DPO.</p>
+        <a href="https://dpdpa.com/pdf/DPDPA_notice_of_data_breach_template.pdf" target="_blank" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-download me-2"></i>DOWNLOAD FORM
+ 
+        </a>
+    </div>
+</div>
+
+</div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">DPDPA <span class="text-primary">TN</span></span>
+                    <p class="small">Securing India's digital economy through precision governance and expert advisory. We help businesses navigate the DPDPA 2023 landscape with confidence.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6>Resources</h6>
+                    <a href="/rules" class="footer-link">DPDP Rules</a>
+                    <a href="/templates" class="footer-link">DPDP Templates</a>
+                    <a href="/checklists" class="footer-link">Audit Checklist</a>
+                </div>
+                <div class="col-lg-2">
+                    <h6>Company</h6>
+                    <a href="/about" class="footer-link">About Us</a>
+                    <a href="/ourteam" class="footer-link">Advisory Team</a>
+                    <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+            <div class="text-center small opacity-50">© 2026 DPDA TN. Built for the Indian Digital Economy.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Theme Toggle Logic with Icon Update
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        function updateIcon(theme) {
+            const knob = themeToggle.querySelector('.toggle-knob');
+            if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        if (localStorage.getItem('theme')) {
+            const savedTheme = localStorage.getItem('theme');
+            html.setAttribute('data-bs-theme', savedTheme);
+            updateIcon(savedTheme);
+        }
+
+        // Show Template Function
+        function showTemplate(templateId) {
+            const cards = document.querySelectorAll('.template-content-card');
+            cards.forEach(card => card.style.display = 'none');
+
+            const selected = document.getElementById(templateId);
+            if (selected) {
+                selected.style.display = 'block';
+                AOS.refresh();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            document.querySelectorAll('.submenu-item a').forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`[onclick="showTemplate('${templateId}')"]`);
+            if (activeLink) activeLink.classList.add('active');
+
+            // Hide mobile sidebar after selection on small screens
+            if (window.innerWidth < 992) {
+                const mobileSidebarEl = document.getElementById('mobileSidebar');
+                if (mobileSidebarEl) {
+                    const bs = bootstrap.Collapse.getOrCreateInstance(mobileSidebarEl);
+                    bs.hide();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

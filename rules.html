@@ -1,0 +1,1158 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Explore a practical breakdown of DPDP Rules 2025 with explanations, compliance impact, and implementation guidance for organizations.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/rules">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/rules">
+    <meta property="og:title" content="DPDP Rules 2025 Explained | DPDPA TN">
+    <meta property="og:description" content="Explore a practical breakdown of DPDP Rules 2025 with explanations, compliance impact, and implementation guidance for organizations.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDP Rules 2025 Explained | DPDPA TN">
+    <meta name="twitter:description" content="Explore a practical breakdown of DPDP Rules 2025 with explanations, compliance impact, and implementation guidance for organizations.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDP Rules 2025 Explained | DPDPA TN</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --body-bg: #ffffff;
+            --text: var(--dark);
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+
+            /* Rules viewer colors */
+            --rules-primary: #1e3a8a;
+            --rules-accent: #3b82f6;
+            --rules-border: #e2e8f0;
+            --rules-text: #0f172a;
+            --rules-muted: #475569;
+            --rules-sidebar-bg: #f8fafc;
+            --rules-bg: #ffffff;
+            --rules-accordion-bg: #f1f5f9;
+            --rules-accordion-text: #1e40af;
+            --rules-divider: #cbd5e1;
+            --rules-alert-bg: #fff1f2;
+            --rules-alert-border: #e11d48;
+            --rules-example-bg: #f0f9ff;
+            --rules-example-border: #0ea5e9;
+            --rules-sidebar-width: 340px;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #e2e8f0;
+            --slate: #94a3b8;
+            --light-bg: #0f172a;
+            --body-bg: #0a0f1d;
+            --text: #f8fafc;
+            --card-bg: #1e293b;
+            --border: #334155;
+
+            --rules-primary: #60a5fa;
+            --rules-accent: #93c5fd;
+            --rules-border: #334155;
+            --rules-text: #f1f5f9;
+            --rules-muted: #94a3b8;
+            --rules-sidebar-bg: #0f172a;
+            --rules-bg: #020617;
+            --rules-accordion-bg: #1e293b;
+            --rules-accordion-text: #60a5fa;
+            --rules-divider: #475569;
+            --rules-alert-bg: #4c1d1d;
+            --rules-alert-border: #f87171;
+            --rules-example-bg: #1e293b;
+            --rules-example-border: #60a5fa;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--body-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        main { flex: 1 0 auto; }
+
+        footer { flex-shrink: 0; }
+
+        /* Navbar */
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+        .navbar .navbar-toggler { margin-left: auto; }
+
+        /* Theme Toggle */
+/* Rules Layout */
+        .rules-wrapper {
+            display: flex;
+            flex: 1;
+            margin-top: 76px; /* space for fixed navbar */
+        }
+
+        .rules-sidebar {
+            width: var(--rules-sidebar-width);
+            border-right: 1px solid var(--rules-border);
+            background: var(--rules-sidebar-bg);
+            padding: 32px 20px;
+            overflow-y: auto;
+            position: sticky;
+            top: 76px;
+            height: calc(100vh - 76px);
+            flex-shrink: 0;
+        }
+
+        .rules-main {
+            flex: 1;
+            padding: 40px 60px;
+            max-width: 1100px;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .sidebar h3 {
+            margin: 0;
+            color: var(--rules-primary);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--rules-border);
+            border-radius: 8px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            background: var(--rules-bg);
+            color: var(--rules-text);
+        }
+
+        .rule-list { list-style: none; padding: 0; margin: 0; }
+        .rule-list li {
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            color: var(--rules-muted);
+            cursor: pointer;
+            margin-bottom: 4px;
+            transition: 0.2s;
+        }
+        .rule-list li:hover { background: var(--rules-border); color: var(--rules-text); }
+        .rule-list li.active {
+            background: var(--rules-primary);
+            color: white;
+            font-weight: 500;
+        }
+
+        h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; color: var(--rules-text); }
+        .rule-sub-title { color: var(--rules-muted); margin-bottom: 40px; font-size: 1.1rem; }
+
+        .accordion {
+            background: var(--rules-accordion-bg);
+            border: 1px solid var(--rules-border);
+            border-radius: 8px;
+            padding: 18px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--rules-accordion-text);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+
+        .accordion:hover { background: color-mix(in srgb, var(--rules-accordion-bg) 90%, var(--rules-primary) 10%); }
+
+        .rule-content {
+            background: var(--rules-bg);
+            border: 1px solid var(--rules-border);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 24px;
+            display: none;
+        }
+
+        .rule-content.show { display: block; }
+
+        .divider { height: 1px; background: var(--rules-divider); margin: 48px 0; border: none; opacity: 0.4; }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--rules-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .alert-box {
+            padding: 24px;
+            border-radius: 10px;
+            margin: 32px 0;
+            background: var(--rules-alert-bg);
+            border-left: 6px solid var(--rules-alert-border);
+        }
+
+        .example-box {
+            padding: 24px;
+            border-radius: 10px;
+            margin: 32px 0;
+            background: var(--rules-example-bg);
+            border-left: 6px solid var(--rules-example-border);
+        }
+
+        .nav-footer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+            border-top: 1px solid var(--rules-border);
+            margin-top: 60px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: var(--rules-primary);
+            font-weight: 600;
+            padding: 12px 20px;
+            border: 1px solid var(--rules-border);
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .nav-btn:hover:not(.disabled) {
+            background: var(--rules-primary);
+            color: white;
+            border-color: var(--rules-primary);
+        }
+
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
+        footer {
+            background: #070b14;
+            color: #94a3b8;
+            padding: 10px 0 10px;
+            margin-top: 48px;
+        }
+
+        .footer-logo { font-size: 1.5rem; font-weight: 900; color: white; margin-bottom: 20px; }
+        .footer-link { color: #94a3b8; display: block; margin-bottom: 14px; transition: all 0.3s; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+
+        @media (max-width: 992px) {
+            .rules-sidebar { width: 280px; }
+            .rules-main { margin-left: 0; padding: 30px 16px; }
+        }
+
+        @media (max-width: 768px) {
+            .rules-wrapper { flex-direction: column; }
+            .rules-sidebar {
+                position: fixed;
+                left: 0;
+                top: 76px;
+                width: 100vw;
+                height: calc(100vh - 76px);
+                z-index: 2000;
+                background: var(--rules-sidebar-bg);
+                border-right: none;
+                border-bottom: 1px solid var(--rules-border);
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+            .rules-sidebar.open {
+                transform: translateX(0);
+            }
+            .rules-main { margin-left: 0; padding: 16px 6vw 32px 6vw; max-width: 100vw; }
+            .rules-container { padding-top: 80px; }
+            .nav-footer { flex-direction: column; gap: 16px; text-align: center; }
+            .sidebar-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .sidebar-close-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--rules-primary);
+                margin-left: 8px;
+            }
+            .sidebar-toggle-btn {
+                display: inline-flex !important;
+            }
+
+            /* Mobile panel that slides down beneath the toggle */
+            .mobile-rules-panel {
+                position: fixed;
+                left: 0;
+                top: 76px;
+                width: 100vw;
+                height: calc(100vh - 76px);
+                z-index: 2100;
+                background: var(--rules-sidebar-bg);
+                border-bottom: 1px solid var(--rules-border);
+                transform: translateY(-6px) scaleY(0.98);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.22s ease, opacity 0.22s ease, visibility 0.22s;
+                padding-bottom: 24px;
+                overflow-y: auto;
+            }
+            .mobile-rules-panel.open {
+                transform: translateY(0) scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+            .mobile-rules-panel .search-box { margin-bottom: 12px; }
+        }
+        @media (min-width: 769px) {
+            .sidebar-toggle-btn,
+            .sidebar-close-btn {
+                display: none !important;
+            }
+        }
+        .sidebar-toggle-btn {
+            display: none;
+            background: var(--rules-primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-right: 12px;
+            margin-top: 8px;
+            position: fixed;
+            right: 16px;
+            left: auto;
+            top: 110px;
+            z-index: 2100;
+            box-shadow: 0 2px 8px rgba(30,58,138,0.08);
+        }
+        body.sidebar-open {
+            overflow: hidden;
+        }
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Toggle Button (mobile only) -->
+    <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Show rules index">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Rules Panel (appears beneath toggle on small screens) -->
+    <div class="mobile-rules-panel d-lg-none" id="mobileRulesPanel" aria-hidden="true">
+        <div class="mobile-panel-header d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <strong class="mb-0">Rules Categories</strong>
+            <button class="btn btn-sm btn-outline-secondary" id="mobilePanelCloseBtn" aria-label="Close rules categories">Close</button>
+        </div>
+        <div class="px-3 py-3">
+            <input type="text" class="search-box mb-2" placeholder="Search rules..." onkeyup="filterRules(this.value)">
+            <ul class="rule-list" id="mobileRuleList"></ul>
+        </div>
+    </div>
+
+    <!-- Rules Content -->
+    <div class="rules-wrapper">
+        <!-- Sidebar -->
+        <aside class="rules-sidebar" id="rulesSidebar">
+            <div class="sidebar-header">
+                <h3>Rules Index</h3>
+                <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close rules index">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <input type="text" class="search-box" placeholder="Search rules..." onkeyup="filterRules(this.value)">
+            <ul class="rule-list" id="ruleList"></ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="rules-main">
+            <h1 id="ruleTitle">Loading...</h1>
+            <p class="rule-sub-title" id="ruleSubtitle"></p>
+
+            <div class="accordion" id="ruleAccordion">
+                <span><i class="fas fa-gavel"></i> OFFICIAL LEGAL TEXT</span>
+                <i class="fas fa-chevron-down" id="accordionIcon"></i>
+            </div>
+            <div class="rule-content" id="ruleTextContent"></div>
+
+            <hr class="divider">
+
+            <div class="section-title">Explanation</div>
+            <div id="ruleExplanation"></div>
+
+            <hr class="divider">
+
+            <div class="section-title">Compliance Requirements</div>
+            <div id="ruleCompliance"></div>
+
+            <div class="example-box" id="ruleExampleContainer">
+                <div style="font-weight: 800; margin-bottom: 8px; color: var(--rules-primary);">
+                    PRACTICAL EXAMPLE
+                </div>
+                <div id="ruleExample"></div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="section-title">Key Takeaways</div>
+            <div id="ruleTakeaways"></div>
+
+            <div class="nav-footer">
+                <a href="#" class="nav-btn disabled" id="prevBtn"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="#" class="nav-btn" id="nextBtn">Next <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">DPDPA  <span class="text-primary">TN</span></span>
+                    <p class="small">Securing India's digital economy through precision governance and expert advisory. We help businesses navigate the DPDPA 2023 landscape with confidence.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="/rules" class="footer-link">Compliance Rules</a>
+                    <a href="/templates" class="footer-link">DPDP Templates</a>
+                    <a href="/checklists" class="footer-link">Audit Checklist</a>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="/about" class="footer-link">About Us</a>
+                    <a href="/ourteam" class="footer-link">Advisory Team</a>
+                    <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+            <div class="text-center small opacity-50">© 2026 DPDPA TN. Built for the Indian Digital Economy.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Theme Toggle (works on both navbar and sidebar)
+        const toggleBtns = document.querySelectorAll('.theme-toggle');
+        const html = document.documentElement;
+
+        function updateIcons() {
+            const isDark = html.getAttribute('data-bs-theme') === 'dark';
+            toggleBtns.forEach(btn => {
+                const knob = btn.querySelector('.toggle-knob');
+                if (knob) knob.textContent = isDark ? '☽' : '☀';
+            });
+        }
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const current = html.getAttribute('data-bs-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', next);
+                localStorage.setItem('theme', next);
+                updateIcons();
+            });
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-bs-theme', savedTheme);
+        updateIcons();
+
+        // Rules Data
+        const rules = [
+           {
+                title: "Rule 1: Short Title and Commencement",
+                subtitle: "Activation timeline and nomenclature of the rules.",
+                text: `<ol><li>These rules may be called the <strong>Digital Personal Data Protection Rules, 2025</strong>.</li><li><strong>Rules 1, 2 and 17 to 21</strong> shall come into force immediately.</li><li><strong>Rule 4</strong> shall come into force in 12 months.</li><li>Remaining rules come into force in <strong>18 months</strong>.</li></ol>`,
+                explanation: "Rule 1 establishes the official name of the Rules and sets out a phased implementation schedule. This staggered approach gives organizations (Data Fiduciaries), Consent Managers, and the Data Protection Board time to prepare systems, policies, and infrastructure.<br><br><ul><li><strong>Immediate effect (from publication date in Official Gazette, November 2025):</strong> <strong>Rules 1, 2</strong> (definitions), and <strong>17–21</strong> (likely governance, board-related, and transitional provisions).</li><li><strong>One year later (approx. November 2026):</strong> <strong>Rule 4</strong> (Registration and obligations of Consent Managers) becomes enforceable, allowing time to set up the Consent Manager ecosystem.</li><li><strong>Eighteen months later (approx. May 2027):</strong> Core operational rules (notice, consent, children's data, security, breach reporting, rights exercise, cross-border transfers, etc.) kick in, marking full compliance deadline for most obligations under the <strong>DPDP Act, 2023</strong>.</li></ul>",
+                compliance: "Organizations should immediately review and understand definitions (<strong>Rule 2</strong>) and any governance/board-related provisions (<strong>Rules 17–21</strong>). Prepare for <strong>Consent Manager</strong> framework activation in ~November 2026. Plan major updates (privacy notices, consent flows, data retention policies, security measures, grievance mechanisms) by ~May 2027. Monitor official notifications from <strong>MeitY</strong> / <strong>Data Protection Board</strong> for any extensions or clarifications.",
+                example: "A startup, XXX Pvt Ltd, notes that the Digital Personal Data Protection Rules are notified in November 2025. From that day onward, the company immediately applies the definitions from Rule 2. They then create a roadmap to ensure their Consent Manager integrations are ready by November 2026, and their full data processing systems meet all security and notice requirements by the final May 2027 deadline.",
+                takeaways: "<ul><li>The <strong>phased rollout</strong> balances enforcement urgency with practical preparation time for businesses.</li><li><strong>Core data protection obligations</strong> (e.g., clear notices, consent validity, security safeguards) become mandatory <strong>18 months</strong> post-notification.</li><li>Stay updated via official sources: <strong>MeitY</strong> website (meity.gov.in) or the <strong>Data Protection Board</strong> once operational.</li><li><strong>Early preparation</strong> helps avoid penalties and builds user trust in data handling practices.</li></ul>"
+            },
+            {
+    title: "Rule 2: Definitions",
+    subtitle: "Key terms and expressions used in the Rules.",
+    text: `<ol>
+        <li>"<strong>Act</strong>" means the <strong>Digital Personal Data Protection Act, 2023</strong> (22 of 2023).</li>
+        <li>"<strong>Techno-legal measures</strong>" means the measures referred to under <strong>Rules 20 and 22</strong>.</li>
+        <li>"<strong>User account</strong>" means the online account registered by the <strong>Data Principal</strong> with the <strong>Data Fiduciary</strong>, including profiles, pages, handles, email addresses, mobile numbers, or similar presences through which the <strong>Data Principal</strong> accesses services of the <strong>Data Fiduciary</strong>.</li>
+        <li>"<strong>Verifiable consent</strong>" means <strong>consent</strong> as specified in <strong>Rule 10 or 11</strong>.</li>
+        <li>Words and expressions used in these <strong>Rules</strong> but not defined here shall have the meanings assigned to them in the <strong>Act</strong>.</li>
+    </ol>`,
+        explanation: "Rule 2 ensures <strong>consistency and legal clarity</strong> by linking the meanings of terms used in the Rules directly to those defined in the <strong>DPDP Act, 2023</strong>. This avoids ambiguity and prevents multiple interpretations of critical terms such as <strong>Personal Data</strong>, <strong>Data Principal</strong>, <strong>Data Fiduciary</strong>, <strong>Consent</strong>, and <strong>Processing</strong>. Any interpretation of obligations under the Rules must therefore be read together with the Act.",
+    compliance: "Organizations must ensure that all internal documents, <strong>privacy policies</strong>, <strong>contracts</strong>, <strong>consent notices</strong>, and <strong>training materials</strong> use terminology exactly as defined under the <strong>DPDP Act, 2023</strong>. Legal and compliance teams should cross-reference the Act whenever interpreting obligations under these Rules to avoid <strong>misclassification</strong> or <strong>non-compliance</strong>.",
+    example: "An e-commerce company refers to users as \"customers\" internally, but while drafting its privacy notice, it correctly adopts the term <strong>Data Principal</strong> as defined under the DPDP Act. Similarly, it classifies itself as a <strong>Data Fiduciary</strong> and aligns all consent language with the statutory definition, ensuring regulatory accuracy during audits.",
+    takeaways: `<ul>
+        <li>All terms derive their meaning from the <strong>DPDP Act, 2023</strong>.</li>
+        <li>Ensures <strong>uniform interpretation</strong> across all rules.</li>
+        <li>Reduces legal ambiguity and compliance errors.</li>
+        <li>Always read the Rules <strong>together with the Act</strong>.</li>
+    </ul>`
+
+},
+{
+    title: "Rule 3: Notice given by Data Fiduciary to Data Principal",
+    subtitle: "Requirements for clear and comprehensive communication to Data Principals.",
+    text: `<ol>
+        <li>The <strong>notice</strong> given by the <strong>Data Fiduciary</strong> to the <strong>Data Principal</strong> shall be presented and understandable independently of any other information provided by the <strong>Data Fiduciary</strong>.</li>
+        <li>The <strong>notice</strong> shall give, in clear and plain language, sufficient details to enable the <strong>Data Principal</strong> to give specific and informed <strong>consent</strong>, including an itemised description of <strong>personal data</strong> and the specified purposes of processing along with the goods or services provided.</li>
+        <li>The <strong>notice</strong> shall provide the communication link for accessing the <strong>Data Fiduciary</strong>'s website or app, and describe other means by which the <strong>Data Principal</strong> may withdraw <strong>consent</strong>, exercise their rights, or make a complaint to the <strong>Board</strong>.</li>
+    </ol>`,
+       explanation: "Rule 3 enforces the principle of <strong>transparency</strong> by mandating that Data Principals are informed <strong>before</strong> their personal data is processed. The notice must be <strong>plain, concise, and easily accessible</strong>, enabling individuals to understand how and why their data is being used. This rule ensures informed decision-making and strengthens <strong>trust</strong> between users and organizations.",
+    compliance: "Organizations must redesign their <strong>privacy notices</strong> to ensure clarity and separation from other documents (such as terms of service). Notices should clearly list <strong>data categories</strong>, <strong>processing purposes</strong>, <strong>retention period</strong>, <strong>contact details</strong>, and <strong>rights mechanism</strong>. Notices must be language-friendly and accessible across web and mobile platforms.",
+    example: "A fintech mobile app displays a dedicated privacy notice during user signup explaining that it collects <strong>PAN details</strong> for KYC, <strong>bank account information</strong> for payments, and <strong>mobile numbers</strong> for transaction alerts. The notice also provides a link to withdraw consent and a grievance email ID, ensuring compliance with Rule 3.",
+    takeaways: `<ul>
+        <li><strong>Notice is mandatory</strong> before consent is taken.</li>
+        <li>Must be <strong>clear, standalone, and user-friendly</strong>.</li>
+        <li>Supports <strong>informed consent</strong> and user trust.</li>
+        <li>Language accessibility is a legal requirement.</li>
+    </ul>`
+},
+
+{
+    title: "Rule 4: Registration and Obligations of Consent Manager",
+    subtitle: "Process for registration and duties of Consent Managers.",
+    text: `<ol>
+        <li>A person meeting the conditions in Part A of the <strong>First Schedule</strong> may apply to the <strong>Board</strong> for registration as a <strong>Consent Manager</strong> by providing required particulars, information, and documents.</li>
+        <li>On receiving the application, the <strong>Board</strong> may inquire to verify fulfillment of conditions, and if satisfied, register the applicant and publish their particulars on its website, or reject the application with reasons communicated to the applicant.</li>
+        <li>The <strong>Consent Manager</strong> shall comply with obligations specified in Part B of the <strong>First Schedule</strong>.</li>
+        <li>If the <strong>Board</strong> finds non-adherence to conditions or obligations, it may inform the <strong>Consent Manager</strong> and direct corrective measures after giving an opportunity to be heard.</li>
+        <li>For protecting <strong>Data Principals</strong>, the <strong>Board</strong> may, after giving a hearing, suspend or cancel registration and issue directions as deemed necessary.</li>
+        <li>The <strong>Board</strong> may require the <strong>Consent Manager</strong> to furnish any information necessary to implement this rule.</li>
+    </ol>`,
+    explanation: "Rule 4 introduces the concept of <strong>Consent Managers</strong> as neutral platforms that empower Data Principals to exercise <strong>control over their consent</strong>. These entities reduce complexity by providing a centralized mechanism to manage consents across multiple Data Fiduciaries, enhancing accountability and reducing misuse of personal data.",
+    compliance:  "Organizations or individuals seeking to act as <strong>Consent Managers</strong> must ensure they meet the <strong>registration requirements</strong>, adhere to <strong>obligations</strong> in <strong>Part B of the First Schedule</strong>, and respond promptly to any <strong>Board directives</strong> or <strong>information requests</strong>.",
+    example: "XXX Company applies for <strong>registration</strong> as a <strong>Consent Manager</strong> by submitting all <strong>required documents</strong> and <strong>particulars</strong>. Upon approval, it publishes its <strong>registration details</strong> and implements all <strong>obligations</strong> specified by the <strong>Board</strong>. If the <strong>Board</strong> identifies <strong>non-compliance</strong>, it takes <strong>corrective measures</strong> as directed to maintain <strong>trust</strong> and <strong>legality</strong>.",
+    takeaways: "<ul><li><strong>Consent Managers</strong> must be officially <strong>registered</strong> by the <strong>Board</strong> before operating.</li><li><strong>Compliance</strong> with <strong>Part B obligations</strong> is <strong>mandatory</strong>.</li><li>The <strong>Board</strong> can monitor, direct <strong>corrective measures</strong>, and <strong>suspend registrations</strong> to protect <strong>Data Principals</strong>.</li><li><strong>Timely reporting</strong> and <strong>adherence</strong> prevent <strong>penalties</strong> and maintain <strong>operational legitimacy</strong>.</li></ul>"
+},
+{
+    title: "Rule 5: Processing for Provision or Issue of Subsidy, Benefit, Service, Certificate, Licence, or Permit by State and its Instrumentalities",
+    subtitle: "Standards for processing personal data in public services.",
+    text: `<ol>
+        <li><strong>Processing</strong> the <strong>personal data</strong> of a <strong>Data Principal</strong> under this rule shall follow the standards specified in the <strong>Second Schedule</strong>.</li>
+        <li>References to any subsidy, benefit, service, certificate, licence, or permit provided or issued under law are understood as actions performed by the <strong>State</strong> or its instrumentalities under applicable laws.</li>
+        <li>References under policy are understood as actions undertaken by the <strong>Central</strong> or <strong>State Government</strong> under policy or instructions exercising executive powers.</li>
+        <li>References using <strong>public funds</strong> mean provision or issuance by incurring expenditure from, or with accrual to, the <strong>Consolidated Fund of India</strong>, the <strong>Consolidated Fund of the State</strong>, the <strong>public account of India</strong>, the <strong>public account of the State</strong>, or the funds of local/other authorities within India or under government control.</li>
+    </ol>`,
+    explanation: "Rule 5 specifies that <strong>personal data processing</strong> for <strong>public benefits</strong>, <strong>subsidies</strong>, <strong>services</strong>, <strong>certificates</strong>, <strong>licences</strong>, or <strong>permits</strong> must comply with standards in the <strong>Second Schedule</strong> and distinguishes whether the processing is under <strong>law</strong>, <strong>policy</strong>, or <strong>public funding</strong>.",
+    compliance: "<strong>Government departments</strong> and <strong>instrumentalities</strong> must ensure that all <strong>personal data processing</strong> for <strong>public services</strong> adheres to the <strong>Second Schedule standards</strong> and clearly identify the <strong>legal</strong>, <strong>policy</strong>, or <strong>funding basis</strong> for each action.",
+    example: "A <strong>State Welfare Department</strong> processes <strong>citizen data</strong> to issue a <strong>subsidy</strong> for <strong>farmers</strong>. They follow <strong>Second Schedule standards</strong>, ensure the processing is under <strong>relevant law</strong>, and fund it through the <strong>State Consolidated Fund</strong>, maintaining <strong>proper records</strong> and <strong>transparency</strong>.",
+    takeaways: "<ul><li><strong>Personal data processing</strong> for <strong>public services</strong> must meet <strong>Second Schedule standards</strong>.</li><li>Clearly distinguish whether actions are under <strong>law</strong>, <strong>policy</strong>, or <strong>public funds</strong>.</li><li><strong>Compliance</strong> ensures <strong>transparency</strong>, <strong>accountability</strong>, and <strong>legal protection</strong>.</li><li><strong>Proper documentation</strong> and <strong>adherence</strong> prevent <strong>misuse</strong> and build <strong>citizen trust</strong>.</li></ul>"
+},
+{
+    title: "Rule 6: Reasonable Security Safeguards",
+    subtitle: "Minimum measures to protect personal data from breaches.",
+    text: `<ol>
+        <li>A <strong>Data Fiduciary</strong> shall protect <strong>personal data</strong> in its possession or under its control, including <strong>processing</strong> by a <strong>Data Processor</strong>, by taking reasonable <strong>security safeguards</strong> to prevent <strong>personal data breaches</strong>.</li>
+        <li>Reasonable safeguards include <strong>encryption</strong>, <strong>obfuscation</strong>, <strong>masking</strong>, or use of <strong>virtual tokens</strong> to secure <strong>personal data</strong>.</li>
+        <li>Appropriate measures must control access to <strong>computer resources</strong> used by the <strong>Data Fiduciary</strong> or <strong>Data Processor</strong>.</li>
+        <li>Visibility of data access must be ensured through <strong>logs</strong>, <strong>monitoring</strong>, and review for detection, investigation, and remediation of <strong>unauthorized access</strong>.</li>
+        <li>Reasonable measures must enable continued <strong>processing</strong> in case of compromise, including <strong>data backups</strong>.</li>
+        <li><strong>Logs</strong> and <strong>personal data</strong> must be retained for <strong>one year</strong> for detecting, investigating, and remediating <strong>unauthorized access</strong>, unless law requires otherwise.</li>
+        <li><strong>Contracts</strong> between <strong>Data Fiduciaries</strong> and <strong>Data Processors</strong> must include provisions for reasonable <strong>security safeguards</strong>.</li>
+        <li><strong>Technical and organizational measures</strong> must ensure effective observance of <strong>security safeguards</strong>.</li>
+        <li>"<strong>Computer resource</strong>" has the meaning assigned under the <strong>Information Technology Act, 2000</strong>.</li>
+    </ol>`,
+    explanation: "Rule 6 lays down the <strong>mandatory minimum security standards</strong> that every <strong>Data Fiduciary</strong> (and their <strong>Data Processors</strong>) must implement to protect <strong>personal data</strong> from <strong>loss</strong>, <strong>unauthorized access</strong>, <strong>disclosure</strong>, <strong>alteration</strong>, or <strong>destruction</strong>.<br><br>It requires a <strong>layered approach</strong>: <strong>technical controls</strong> (<strong>encryption</strong>, <strong>masking</strong>), <strong>access governance</strong> (<strong>RBAC</strong>, <strong>logging</strong>), <strong>visibility & monitoring</strong> (<strong>SIEM-like review</strong>), <strong>business continuity</strong> (<strong>backups</strong>), and <strong>contractual enforcement</strong> with <strong>vendors</strong>. The <strong>1-year log retention</strong> requirement supports <strong>forensic investigation</strong> and <strong>regulatory audits</strong>.<br><br>This is a <strong>core operational rule</strong>, enforceable eighteen months after notification (approx. <strong>May 2027</strong>). It aligns closely with global standards (e.g., ISO 27001 controls, GDPR Art. 32) but adds India-specific elements like 1-year log retention and explicit mention of virtual tokens.",
+    compliance: "<strong>Organizations</strong> should treat Rule 6 as a <strong>high-priority implementation item</strong> with the following <strong>roadmap</strong>: Conduct a <strong>security gap assessment</strong> against each sub-clause (now ? <strong>Q1 2026</strong>), deploy <strong>encryption</strong> (at rest & in transit) and <strong>tokenization/masking</strong> for <strong>sensitive fields</strong>, implement <strong>strict access controls</strong> (<strong>least privilege</strong>, <strong>MFA</strong>, <strong>privileged access management</strong>), set up <strong>centralized logging</strong>, <strong>monitoring</strong>, and <strong>alerting</strong> with <strong>1-year retention</strong> (<strong>secure storage</strong>), establish <strong>automated backups</strong> with regular restore testing, update all <strong>vendor/Data Processor contracts</strong> to include <strong>mandatory security clauses</strong> and <strong>audit rights</strong>, conduct <strong>annual security training</strong> and simulate <strong>breach scenarios</strong>, document all measures in a <strong>security policy</strong> and perform <strong>internal audits</strong>. Target full alignment by <strong>early 2027</strong> to avoid last-minute rush and demonstrate <strong>due diligence</strong>.",
+    example: "XXX Company, a <strong>SaaS platform</strong> handling <strong>customer names</strong>, <strong>emails</strong>, <strong>phone numbers</strong>, and <strong>payment details</strong>, immediately begins <strong>implementation</strong> post-notification. They <strong>encrypt</strong> all <strong>databases</strong> and <strong>API traffic</strong>, implement <strong>role-based access control</strong> so only <strong>customer-support engineers</strong> can see <strong>masked PII</strong>, deploy a <strong>SIEM tool</strong> to <strong>monitor</strong> and <strong>alert</strong> on <strong>suspicious logins</strong>, retain all <strong>access logs</strong> for <strong>one full year</strong> in <strong>immutable storage</strong>, maintain <strong>daily encrypted backups</strong> tested <strong>quarterly</strong>, and add <strong>detailed security obligations</strong> (including <strong>breach notification timelines</strong> and <strong>audit rights</strong>) to every contract with <strong>AWS</strong>, <strong>payment gateways</strong>, and <strong>analytics vendors</strong>. By <strong>Q1 2027</strong>, an <strong>independent audit</strong> confirms <strong>full compliance</strong> with Rule 6.",
+    takeaways: "<ul><li><strong>Security safeguards</strong> are <strong>mandatory</strong> to prevent <strong>personal data breaches</strong>.</li><li>Include <strong>technical</strong> (<strong>encryption</strong>, <strong>masking</strong>, <strong>virtual tokens</strong>), <strong>organizational</strong> (<strong>access controls</strong>, <strong>training</strong>, <strong>monitoring</strong>), and <strong>contractual measures</strong> (<strong>vendor obligations</strong>).</li><li><strong>Monitor access</strong>, retain <strong>logs</strong> for <strong>one year</strong>, and ensure <strong>continued processing</strong> in case of <strong>compromise</strong> (<strong>backups & disaster recovery</strong>).</li><li><strong>Compliance</strong> builds <strong>trust</strong>, reduces <strong>legal</strong> and <strong>operational risks</strong>, and helps avoid <strong>significant penalties</strong> — full implementation required by ~<strong>May 2027</strong>.</li></ul>"
+},
+{
+    title: "Rule 7: Intimation of Personal Data Breach",
+    subtitle: "Obligations to notify affected Data Principals and the Board.",
+    text: `<ol>
+        <li>On becoming aware of a <strong>personal data breach</strong>, the <strong>Data Fiduciary</strong> shall promptly inform each affected <strong>Data Principal</strong> in a concise, clear, and plain manner via her <strong>user account</strong> or registered communication mode.</li>
+        <li>The notice to <strong>Data Principals</strong> shall include the <strong>breach</strong> description (nature, extent, timing), consequences likely to affect them, measures implemented to mitigate risk, safety measures they may take, and business contact information for queries.</li>
+        <li>The <strong>Data Fiduciary</strong> shall also inform the <strong>Board</strong> without delay, providing a description of the <strong>breach</strong>, its nature, extent, timing, location, and likely impact.</li>
+        <li>Within <strong>seventy-two hours</strong>, or longer if approved by the <strong>Board</strong>, the <strong>Data Fiduciary</strong> must provide updated and detailed information including events, circumstances, reasons, mitigation measures, findings about the <strong>breach</strong> cause, remedial actions, and a report of notices given to affected <strong>Data Principals</strong>.</li>
+    </ol>`,
+    explanation: "Rule 7 imposes <strong>strict</strong>, <strong>time-bound breach notification obligations</strong> on <strong>Data Fiduciaries</strong>. It requires <strong>immediate communication</strong> to affected individuals (<strong>Data Principals</strong>) in <strong>plain language</strong>, followed by a <strong>detailed report</strong> to the <strong>Data Protection Board</strong> within <strong>72 hours</strong> (extendable only with <strong>Board approval</strong>). The goal is <strong>rapid transparency</strong>, enabling affected people to protect themselves and allowing the regulator to assess <strong>systemic risk</strong>.<br><br>This is a <strong>core operational rule</strong>, enforceable eighteen months after notification (approx. <strong>May 2027</strong>). The <strong>72-hour timeline</strong> aligns with many global frameworks (e.g., <strong>GDPR</strong> 72-hour reporting to supervisory authority), but the <strong>direct-to-individual notification</strong> via <strong>user account</strong> is particularly <strong>user-centric</strong>.",
+    compliance: "<strong>Organizations</strong> should treat <strong>breach response</strong> as a <strong>high-priority capability</strong> with the following actions: Establish 24/7 <strong>breach detection</strong> & <strong>incident response team/process</strong>, define '<strong>becoming aware</strong>' triggers and internal <strong>escalation matrix</strong>, prepare templates for <strong>user notifications</strong> (<strong>concise</strong>, <strong>plain language</strong>, containing all required elements), set up <strong>direct communication channels</strong> via <strong>user account</strong> (<strong>in-app alert</strong>, <strong>email/SMS fallback</strong>), build <strong>automated or semi-automated reporting pipeline</strong> to the <strong>Board</strong>, conduct regular <strong>tabletop exercises</strong> simulating <strong>breaches</strong> of varying severity, document every <strong>breach</strong> (even minor ones) for potential future disclosure, train all staff on <strong>breach identification</strong> and <strong>immediate reporting</strong>. Target full <strong>operational readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company detects <strong>unauthorised access</strong> to a <strong>customer database</strong> exposing <strong>names</strong>, <strong>emails</strong>, and <strong>partial payment details</strong>. Within hours, they send an <strong>in-app notification</strong> and <strong>email</strong> to every <strong>affected user</strong> with a <strong>clear summary</strong>: what happened, when, what <strong>data</strong> was exposed, <strong>potential risks</strong> (<strong>phishing</strong>, <strong>identity theft</strong>), steps the company has taken (<strong>password reset</strong> forced, <strong>enhanced monitoring</strong>), recommended <strong>user actions</strong> (change passwords, monitor statements), and a <strong>dedicated helpline</strong>. Simultaneously, they notify the <strong>Data Protection Board</strong> with <strong>initial facts</strong>. Within <strong>72 hours</strong>, a <strong>comprehensive report</strong> is submitted detailing <strong>root cause</strong> (<strong>unpatched vulnerability</strong>), <strong>containment steps</strong>, <strong>forensic findings</strong>, and proof of <strong>user notifications</strong> — demonstrating <strong>full compliance</strong>.",
+    takeaways: "<ul><li><strong>Immediate</strong> and <strong>clear notification</strong> to affected <strong>Data Principals</strong> is <strong>mandatory</strong> — use <strong>user account</strong> or registered contact method.</li><li><strong>Detailed reporting</strong> to the <strong>Data Protection Board</strong> must occur without delay, with a full update within <strong>72 hours</strong> (or as approved).</li><li><strong>Proper breach management procedures</strong> reduce impact, <strong>legal risk</strong>, and <strong>reputational damage</strong>.</li><li><strong>Transparency</strong> through <strong>timely</strong>, <strong>honest communication</strong> builds long-term <strong>user trust</strong> and <strong>accountability</strong> — full readiness required by ~<strong>May 2027</strong>.</li></ul>"
+},
+
+    {
+        title: "Rule 8: Time Period for Specified Purpose to be Deemed as No Longer Being Served",
+        subtitle: "Retention and erasure of personal data after the purpose is fulfilled.",
+        text: `<ol>
+            <li>A <strong>Data Fiduciary</strong> <strong>processing</strong> <strong>personal data</strong> for purposes specified in the <strong>Third Schedule</strong> shall erase such <strong>personal data</strong> once the purpose is served, unless retention is required by law or within the period specified in the <strong>Third Schedule</strong> if the <strong>Data Principal</strong> does not approach the <strong>Data Fiduciary</strong> or exercise her rights.</li>
+            <li>At least <strong>forty-eight hours</strong> before erasure, the <strong>Data Fiduciary</strong> shall notify the <strong>Data Principal</strong> that the <strong>personal data</strong> will be erased unless she initiates contact or exercises her rights.</li>
+            <li>A <strong>Data Fiduciary</strong> shall retain <strong>personal data</strong>, associated traffic data, and <strong>processing</strong> logs for a minimum of <strong>one year</strong> from the date of <strong>processing</strong> for purposes in the <strong>Seventh Schedule</strong>, after which it shall erase them unless further retention is legally required.</li>
+        </ol>`,
+        explanation: "Rule 8 enforces the principle of <strong>storage limitation</strong> by requiring <strong>Data Fiduciaries</strong> to <strong>erase personal data</strong> once the <strong>original purpose</strong> is <strong>fulfilled</strong> (with exceptions for <strong>legal retention</strong> or <strong>Third Schedule periods</strong>). It mandates a <strong>48-hour pre-erasure notice</strong> to give <strong>Data Principals</strong> a <strong>final opportunity</strong> to act, and imposes a minimum <strong>1-year retention period</strong> for certain <strong>logs</strong> and <strong>traffic data</strong> (<strong>Seventh Schedule</strong>) to support <strong>audits</strong>, <strong>investigations</strong>, and <strong>security forensics</strong>.<br><br>This is a <strong>core operational rule</strong>, enforceable ~<strong>May 2027</strong> (18 months post-notification).",
+        compliance: "Implement <strong>automated or semi-automated data lifecycle management</strong>: Map every <strong>processing activity</strong> to its <strong>purpose</strong> and <strong>retention period</strong> (<strong>Third/Seventh Schedules</strong> or law), build <strong>expiry tracking</strong> and <strong>automated deletion workflows</strong>, set up <strong>48-hour pre-erasure notifications</strong> (<strong>email</strong> + <strong>in-app</strong> if <strong>user account</strong> exists), retain <strong>logs</strong>, <strong>traffic data</strong>, and necessary <strong>personal data</strong> for at least <strong>1 year</strong> in <strong>secure</strong>, <strong>auditable storage</strong>, document <strong>exceptions</strong> (<strong>legal holds</strong>) with justification, test <strong>erasure processes</strong> regularly to ensure <strong>complete</strong>, <strong>irreversible deletion</strong> where required. Target full <strong>readiness</strong> by <strong>early 2027</strong>.",
+        example: "XXX Company runs an <strong>e-commerce platform</strong>. After an order is <strong>delivered</strong> and the <strong>30-day return window expires</strong> (<strong>purpose served</strong>), they send a <strong>48-hour notice</strong> via <strong>app</strong> and <strong>email</strong> stating: 'Your <strong>order data</strong> will be <strong>erased</strong> unless you contact us or <strong>exercise rights</strong>.' If no response, <strong>data</strong> is <strong>automatically deleted</strong>. All <strong>access logs</strong>, <strong>order metadata</strong>, and <strong>traffic data</strong> are retained in <strong>immutable storage</strong> for <strong>one full year</strong> after <strong>processing</strong> for <strong>security</strong> and <strong>audit purposes</strong>.",
+        takeaways: "<ul><li><strong>Personal data</strong> must be <strong>erased</strong> once its <strong>specified purpose</strong> is <strong>complete</strong> (unless <strong>legally required</strong> otherwise).</li><li>Notify <strong>Data Principals</strong> at least <strong>48 hours</strong> before <strong>erasure</strong> to allow <strong>last-minute action</strong> or <strong>rights exercise</strong>.</li><li>Retain <strong>logs</strong>, <strong>traffic data</strong>, and related <strong>personal data</strong> for a minimum of <strong>one year</strong> for <strong>operational</strong>, <strong>security</strong>, and <strong>legal purposes</strong>.</li><li><strong>Strong retention tracking</strong> and <strong>automated deletion</strong> reduce <strong>compliance risk</strong> and demonstrate <strong>accountability</strong> — full implementation required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 9: Contact Information of Person to Answer Questions About Processing",
+        "subtitle": "Ensuring accessible communication for Data Principals regarding their personal data.",
+        "text": `<ol>
+            <li>Every <strong>Data Fiduciary</strong> shall prominently publish on its website or app, and include in every response to communications regarding <strong>Data Principal</strong> rights, the business contact information of the <strong>Data Protection Officer</strong>, if applicable, or a designated person able to answer questions about <strong>personal data processing</strong>.</li>
+        </ol>`,
+    explanation: "Rule 9 requires <strong>organizations</strong> to make it <strong>easy</strong> and <strong>transparent</strong> for <strong>individuals</strong> to ask <strong>questions</strong> or raise <strong>concerns</strong> about how their <strong>personal data</strong> is handled. The <strong>contact details</strong> of the <strong>Data Protection Officer</strong> (<strong>DPO</strong>) — or a <strong>designated responsible person</strong> — must be <strong>clearly visible</strong> on <strong>public platforms</strong> and <strong>automatically included</strong> in every <strong>communication</strong> related to <strong>data rights</strong> (<strong>access</strong>, <strong>correction</strong>, <strong>erasure</strong>, <strong>grievances</strong>, etc.).<br><br>This rule promotes <strong>direct accountability</strong>, reduces <strong>escalation</strong> to the <strong>Board</strong>, and builds <strong>user trust</strong>. It is a <strong>core operational obligation</strong>, enforceable approximately <strong>May 2027</strong>.",
+    compliance: "Designate a clear <strong>contact person</strong> (<strong>DPO</strong> preferred for larger entities), publish <strong>contact details</strong> <strong>prominently</strong> (<strong>website footer</strong>, <strong>privacy policy</strong>, <strong>app settings</strong>, <strong>cookie banner</strong>), <strong>automatically include</strong> the same <strong>contact information</strong> in every <strong>automated</strong> or <strong>manual reply</strong> to <strong>data rights requests</strong> or inquiries, ensure availability in relevant languages for diverse users, set up a <strong>ticketing system</strong> to track and monitor <strong>response quality</strong> and <strong>timeliness</strong>, train <strong>support staff</strong> on consistent handling of <strong>data-related queries</strong>, periodically test <strong>visibility</strong> and <strong>responsiveness</strong>. Complete early to strengthen <strong>trust</strong> before the <strong>May 2027</strong> deadline.",
+    example: "XXX Company places a prominent 'Contact our <strong>Data Protection Officer</strong>' <strong>link</strong> in the <strong>footer</strong> of every <strong>webpage</strong> and <strong>app screen</strong>, showing <strong>email</strong>: dpo@techsolutions.in, <strong>phone</strong>: +91-80-XXXX-XXXX, and a dedicated <strong>web form</strong>. Every <strong>reply</strong> to a <strong>data access request</strong> (<strong>automated</strong> or <strong>manual</strong>) includes: 'For any <strong>questions</strong> about your <strong>personal data</strong> or this request, contact our <strong>DPO</strong> at dpo@techsolutions.in or via techsolutions.in/contact-dpo'.",
+    takeaways: "<ul><li><strong>Data Principals</strong> must have <strong>easy</strong>, <strong>visible access</strong> to a <strong>responsible contact</strong> for <strong>questions</strong> about their <strong>personal data</strong>.</li><li><strong>Contact details</strong> must be <strong>prominent</strong> on <strong>website/app</strong> and included in all <strong>rights-related communications</strong>.</li><li><strong>Clear</strong>, <strong>responsive channels</strong> reduce formal <strong>complaints</strong> to the <strong>Board</strong> and increase <strong>user confidence</strong>.</li><li><strong>Implement early</strong> — required by ~<strong>May 2027</strong> to demonstrate <strong>transparency</strong> and <strong>accountability</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 10: Verifiable Consent for Processing of Personal Data of Child",
+        "subtitle": "Obtaining and verifying parental consent for child data processing.",
+        "text": `<ol>
+            <li>A <strong>Data Fiduciary</strong> shall implement technical and organizational measures to obtain verifiable <strong>consent</strong> from a <strong>parent</strong> before <strong>processing</strong> any <strong>personal data</strong> of a <strong>child</strong>.</li>
+            <li>The <strong>Data Fiduciary</strong> must ensure the individual claiming to be the <strong>parent</strong> is an <strong>adult</strong> and identifiable, using either reliable identity and age details available with the <strong>Data Fiduciary</strong> or voluntarily provided details or virtual tokens issued by an <strong>authorised entity</strong>.</li>
+            <li>"<strong>Adult</strong>" means a person who has completed 18 years of age.</li>
+            <li>"<strong>Authorised entity</strong>" includes entities entrusted by law or the government to issue identity and age details or virtual tokens, and persons appointed by such entities, including <strong>Digital Locker Service Providers</strong>.</li>
+            <li>"<strong>Digital Locker Service Provider</strong>" means an intermediary, body corporate, or government agency notified by the <strong>Central Government</strong> under the <strong>IT Act, 2000</strong> for issuance and verification of identity/age details or tokens.</li>
+        </ol>`,
+    explanation: "Rule 10 creates <strong>strong protection</strong> for <strong>children's personal data</strong> by prohibiting any <strong>processing</strong> without <strong>verifiable parental/guardian consent</strong>. <strong>Verification</strong> must confirm that the <strong>consenting person</strong> is an <strong>adult</strong> (=18 years) and is genuinely who they claim to be — preferably using <strong>secure</strong>, <strong>government-backed methods</strong> (e.g., <strong>virtual tokens</strong> from <strong>DigiLocker</strong> or <strong>authorised entities</strong>).<br><br>This rule reflects <strong>global child data protection standards</strong> (similar to <strong>COPPA</strong> or <strong>GDPR</strong> Art. 8) but leverages <strong>Indian digital identity infrastructure</strong>. It is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong>.",
+    compliance: "Add <strong>age-gating logic</strong> to all <strong>user registration/onboarding flows</strong>, route <strong>users under 18</strong> to a <strong>mandatory parental consent workflow</strong>, integrate reliable <strong>verification methods</strong> (existing trusted <strong>KYC data</strong>, <strong>DigiLocker virtual tokens</strong>, <strong>Aadhaar-based age proof</strong> where permitted), maintain <strong>auditable records</strong> of <strong>consent collection</strong> and <strong>verification attempts</strong>, design <strong>child-friendly interfaces</strong> with <strong>parental oversight/dashboard options</strong>, train <strong>product</strong>, <strong>legal</strong>, and <strong>support teams</strong> on <strong>child data risks</strong> and <strong>legal obligations</strong>, regularly test the <strong>verification flow</strong> for <strong>robustness</strong> and <strong>edge cases</strong>. Target full <strong>implementation</strong> well before <strong>May 2027</strong> to avoid <strong>high penalties</strong>.",
+    example: "A <strong>12-year-old</strong> tries to <strong>sign up</strong> for XXX Company's <strong>kids learning app</strong>. The system detects <strong>age <18</strong> and <strong>blocks account creation</strong> until <strong>parental consent</strong> is <strong>verified</strong>. The parent <strong>authenticates</strong> via <strong>DigiLocker</strong>, receives a <strong>virtual token</strong> confirming they are 40 years old, and grants <strong>verifiable consent</strong>. Only then is the <strong>child's profile activated</strong> and <strong>learning data processing</strong> allowed.",
+    takeaways: "<ul><li>Any <strong>processing</strong> of a <strong>child's personal data</strong> requires <strong>verifiable parental/guardian consent</strong> — no exceptions without specific <strong>exemptions</strong>.</li><li><strong>Verification</strong> must prove the <strong>consenting person</strong> is an <strong>adult</strong> (=18) and <strong>identifiable</strong> — prefer <strong>secure government-backed methods</strong> (<strong>virtual tokens</strong>, <strong>DigiLocker</strong>).</li><li><strong>Technical</strong> and <strong>organizational safeguards</strong> are <strong>mandatory</strong> to prevent <strong>fake</strong> or <strong>unauthorized consent</strong>.</li><li><strong>Child data protection</strong> is a <strong>high-risk area</strong> — <strong>non-compliance</strong> carries <strong>severe penalties</strong> — full readiness required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 11: Verifiable Consent for Processing of Personal Data of Person with Disability Having Lawful Guardian",
+        "subtitle": "Verification of lawful guardianship for consent-based processing.",
+        "text": `<ol>
+            <li>A <strong>Data Fiduciary</strong> shall exercise due diligence to verify that the individual claiming to be the lawful <strong>guardian</strong> of a <strong>person with disability</strong> is appointed by a <strong>court</strong>, <strong>designated authority</strong>, or <strong>local level committee</strong> under applicable guardianship laws.</li>
+            <li>"<strong>Designated authority</strong>" means an authority appointed under section 15 of the <strong>Rights of Persons with Disabilities Act, 2016</strong> to support persons with disabilities in exercising legal capacity.</li>
+            <li>"<strong>Law applicable to guardianship</strong>" refers to the <strong>Rights of Persons with Disabilities Act, 2016</strong> or the <strong>National Trust Act, 1999</strong>, depending on the nature of the disability.</li>
+            <li>"<strong>Local level committee</strong>" means a committee constituted under section 13 of the <strong>National Trust Act, 1999</strong>.</li>
+            <li>"<strong>Person with disability</strong>" includes individuals with long-term physical, mental, intellectual, sensory, or multiple disabilities who are unable to take legally binding decisions despite adequate support.</li>
+        </ol>`,
+    explanation: "Rule 11 protects <strong>adults with disabilities</strong> who cannot provide <strong>legally binding consent</strong> by requiring <strong>organizations</strong> to <strong>verify</strong> that any <strong>guardian</strong> giving <strong>consent</strong> has been <strong>lawfully appointed</strong> under <strong>Indian law</strong> (primarily the <strong>Rights of Persons with Disabilities Act, 2016</strong> or <strong>National Trust Act, 1999</strong>). This ensures <strong>consent</strong> is <strong>valid</strong> and protects <strong>vulnerable individuals</strong> from <strong>unauthorized</strong> or <strong>exploitative data processing</strong>.<br><br>This is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong>.",
+    compliance: "Create a clear <strong>verification workflow</strong> for <strong>guardian-provided consent</strong>, request and validate <strong>official documents</strong> (<strong>court guardianship order</strong>, certificate from <strong>designated authority</strong> under s.15 <strong>RPwD Act</strong>, or <strong>local committee appointment</strong> under <strong>National Trust Act</strong>), train <strong>customer support</strong> and <strong>legal teams</strong> to recognize and verify valid <strong>guardianship documents</strong>, store <strong>verification records</strong> <strong>securely</strong> and <strong>confidentially</strong>, provide <strong>accessible</strong>, <strong>assisted consent mechanisms</strong> where needed, review the process <strong>annually</strong> for <strong>effectiveness</strong> and <strong>legal updates</strong>. Target full <strong>readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company receives a request from a <strong>guardian</strong> to manage <strong>financial services</strong> for a 35-year-old user with <strong>severe autism</strong>. The company requests the <strong>court-issued guardianship order</strong> under the <strong>Rights of Persons with Disabilities Act, 2016</strong>, <strong>verifies</strong> the <strong>appointment details</strong> and <strong>identity</strong>, and only then <strong>accepts consent</strong> and <strong>processes</strong> the user's <strong>personal data</strong>.",
+    takeaways: "<ul><li><strong>Guardian consent</strong> for a <strong>person with disability</strong> must be <strong>verified</strong> against a valid <strong>legal appointment</strong> (<strong>court</strong>, <strong>designated authority</strong>, or <strong>local committee</strong>).</li><li><strong>Verification</strong> must align with the correct law (<strong>RPwD Act 2016</strong> or <strong>National Trust Act 1999</strong> depending on <strong>disability</strong>).</li><li><strong>Due diligence</strong> protects <strong>vulnerable individuals</strong> and reduces <strong>legal/reputational exposure</strong>.</li><li>Implement <strong>robust verification</strong> by ~<strong>May 2027</strong> to ensure <strong>compliance</strong>.</li></ul>"
+    },
+    
+    {
+        "title": "Rule 12: Exemptions from certain obligations applicable to processing of personal data of child",
+        "subtitle": "Limited exemptions for child data processing in specified cases.",
+        "text": `<ol>
+            <li>Where <strong>processing</strong> of <strong>personal data</strong> of a <strong>child</strong> is necessary for the purposes specified in Part B of the <strong>Fourth Schedule</strong>, the provisions of section 9 of the <strong>Act</strong> and <strong>rules 10 and 11</strong> shall not apply, subject to <strong>compliance</strong> with standards in the <strong>Second Schedule</strong>.</li>
+            <li>The <strong>Data Fiduciary</strong> shall process the <strong>personal data</strong> of a <strong>child</strong> in accordance with the standards specified in the <strong>Second Schedule</strong>.</li>
+        </ol>`,
+    explanation: "Rule 12 creates <strong>narrow</strong>, <strong>conditional exemptions</strong> from the strict <strong>child consent</strong> and <strong>verifiable parental consent</strong> requirements (Section 9 of the Act + Rules 10 and 11) for <strong>specific purposes</strong> listed in Part B of the <strong>Fourth Schedule</strong> (typically <strong>child protection</strong>, <strong>public health</strong>, <strong>education</strong>, or other <strong>public-interest activities</strong> involving <strong>children</strong>). Even when <strong>exempt</strong>, the organization must still fully comply with the <strong>Second Schedule standards</strong> (<strong>reasonable security safeguards</strong>, <strong>data minimization</strong>, <strong>purpose limitation</strong>, etc.).<br><br>This balances <strong>child protection</strong> with legitimate <strong>public-interest processing</strong>, while ensuring no <strong>blanket exemption</strong> exists. It is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong> (18 months post-notification).",
+    compliance: "Carefully review <strong>Fourth Schedule Part B</strong> to identify <strong>qualifying purposes</strong>, <strong>document</strong> every instance where an <strong>exemption</strong> is <strong>claimed</strong>, clearly linking it to a specific <strong>Part B purpose</strong>, apply <strong>Second Schedule safeguards</strong> in full (<strong>encryption</strong>, <strong>access control</strong>, <strong>logging</strong>, <strong>minimization</strong>, etc.) even when <strong>exempt</strong> from <strong>consent rules</strong>, avoid <strong>broad interpretation</strong> of <strong>exemptions</strong> — default to <strong>verifiable consent</strong> where any doubt exists, train <strong>product</strong> and <strong>legal teams</strong> on the <strong>narrow scope</strong> and <strong>documentation requirement</strong>, audit <strong>exemption usage</strong> <strong>periodically</strong> to ensure it remains <strong>justified</strong> and <strong>compliant</strong>. Target full <strong>process readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company runs a free <strong>child safety reporting feature</strong> in its <strong>app</strong>. When a <strong>child</strong> submits a report of <strong>bullying</strong> or <strong>abuse</strong>, the <strong>processing</strong> is <strong>exempt</strong> from parental <strong>verifiable consent</strong> (qualifies under <strong>Fourth Schedule Part B public-safety purpose</strong>). However, the company still applies full <strong>Second Schedule protections</strong>: <strong>data</strong> is <strong>encrypted</strong>, <strong>access</strong> is <strong>restricted</strong> to <strong>child-protection officers</strong>, <strong>logs</strong> are <strong>retained</strong>, and only <strong>minimal data</strong> is collected.",
+    takeaways: "<ul><li><strong>Exemptions</strong> from <strong>child consent/verifiable consent rules</strong> are very <strong>narrow</strong> — only for <strong>specific purposes</strong> listed in <strong>Fourth Schedule Part B</strong>.</li><li><strong>Second Schedule standards</strong> (<strong>security</strong>, <strong>minimization</strong>, etc.) must always be followed — there is no <strong>exemption</strong> from the Act itself.</li><li>Every <strong>exemption claim</strong> must be <strong>documented</strong> and <strong>justifiable</strong> to defend against <strong>scrutiny</strong> or <strong>complaints</strong>.</li><li><strong>Child data</strong> remains <strong>high-risk</strong> — handle <strong>exemptions</strong> <strong>conservatively</strong> — full <strong>compliance</strong> required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 13: Additional Obligations of Significant Data Fiduciary",
+        "subtitle": "Enhanced accountability and risk management for large-scale data processing.",
+        "text": `<ol>
+            <li>A <strong>Significant Data Fiduciary</strong> shall conduct a <strong>Data Protection Impact Assessment (DPIA)</strong> and an audit at least once every <strong>twelve months</strong> from the date it is notified as a <strong>Significant Data Fiduciary</strong>.</li>
+            <li>The DPIA and audit shall ensure effective <strong>compliance</strong> with the provisions of the <strong>Act</strong> and the rules made thereunder.</li>
+            <li>The person conducting the DPIA and audit shall submit a report containing significant observations to the <strong>Data Protection Board</strong>.</li>
+            <li>The <strong>Significant Data Fiduciary</strong> shall exercise due diligence to ensure that <strong>technical measures</strong>, including <strong>algorithmic software</strong>, do not pose risks to the rights of <strong>Data Principals</strong>.</li>
+            <li><strong>Personal data</strong> notified by the <strong>Central Government</strong> shall be processed subject to <strong>data localisation</strong> requirements, ensuring that such <strong>personal data</strong> and related traffic data are not transferred outside India.</li>
+            <li>The localisation requirements shall be based on recommendations of a committee constituted by the <strong>Central Government</strong>, including officials from the <strong>Ministry of Electronics and Information Technology</strong>.</li>
+        </ol>`,
+    explanation: "Rule 13 imposes <strong>significantly stricter obligations</strong> on <strong>organizations</strong> designated as <strong>Significant Data Fiduciaries</strong> (<strong>SDFs</strong>) — likely entities handling <strong>large volumes of data</strong>, <strong>sensitive data</strong>, or <strong>high-risk processing</strong> (<strong>designation</strong> by <strong>Central Government</strong>). Key requirements include: <strong>annual DPIA</strong> + <strong>independent audit</strong>, submission of <strong>audit/DPIA reports</strong> to the <strong>Data Protection Board</strong>, <strong>due diligence</strong> on <strong>algorithmic systems</strong> to prevent <strong>rights harms</strong> (<strong>bias</strong>, <strong>discrimination</strong>, etc.), and <strong>mandatory data localisation</strong> for any categories of <strong>personal data</strong> notified by the government.<br><br>This rule reflects the higher risk posed by <strong>large-scale</strong> or <strong>critical data handlers</strong>. It becomes enforceable approximately <strong>May 2027</strong> (or from the date of <strong>SDF designation</strong>).",
+    compliance: "If you are (or expect to be) designated an <strong>SDF</strong>: Prepare for <strong>annual DPIA</strong> (<strong>risk assessment</strong> of <strong>processing activities</strong>) and <strong>independent compliance audits</strong>, engage qualified <strong>third-party auditors</strong> for <strong>DPIA/audit execution</strong>, set up a process to submit detailed reports (<strong>significant findings</strong>, <strong>recommendations</strong>) to the <strong>Board</strong>, conduct regular <strong>algorithmic impact assessments</strong> (<strong>fairness</strong>, <strong>bias</strong>, <strong>transparency</strong>, <strong>rights risks</strong>), monitor government notifications for <strong>localisation orders</strong> and implement <strong>geo-fencing/storage</strong> in India for affected data, build internal governance (<strong>committee</strong>, <strong>tools</strong>, <strong>documentation</strong>) to manage these obligations, engage early with <strong>legal/compliance experts</strong> on potential <strong>designation criteria</strong>. Target <strong>readiness</strong> well before <strong>May 2027</strong> or <strong>designation date</strong>.",
+    example: "XXX Company is notified as a <strong>Significant Data Fiduciary</strong> due to its <strong>large user base</strong> and <strong>sensitive financial data processing</strong>. They conduct an <strong>annual DPIA</strong> covering <strong>user profiling</strong> and <strong>recommendation algorithms</strong>, engage an <strong>independent auditor</strong> to verify <strong>compliance</strong>, submit the <strong>audit report</strong> (including <strong>bias mitigation steps</strong>) to the <strong>Data Protection Board</strong>, and ensure all notified <strong>KYC</strong> and <strong>financial personal data</strong> is stored only in <strong>Indian data centers</strong> per government <strong>localisation directive</strong>.",
+    takeaways: "<ul><li><strong>Annual DPIA</strong>, <strong>independent audit</strong>, and <strong>report submission</strong> to the <strong>Board</strong> are <strong>mandatory</strong> for <strong>Significant Data Fiduciaries</strong>.</li><li><strong>Algorithmic systems</strong> must be actively <strong>assessed</strong> and <strong>mitigated</strong> for risks to <strong>Data Principal rights</strong> (<strong>bias</strong>, <strong>discrimination</strong>, etc.).</li><li><strong>Data localisation</strong> applies to any <strong>personal data categories</strong> notified by the <strong>Central Government</strong>.</li><li><strong>SDF obligations</strong> represent a <strong>significantly higher compliance burden</strong> — prepare early for potential <strong>designation</strong> (~<strong>May 2027</strong> or from <strong>designation date</strong>).</li></ul>"
+    },
+ 
+    {
+        "title": "Rule 14: Rights of Data Principals",
+        "subtitle": "Transparent mechanisms for exercising data protection rights.",
+        "text": `<ol>
+            <li><strong>Data Fiduciaries</strong> and <strong>Consent Managers</strong> shall clearly publish the means through which <strong>Data Principals</strong> can exercise their rights.</li>
+            <li>Required identifiers for verification must be communicated under the <strong>terms of service</strong>.</li>
+            <li>Requests to exercise rights shall be submitted using the prescribed means.</li>
+            <li>A grievance redressal mechanism must be published and operational, with responses provided within <strong>ninety days</strong>.</li>
+            <li><strong>Data Principals</strong> may nominate individuals to exercise rights on their behalf.</li>
+        </ol>`,
+    explanation: "Rule 14 empowers <strong>Data Principals</strong> by requiring <strong>organizations</strong> to provide <strong>clear</strong>, <strong>accessible</strong>, and <strong>transparent ways</strong> to exercise <strong>statutory rights</strong> (<strong>access</strong>, <strong>correction</strong>, <strong>erasure</strong>, <strong>nomination of representative</strong>, etc.). It mandates <strong>public publication</strong> of the <strong>process</strong>, specification of required <strong>verification identifiers</strong> (e.g., <strong>email + OTP</strong>), mandatory use of <strong>prescribed channels</strong>, a <strong>published</strong> and <strong>operational grievance mechanism</strong> with a strict <strong>90-day response SLA</strong>, and the right to <strong>nominate</strong> someone to act on their behalf.<br><br>This rule is central to <strong>user empowerment</strong> and <strong>accountability</strong>. It is a <strong>core operational obligation</strong>, enforceable approximately <strong>May 2027</strong> (18 months post-notification).",
+    compliance: "Create a dedicated '<strong>Data Rights</strong>' or '<strong>My Privacy Rights</strong>' <strong>section/portal</strong> on <strong>website</strong> and <strong>app</strong> with <strong>clear instructions</strong> and <strong>forms</strong>, explicitly list required <strong>verification identifiers</strong> (e.g., registered <strong>email + OTP</strong>, <strong>user ID</strong>) in the <strong>privacy policy</strong> and <strong>terms of service</strong>, build a <strong>secure</strong>, <strong>tracked request intake system</strong> (<strong>dashboard</strong> or <strong>ticketing</strong>) that routes <strong>rights requests</strong> to the correct <strong>team</strong>, set up a <strong>published grievance redressal mechanism</strong> (<strong>online form</strong>, <strong>email</strong>, <strong>helpline</strong>) with <strong>automated acknowledgment</strong> and <strong>90-day SLA tracking</strong>, enable <strong>nomination workflow</strong> (with <strong>verification</strong> of <strong>nominee</strong> and <strong>principal consent</strong>), train <strong>support</strong> and <strong>legal teams</strong> on <strong>rights handling timelines</strong> and <strong>documentation</strong>, test <strong>end-to-end flow</strong> <strong>quarterly</strong> and monitor <strong>completion rates</strong>. Target full <strong>operational readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company launches a '<strong>My Data Rights</strong>' <strong>dashboard</strong> in their <strong>app</strong> and <strong>website</strong>. <strong>Users</strong> can submit <strong>requests</strong> for <strong>data access</strong>, <strong>correction</strong>, <strong>erasure</strong>, or <strong>nomination</strong> via a <strong>simple form</strong> requiring <strong>verified email + OTP</strong> (<strong>listed</strong> in <strong>terms of service</strong>). All <strong>requests</strong> are <strong>tracked</strong> in a <strong>backend system</strong>. A separate '<strong>Grievance Redressal</strong>' <strong>link</strong> leads to a <strong>form</strong> with <strong>automated acknowledgment</strong>; any <strong>complaint</strong> is <strong>resolved</strong> within <strong>90 days</strong>. <strong>Users</strong> can <strong>nominate</strong> a <strong>family member</strong> to manage their <strong>rights</strong> by uploading <strong>consent proof</strong>.",
+    takeaways: "<ul><li><strong>Rights exercise mechanisms</strong> must be <strong>clearly published</strong>, <strong>easy to find</strong>, and <strong>user-friendly</strong>.</li><li><strong>Grievance redressal</strong> must be <strong>operational</strong> with a strict <strong>90-day response timeline</strong>.</li><li><strong>Nomination of representatives</strong> is <strong>explicitly permitted</strong> (with <strong>verification</strong>).</li><li><strong>Transparent rights handling</strong> reduces <strong>escalation</strong> to the <strong>Board</strong> and builds <strong>long-term trust</strong> — full implementation required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 15: Transfer of personal data outside the territory of India",
+        "subtitle": "Conditional cross-border data transfers.",
+        "text": `<ol>
+            <li><strong>Personal data</strong> may be transferred outside <strong>India</strong> subject to conditions specified by the <strong>Central Government</strong>.</li>
+            <li>Restrictions may apply when data is made available to a <strong>foreign State</strong> or entities controlled by such <strong>State</strong>.</li>
+            <li><strong>Compliance</strong> with general or special government orders is mandatory.</li>
+        </ol>`,
+    explanation: "Rule 15 allows <strong>cross-border transfers</strong> of <strong>personal data</strong> but makes them <strong>conditional</strong> on <strong>Central Government directives</strong> (<strong>adequacy decisions</strong>, <strong>standard contractual clauses</strong>, <strong>binding corporate rules</strong>, etc.). It explicitly flags <strong>restrictions</strong> when data could be accessed by <strong>foreign governments</strong> or <strong>state-controlled entities</strong>, reflecting <strong>national security</strong> and <strong>sovereignty concerns</strong>.<br><br>This rule balances <strong>global business operations</strong> with <strong>data sovereignty</strong>. It is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong>.",
+    compliance: "Monitor <strong>MeitY/Central Government notifications</strong> for permitted destinations, <strong>adequacy lists</strong>, or <strong>transfer conditions</strong>, update <strong>vendor contracts</strong> with overseas processors to include required <strong>safeguards</strong> (e.g., <strong>SCCs</strong>, <strong>audit rights</strong>), implement <strong>geo-fencing</strong> or <strong>data residency controls</strong> to block <strong>transfers</strong> to restricted jurisdictions or entities, conduct <strong>transfer impact assessments</strong> for <strong>high-risk flows</strong>, maintain a register of <strong>international transfers</strong> with <strong>legal basis</strong> and <strong>safeguards</strong>, train <strong>legal</strong> and <strong>engineering teams</strong> on current <strong>restrictions</strong>. Target full <strong>compliance readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company uses <strong>cloud storage</strong> in <strong>Singapore</strong> for non-sensitive <strong>analytics data</strong>. They regularly check <strong>MeitY notifications</strong> for current <strong>transfer conditions</strong>, include <strong>standard contractual clauses</strong> in their <strong>AWS contract</strong>, and block any routing that would make data accessible to restricted <strong>foreign state entities</strong>. When a new <strong>localisation order</strong> is issued for <strong>payment data</strong>, they migrate it to <strong>Indian servers</strong> within the deadline.",
+    takeaways: "<ul><li><strong>Cross-border transfers</strong> are permitted only under <strong>conditions</strong> set by the <strong>Central Government</strong>.</li><li><strong>Strict restrictions</strong> apply if data could be accessed by <strong>foreign states</strong> or <strong>state-controlled entities</strong>.</li><li><strong>Compliance</strong> with any <strong>government order</strong> (general or special) is <strong>non-negotiable</strong>.</li><li>Monitor <strong>notifications</strong> closely — full <strong>readiness</strong> required by ~<strong>May 2027</strong> to avoid <strong>enforcement risk</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 16: Exemption from Act for research, archiving or statistical purposes",
+        "subtitle": "Limited exemption for public interest data processing.",
+        "text": `<ol>
+            <li>The <strong>Act</strong> shall not apply to <strong>processing</strong> of <strong>personal data</strong> for <strong>research</strong>, <strong>archiving</strong>, or <strong>statistical purposes</strong>.</li>
+            <li>Such <strong>processing</strong> must strictly comply with standards specified in the <strong>Second Schedule</strong>.</li>
+        </ol>`,
+    explanation: "Rule 16 provides a <strong>conditional exemption</strong> from most <strong>obligations</strong> of the <strong>DPDP Act</strong> for <strong>processing</strong> done solely for <strong>research</strong>, <strong>archiving</strong>, or <strong>statistical purposes</strong> (e.g., <strong>academic studies</strong>, <strong>historical preservation</strong>, <strong>aggregate analytics</strong>). The <strong>exemption</strong> is not absolute — <strong>Second Schedule standards</strong> (<strong>reasonable security safeguards</strong>, <strong>data minimization</strong>, <strong>purpose limitation</strong>, etc.) must still be fully applied.<br><br>This balances <strong>innovation/public-good processing</strong> with <strong>privacy protection</strong>. It is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong>.",
+    compliance: "<strong>Clearly define</strong> and <strong>document</strong> the <strong>processing</strong> as <strong>research/archiving/statistical</strong> (no <strong>commercial use</strong>), apply <strong>Second Schedule safeguards</strong> in full (<strong>encryption</strong>, <strong>access control</strong>, <strong>logging</strong>, <strong>minimization</strong>, <strong>pseudonymisation</strong> where possible), maintain <strong>records</strong> justifying the <strong>exemption</strong> and demonstrating <strong>compliance</strong>, avoid <strong>mixing</strong> <strong>exempt</strong> and <strong>non-exempt purposes</strong> in the same <strong>dataset</strong>, train <strong>research teams</strong> on the <strong>narrow scope</strong> and <strong>documentation requirement</strong>, audit <strong>exempt processing</strong> <strong>periodically</strong>. Target <strong>readiness</strong> well before <strong>May 2027</strong>.",
+    example: "XXX Company <strong>partners</strong> with a <strong>public health university</strong> to <strong>analyse anonymised usage patterns</strong> for a <strong>population health study</strong>. The <strong>processing</strong> <strong>qualifies</strong> as <strong>statistical/research purpose</strong> and is <strong>exempt</strong> from most <strong>Act obligations</strong>, but the company still applies full <strong>Second Schedule protections</strong>: <strong>data</strong> is <strong>encrypted</strong>, <strong>access</strong> is <strong>restricted</strong> to <strong>researchers</strong>, <strong>logs</strong> are <strong>retained</strong>, and only <strong>necessary fields</strong> are used.",
+    takeaways: "<ul><li><strong>Exemption</strong> applies only to genuine <strong>research</strong>, <strong>archiving</strong>, or <strong>statistical purposes</strong> — no <strong>commercial processing</strong> allowed.</li><li><strong>Second Schedule standards</strong> (<strong>security</strong>, <strong>minimization</strong>, etc.) must always be followed — no full <strong>exemption</strong> from <strong>safeguards</strong>.</li><li><strong>Document</strong> the <strong>purpose</strong> and <strong>safeguards</strong> clearly to <strong>defend</strong> the <strong>exemption</strong> if <strong>challenged</strong>.</li><li>Use the <strong>exemption</strong> <strong>responsibly</strong> — full <strong>compliance</strong> required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 17: Appointment of Chairperson and Members",
+        "subtitle": "Structured and transparent selection process.",
+        "text": `<ol>
+            <li>The <strong>Central Government</strong> shall constitute <strong>Search-cum-Selection Committees</strong> for appointments.</li>
+            <li>Separate committees are constituted for <strong>Chairperson</strong> and other <strong>Members</strong>.</li>
+            <li>Appointments are made after assessing suitability of recommended individuals.</li>
+            <li>Proceedings are not invalidated due to vacancies or defects in committee constitution.</li>
+        </ol>`,
+        "explanation": "Rule 17 establishes a formal, expert-driven, and transparent appointment process for the Data Protection Board. The Central Government forms separate Search-cum-Selection Committees for the Chairperson and Members, assesses suitability, and ensures continuity even if there are vacancies or procedural issues.<br><br>This governance rule is foundational for an independent and competent regulator. It is already in force (immediate effect from 13 November 2025).",
+        "compliance": "No direct action required from private organizations. Monitor the constitution of the Board and its published decisions/orders for compliance impact.",
+        "example": "The Central Government constitutes a Search-cum-Selection Committee comprising experts in law, technology, and public administration. The committee recommends qualified candidates; the government appoints the Chairperson and Members after suitability assessment. Proceedings continue unaffected even if a vacancy occurs during the process.",
+        "takeaways": "<ul><li>Board appointments follow a structured, expert-led committee process for transparency and competence.</li><li>Separate committees for Chairperson and Members ensure focused selection.</li><li>Continuity of Board operations is protected despite vacancies or procedural defects.</li><li>Rule already in force — Board formation and appointments underway since November 2025.</li></ul>"
+    },
+    {
+        "title": "Rule 18: Salary, allowances and other terms and conditions of service of Chairperson and other Members",
+        "subtitle": "Standardised remuneration framework.",
+        "text": `<ol>
+            <li>The <strong>Chairperson</strong> and <strong>Members</strong> shall receive <strong>salary</strong> and <strong>allowances</strong> as specified in the <strong>Fifth Schedule</strong>.</li>
+            <li>Other <strong>service conditions</strong> shall also be governed by the <strong>Fifth Schedule</strong>.</li>
+        </ol>`,
+        "explanation": "Rule 18 fixes the <strong>salary</strong>, <strong>allowances</strong>, and other <strong>service conditions</strong> of the <strong>Data Protection Board</strong> <strong>Chairperson</strong> and <strong>Members</strong> as per the <strong>Fifth Schedule</strong>, ensuring <strong>uniformity</strong>, <strong>independence</strong> from external influence, and <strong>consistency</strong> in <strong>governance</strong>.<br><br>This is a <strong>foundational governance rule</strong>, already in force (<strong>immediate effect</strong> from 13 November 2025).",
+        "compliance": "No action required from <strong>private organizations</strong> — this is an <strong>internal Board administration rule</strong>.",
+        "example": "The <strong>Chairperson</strong> and <strong>Members</strong> of the <strong>Data Protection Board</strong> are paid <strong>salary</strong>, <strong>house rent allowance</strong>, <strong>travel allowance</strong>, and other benefits exactly as prescribed in the <strong>Fifth Schedule</strong>, ensuring <strong>standardized</strong> and <strong>independent service conditions</strong>.",
+        "takeaways": "<ul><li><strong>Remuneration</strong> and <strong>service conditions</strong> are fixed and transparent via the <strong>Fifth Schedule</strong>.</li><li><strong>Standardization</strong> promotes <strong>Board independence</strong> and <strong>impartiality</strong>.</li><li><strong>Government-regulated framework</strong> ensures <strong>consistency</strong>.</li><li>Rule already effective from notification (<strong>November 2025</strong>).</li></ul>"
+    },
+    {
+        "title": "Rule 19: Procedure for Board Meetings and Authentication of its orders, directions and instruments",
+        "subtitle": "Operational governance of the Data Protection Board.",
+        "text": `<ol>
+            <li>The <strong>Chairperson</strong> schedules meetings and approves agendas.</li>
+            <li><strong>Quorum</strong> shall be one-third of <strong>Board membership</strong>.</li>
+            <li>Decisions are taken by <strong>majority vote</strong>, with <strong>casting vote</strong> by <strong>Chairperson</strong> if required.</li>
+            <li><strong>Members</strong> with <strong>conflicts of interest</strong> shall not participate.</li>
+            <li><strong>Emergency actions</strong> may be taken and <strong>ratified</strong> later.</li>
+            <li>Proceedings may be conducted <strong>digitally</strong>.</li>
+        </ol>`,
+        "explanation": "Rule 19 defines the <strong>procedural rules</strong> for <strong>Board meetings</strong> and <strong>decision-making</strong>: <strong>Chairperson-led scheduling</strong>, 1/3 <strong>quorum</strong>, <strong>majority voting</strong> (with <strong>Chairperson casting vote</strong> in ties), mandatory <strong>recusal</strong> for <strong>conflicts</strong>, allowance for <strong>emergency actions</strong> (<strong>later ratified</strong>), and permission for fully <strong>digital proceedings</strong>.<br><br>This ensures <strong>efficient</strong>, <strong>fair</strong>, and <strong>transparent Board operations</strong>. It is already in force (<strong>immediate effect</strong> from 13 November 2025).",
+        "compliance": "No direct action required from organizations. Prepare for <strong>digital interactions</strong> with the <strong>Board</strong> (<strong>e-filings</strong>, <strong>virtual hearings</strong>, <strong>e-orders</strong>).",
+        "example": "The <strong>Data Protection Board</strong> <strong>Chairperson</strong> schedules a <strong>virtual meeting</strong> via secure platform, confirms <strong>quorum</strong> (one-third members present), discusses a penalty matter, and passes an order by <strong>majority vote</strong> after a <strong>conflicted member</strong> <strong>recuses</strong>. <strong>Emergency interim directions</strong> issued <strong>digitally</strong> are later <strong>ratified</strong> in the next meeting.",
+        "takeaways": "<ul><li>Board meetings require <strong>quorum</strong> (1/3), <strong>majority voting</strong>, and <strong>conflict-of-interest recusal</strong>.</li><li><strong>Digital proceedings</strong> are permitted for speed and accessibility.</li><li><strong>Emergency actions</strong> can be taken and <strong>ratified</strong> later.</li><li>Rule already operational since <strong>November 2025</strong> — expect <strong>digital</strong>, <strong>transparent Board processes</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 20: Functioning of Board as a Digital Office",
+        "subtitle": "Paperless and technology-driven governance.",
+        "text": `<ol>
+            <li>The <strong>Board</strong> shall function as a <strong>digital office</strong>.</li>
+            <li><strong>Proceedings</strong> may be conducted without <strong>physical presence</strong>.</li>
+            <li><strong>Powers</strong> to <strong>summon</strong> and <strong>examine</strong> individuals remain unaffected.</li>
+        </ol>`,
+        "explanation": "Rule 20 mandates that the <strong>Data Protection Board</strong> operates as a fully <strong>digital-first entity</strong> — <strong>paperless filings</strong>, <strong>virtual hearings</strong>, <strong>electronic orders</strong> — while preserving all <strong>core enforcement powers</strong> (<strong>summons</strong>, <strong>examination</strong> of witnesses, etc.).<br><br>This promotes <strong>efficiency</strong>, <strong>accessibility</strong>, and <strong>cost-effectiveness</strong>. It is already in force (<strong>immediate effect</strong> from 13 November 2025).",
+        "compliance": "No direct action required. Organizations should prepare for <strong>digital engagement</strong> with the <strong>Board</strong> (<strong>e-submissions</strong>, <strong>virtual appearances</strong>, <strong>electronic service</strong> of notices).",
+        "example": "A <strong>compliance inquiry hearing</strong> is conducted entirely via <strong>secure video conferencing</strong>. <strong>Summons</strong> are issued <strong>electronically</strong>, evidence submitted <strong>digitally</strong>, and the <strong>Board</strong> retains full power to compel attendance and <strong>oral examination</strong> if needed.",
+        "takeaways": "<ul><li>The <strong>Data Protection Board</strong> functions as a fully <strong>digital office</strong> — <strong>paperless</strong> and <strong>virtual-first</strong>.</li><li><strong>Proceedings</strong> do not require <strong>physical presence</strong>.</li><li>All <strong>core enforcement powers</strong> (<strong>summons</strong>, <strong>examination</strong>) remain intact.</li><li>Rule already effective — expect <strong>digital-only interaction</strong> with the <strong>Board</strong> from <strong>November 2025</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 21: Terms and conditions of appointment and service of officers and employees of Board",
+        "subtitle": "Administrative support framework.",
+        "text": `<ol>
+            <li>The <strong>Board</strong> may appoint <strong>officers</strong> and <strong>employees</strong> with prior <strong>government approval</strong>.</li>
+            <li><strong>Service conditions</strong> shall be governed by the <strong>Sixth Schedule</strong>.</li>
+        </ol>`,
+        "explanation": "Rule 21 enables the <strong>Data Protection Board</strong> to hire necessary staff (<strong>technical experts</strong>, <strong>investigators</strong>, <strong>legal officers</strong>, <strong>administrative personnel</strong>) with prior <strong>Central Government approval</strong>. <strong>Service conditions</strong> (pay, allowances, tenure, etc.) are standardized under the <strong>Sixth Schedule</strong>.<br><br>This supports the <strong>Board's operational capacity</strong>. It is already in force (<strong>immediate effect</strong> from 13 November 2025).",
+        "compliance": "No direct action required from <strong>organizations</strong> — this is an <strong>internal Board staffing rule</strong>.",
+        "example": "The <strong>Data Protection Board</strong> seeks and receives <strong>Central Government approval</strong> to appoint <strong>cybersecurity analysts</strong>, <strong>legal advisors</strong>, and <strong>investigation officers</strong>. All appointees receive <strong>service conditions</strong> (<strong>salary</strong>, <strong>leave</strong>, <strong>pension</strong>) as prescribed in the <strong>Sixth Schedule</strong>.",
+        "takeaways": "<ul><li><strong>Board staff appointments</strong> require prior <strong>Central Government approval</strong>.</li><li><strong>Service conditions</strong> are standardized via the <strong>Sixth Schedule</strong>.</li><li>Enables the Board to build necessary <strong>technical</strong>, <strong>legal</strong>, and <strong>administrative capacity</strong>.</li><li>Rule already in effect since <strong>November 2025</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 22: Appeal to Appellate Tribunal",
+        "subtitle": "Digital-first appellate mechanism.",
+        "text": `<ol>
+            <li><strong>Aggrieved persons</strong> may file <strong>appeals</strong> <strong>digitally</strong> before the <strong>Appellate Tribunal</strong>.</li>
+            <li><strong>Appeals</strong> require prescribed <strong>digital fee</strong> payment.</li>
+            <li>The <strong>Tribunal</strong> follows principles of <strong>natural justice</strong>.</li>
+            <li><strong>Proceedings</strong> may be conducted <strong>digitally</strong>.</li>
+        </ol>`,
+        "explanation": "Rule 22 establishes a <strong>digital-first appeal pathway</strong> against <strong>decisions/orders</strong> of the <strong>Data Protection Board</strong>. <strong>Appeals</strong> are filed <strong>electronically</strong>, require a prescribed <strong>digital fee</strong>, follow principles of <strong>natural justice</strong> (<strong>fair hearing</strong>, <strong>reasoned orders</strong>), and can be conducted <strong>virtually</strong>.<br><br>This ensures <strong>accessible</strong>, <strong>timely</strong>, and <strong>fair appellate review</strong>. It is enforceable approximately <strong>May 2027</strong>.",
+        "compliance": "Prepare for <strong>digital appellate process</strong>: Monitor establishment of the <strong>Appellate Tribunal</strong> and its <strong>filing portal</strong>, maintain complete records of <strong>Board proceedings</strong> for potential <strong>appeals</strong>, budget for prescribed <strong>digital fees</strong>, train legal team on <strong>natural justice principles</strong> and <strong>e-filing</strong>. Readiness required by ~<strong>May 2027</strong>.",
+        "example": "XXX Company receives a <strong>penalty order</strong> from the <strong>Data Protection Board</strong>. They file an <strong>appeal</strong> via the <strong>Appellate Tribunal's online portal</strong>, pay the prescribed <strong>digital fee</strong>, submit supporting documents <strong>electronically</strong>, and participate in <strong>virtual hearings</strong> where <strong>natural justice</strong> is followed (opportunity to present case, <strong>reasoned decision</strong>).",
+        "takeaways": "<ul><li><strong>Appeals</strong> against <strong>Board orders</strong> are filed <strong>digitally</strong> with prescribed <strong>fee payment</strong>.</li><li>The <strong>Appellate Tribunal</strong> follows principles of <strong>natural justice</strong> and can conduct proceedings <strong>virtually</strong>.</li><li><strong>Digital mechanism</strong> improves <strong>access</strong>, <strong>speed</strong>, and <strong>cost-efficiency</strong>.</li><li>Prepare for <strong>e-appeals</strong> — required by ~<strong>May 2027</strong>.</li></ul>"
+    },
+    {
+        "title": "Rule 23: Calling for Information from Data Fiduciaries or intermediary",
+        "subtitle": "Government oversight and information access.",
+        "text": `<ol>
+            <li>The <strong>Central Government</strong> may require <strong>Data Fiduciaries</strong> to <strong>furnish information</strong>.</li>
+            <li><strong>Disclosure</strong> may be restricted for <strong>national security</strong> reasons.</li>
+            <li><strong>Non-disclosure directions</strong> require <strong>written permission</strong>.</li>
+        </ol>`,
+        "explanation": "Rule 23 gives the <strong>Central Government</strong> broad power to <strong>demand information</strong> from <strong>Data Fiduciaries</strong> and <strong>intermediaries</strong> for <strong>oversight</strong>, <strong>enforcement</strong>, <strong>policy</strong>, or <strong>public interest</strong> purposes. It includes a safeguard: <strong>disclosure</strong> can be <strong>restricted</strong> if it harms <strong>national security</strong>, but only with explicit <strong>written permission</strong> from the <strong>competent authority</strong>.<br><br>This ensures <strong>regulatory oversight</strong> while protecting sensitive <strong>national interests</strong>. It is a <strong>core operational rule</strong>, enforceable approximately <strong>May 2027</strong>.",
+        "compliance": "Implement these readiness measures: Maintain <strong>comprehensive</strong>, up-to-date, <strong>auditable records</strong> of all <strong>processing activities</strong>, designate a senior <strong>compliance officer</strong> to handle <strong>government information requests</strong>, establish a <strong>rapid-response protocol</strong> for <strong>lawful demands</strong> (verify authority, assess scope), assess requests against <strong>national security exemptions</strong> and seek <strong>written non-disclosure direction</strong> if applicable, document all responses and non-disclosures, train <strong>legal team</strong> on handling <strong>government requisitions</strong>. Target readiness well before <strong>May 2027</strong>.",
+        "example": "The <strong>Central Government</strong> issues a <strong>notice</strong> to XXX Company for <strong>aggregate anonymised usage statistics</strong> and selected <strong>audit logs</strong>. The company <strong>complies</strong> within the stipulated timeframe. When a portion of the request involves sensitive <strong>national security-related metadata</strong>, they formally request and obtain <strong>written non-disclosure permission</strong> before withholding that part.",
+        "takeaways": "<ul><li><strong>Central Government</strong> can require information from <strong>Data Fiduciaries</strong> and <strong>intermediaries</strong> at any time.</li><li><strong>National security-based non-disclosure</strong> requires explicit <strong>written permission</strong> — do not assume it.</li><li>Maintain <strong>robust</strong>, <strong>auditable records</strong> and a clear <strong>response protocol</strong>.</li><li>Applies from ~<strong>May 2027</strong> — prepare during the <strong>transition period</strong>.</li></ul>"
+    },
+
+
+        ];
+
+        let currentIndex = 0;
+
+        function loadRule(index) {
+            currentIndex = index;
+            const r = rules[index];
+
+            document.getElementById("ruleTitle").innerText = r.title;
+            document.getElementById("ruleSubtitle").innerText = r.subtitle || '';
+            document.getElementById("ruleTextContent").innerHTML = r.text || '';
+            document.getElementById("ruleExplanation").innerHTML = r.explanation || '';
+            document.getElementById("ruleCompliance").innerHTML = r.compliance || '';
+            document.getElementById("ruleExample").innerHTML = r.example || '';
+            document.getElementById("ruleTakeaways").innerHTML = r.takeaways || '';
+
+            document.querySelectorAll(".rule-list li").forEach((li, i) => li.classList.toggle("active", i === index));
+
+            document.getElementById("ruleTextContent").classList.remove("show");
+            document.getElementById("accordionIcon").className = "fas fa-chevron-down";
+
+            document.getElementById("prevBtn").className = index === 0 ? "nav-btn disabled" : "nav-btn";
+            const prevSubtitle = rules[index-1].title.split(': ')[1];
+            const prevWords = prevSubtitle.split(' ');
+            const prevText = prevWords.length > 3 ? prevWords.slice(0,3).join(' ') + '...' : prevSubtitle;
+            document.getElementById("prevBtn").innerHTML = index === 0 ? '<i class="fas fa-arrow-left"></i> Previous' : '<i class="fas fa-arrow-left"></i> Rule ' + (index) + ': ' + prevText;
+            document.getElementById("nextBtn").className = index === rules.length - 1 ? "nav-btn disabled" : "nav-btn";
+            const nextSubtitle = rules[index+1].title.split(': ')[1];
+            const nextWords = nextSubtitle.split(' ');
+            const nextText = nextWords.length > 3 ? nextWords.slice(0,3).join(' ') + '...' : nextSubtitle;
+            document.getElementById("nextBtn").innerHTML = index === rules.length - 1 ? 'Next <i class="fas fa-arrow-right"></i>' : 'Rule ' + (index+2) + ': ' + nextText + ' <i class="fas fa-arrow-right"></i>';
+        }
+
+        // Responsive sidebar + mobile panel toggles
+        const sidebar = document.getElementById('rulesSidebar');
+        const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+        const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+        const mobilePanel = document.getElementById('mobileRulesPanel');
+        const mobilePanelCloseBtn = document.getElementById('mobilePanelCloseBtn');
+
+        function openSidebar() {
+            sidebar.classList.add('open');
+            document.body.classList.add('sidebar-open');
+            if (sidebarToggleBtn) sidebarToggleBtn.style.display = 'none';
+        }
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            document.body.classList.remove('sidebar-open');
+            if (sidebarToggleBtn) sidebarToggleBtn.style.display = '';
+        }
+        function openMobilePanel() {
+            if (!mobilePanel) return openSidebar();
+            mobilePanel.classList.add('open');
+            document.body.classList.add('sidebar-open');
+            if (sidebarToggleBtn) sidebarToggleBtn.style.display = 'none';
+        }
+        function closeMobilePanel() {
+            if (!mobilePanel) return closeSidebar();
+            mobilePanel.classList.remove('open');
+            document.body.classList.remove('sidebar-open');
+            if (sidebarToggleBtn) sidebarToggleBtn.style.display = '';
+        }
+
+        sidebarToggleBtn.addEventListener('click', function() { if (window.innerWidth <= 768) openMobilePanel(); else openSidebar(); });
+        sidebarCloseBtn.addEventListener('click', closeSidebar);
+        if (mobilePanelCloseBtn) mobilePanelCloseBtn.addEventListener('click', closeMobilePanel);
+
+        // Close on click outside
+        window.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (mobilePanel && mobilePanel.classList.contains('open')) {
+                    if (!mobilePanel.contains(e.target) && !sidebarToggleBtn.contains(e.target)) {
+                        closeMobilePanel();
+                    }
+                } else if (sidebar.classList.contains('open')) {
+                    if (!sidebar.contains(e.target) && !sidebarToggleBtn.contains(e.target)) {
+                        closeSidebar();
+                    }
+                }
+            } else {
+                if (sidebar.classList.contains('open')) {
+                    if (!sidebar.contains(e.target) && !sidebarToggleBtn.contains(e.target)) {
+                        closeSidebar();
+                    }
+                }
+            }
+        });
+
+        // Close sidebar or mobile panel on rule select (mobile)
+        function mobileCloseSidebarIfNeeded() {
+            if (window.innerWidth <= 768) {
+                if (mobilePanel && mobilePanel.classList.contains('open')) closeMobilePanel();
+                else closeSidebar();
+            }
+        }
+
+        // Populate sidebar and mobile panel
+        const list = document.getElementById("ruleList");
+        const mobileList = document.getElementById("mobileRuleList");
+        rules.forEach((r, i) => {
+            const li = document.createElement("li");
+            li.innerHTML = '<i class="fas fa-balance-scale me-2"></i> ' + r.title;
+            li.onclick = () => { loadRule(i); window.scrollTo({top: 0, behavior: 'smooth'}); mobileCloseSidebarIfNeeded(); };
+            list.appendChild(li);
+
+            if (mobileList) {
+                const li2 = document.createElement('li');
+                li2.innerHTML = '<i class="fas fa-balance-scale me-2"></i> ' + r.title;
+                li2.onclick = () => { loadRule(i); window.scrollTo({top: 0, behavior: 'smooth'}); mobileCloseSidebarIfNeeded(); };
+                mobileList.appendChild(li2);
+            }
+        });
+
+        // Accordion toggle
+        document.getElementById("ruleAccordion").onclick = function() {
+            const content = document.getElementById("ruleTextContent");
+            const icon = document.getElementById("accordionIcon");
+            content.classList.toggle("show");
+            icon.className = content.classList.contains("show") ? "fas fa-chevron-up" : "fas fa-chevron-down";
+        };
+
+        // Prev / Next
+        document.getElementById("prevBtn").onclick = (e) => { 
+            e.preventDefault(); 
+            if (currentIndex > 0) { loadRule(currentIndex - 1); window.scrollTo({top: 0, behavior: 'smooth'}); }
+        };
+        document.getElementById("nextBtn").onclick = (e) => { 
+            e.preventDefault(); 
+            if (currentIndex < rules.length - 1) { loadRule(currentIndex + 1); window.scrollTo({top: 0, behavior: 'smooth'}); }
+        };
+
+        // Search filter
+        function filterRules(value) {
+            const term = value.toLowerCase();
+            document.querySelectorAll(".rule-list li").forEach(li => {
+                li.style.display = li.textContent.toLowerCase().includes(term) ? "block" : "none";
+            });
+        }
+
+        // Load first rule
+        loadRule(0);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

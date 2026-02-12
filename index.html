@@ -1,0 +1,929 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="DPDPA TN helps Indian organizations achieve Digital Personal Data Protection Act compliance with practical advisory, templates, implementation guides, and checklists.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="DPDPA Compliance Services in India | NSU Secure Solutions">
+    <meta property="og:description" content="DPDPA TN helps Indian organizations achieve Digital Personal Data Protection Act compliance with practical advisory, templates, implementation guides, and checklists.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDPA Compliance Services in India | NSU Secure Solutions">
+    <meta name="twitter:description" content="DPDPA TN helps Indian organizations achieve Digital Personal Data Protection Act compliance with practical advisory, templates, implementation guides, and checklists.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDPA Compliance Services in India | NSU Secure Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --light-bg: #f8faff;
+            --body-bg: var(--light-bg);
+            --text: var(--dark);
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+  [data-bs-theme="dark"] {
+    --primary: #4d9aff;
+
+    /* Page backgrounds */
+    --body-bg: #0b1220;
+    --light-bg: #0b1220;
+
+    /* Text */
+    --text: #e5e7eb;
+    --dark: #f8fafc;
+    --slate: #9ca3af;
+
+    /* Cards & borders */
+    --card-bg: #111827;
+    --border: #1f2937;
+}
+
+        
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--body-bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background 0.4s, color 0.4s;
+        }
+.navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+
+        /* Hero - Stronger Indian flag gradient */
+        .hero {
+            padding: 40px 0 60px;
+            background: linear-gradient(135deg, 
+                #ff9933cc 0%,     /* saffron */
+                #ffffffee 48%,    /* white */
+                #138808cc 100%    /* green */
+            );
+            margin-top: 56px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            [data-bs-theme="dark"] .hero {
+                background: linear-gradient(135deg, 
+                    #ff9933cc 0%,
+                    #ffffffee 48%,
+                    #138808cc 100%
+                );
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.4), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: 2.6rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.05;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #003366, #0052CC, #003366);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        @media (max-width: 992px) { .hero-title { font-size: 2.2rem; } }
+        @media (max-width: 768px)  { .hero-title { font-size: 1.9rem; } }
+        @media (max-width: 576px)  { .hero-title { font-size: 1.6rem; } }
+
+        .media-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .media-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 220px;
+        }
+
+        .card-media {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            margin-bottom: 18px;
+        }
+
+        .timer-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 8px;
+            min-width: 64px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(214, 14, 14, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .timer-box:hover { transform: translateY(-4px); }
+
+        .timer-box span { font-size: 1.4rem; font-weight: 900; color: var(--primary); line-height: 1; }
+        .timer-box label { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; color: var(--slate); margin-top: 6px; display: block; }
+
+        .penalty-card {
+            background: var(--card-bg);
+            border: 2px solid #fee2e2;
+            border-radius: 20px;
+            padding: 24px 20px;
+            box-shadow: 0 18px 36px -10px rgba(0,0,0,0.09);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .penalty-card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px -20px rgba(0,0,0,0.18); }
+
+        .penalty-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 8px; background: #ef4444; }
+
+        /* Slightly smaller penalty card content for compact layout */
+        .penalty-card .fa-5x { font-size: 2.6rem !important; margin-bottom: 0.5rem; }
+        .penalty-card h4 { font-size: 1rem; margin-bottom: 0.35rem; }
+        .penalty-card h2 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+        .penalty-card p { font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .penalty-card .mt-5 { margin-top: 0.9rem !important; padding: 0.45rem 0.75rem !important; }
+
+        .section-padding { padding: 60px 0; }
+
+        .feature-box, .grid-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .grid-card:hover, .feature-box:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 32px 64px rgba(0,82,204,0.14);
+        }
+
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: rgba(0,82,204,0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin: 0 auto 18px;
+            font-size: 1.15rem;
+            transition: all 0.25s;
+        }
+
+        .grid-card:hover .icon-circle {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: white;
+            padding: 10px 28px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.25s;
+        }
+
+        .btn-main:hover {
+            background: #0041a3;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 16px 32px rgba(0,82,204,0.4);
+        }
+
+        .contact-card { background: var(--dark); color: white; border-radius: 28px; padding: 30px; }
+        [data-bs-theme="dark"] .section-padding.bg-white {
+            background-color: #0b1220 !important;
+        }
+        [data-bs-theme="dark"] .section-padding.bg-light {
+            background-color: #111827 !important;
+        }
+        [data-bs-theme="dark"] .section-padding .text-secondary,
+        [data-bs-theme="dark"] .section-padding .text-muted {
+            color: #cbd5e1 !important;
+        }
+        [data-bs-theme="dark"] .section-padding.border-top {
+            border-top-color: rgba(255, 255, 255, 0.18) !important;
+        }
+        [data-bs-theme="dark"] .contact-card {
+            background: #0f172a;
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        /* Keep hero section always in light style even in dark mode */
+        [data-bs-theme="dark"] .hero {
+            background: linear-gradient(135deg,
+                #ff9933cc 0%,
+                #ffffffee 48%,
+                #138808cc 100%
+            );
+        }
+        [data-bs-theme="dark"] .hero .badge.bg-primary-subtle {
+            background-color: #cfe2ff !important;
+            color: #0d6efd !important;
+        }
+        [data-bs-theme="dark"] .hero .text-secondary {
+            color: #64748b !important;
+        }
+        [data-bs-theme="dark"] .hero .text-primary {
+            color: #0d6efd !important;
+        }
+        [data-bs-theme="dark"] .hero .timer-box {
+            background: #ffffff;
+            border-color: #e2e8f0 !important;
+            box-shadow: 0 10px 20px rgba(214, 14, 14, 0.05);
+        }
+        [data-bs-theme="dark"] .hero .timer-box label {
+            color: #475569;
+        }
+        [data-bs-theme="dark"] .hero .penalty-card {
+            background: #ffffff;
+            border: 2px solid #fee2e2 !important;
+            box-shadow: 0 18px 36px -10px rgba(0,0,0,0.09);
+        }
+        [data-bs-theme="dark"] .hero .penalty-card .bg-light {
+            background-color: #f3f4f6 !important;
+            color: #6b7280 !important;
+        }
+
+        /* Contact form inputs: white background, dark text */
+        .contact-card .form-control {
+            background: #b0d6ec;
+            border: 1px solid #e5e7eb;
+            color: #0a0f1d;
+        }
+        .contact-card .form-control::placeholder { color: #6b7280; }
+        .contact-card .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 0.15rem rgba(0,82,204,0.08); }
+
+        /* Footer newsletter input: white background, dark text */
+        footer .input-group .form-control {
+            background: #ffffff;
+            border: 1px solid #fdfdfd;
+            color: #0a0f1d;
+        }
+        footer .input-group .form-control::placeholder { color: #6b7280; }
+
+        footer { background: #020202; color: #8e969b; padding: 40px 0 30px; }
+        .footer-logo { font-size: 1.8rem; font-weight: 900; color: rgb(255, 255, 255); margin-bottom: 28px; }
+        .footer-link { color: #ffffff; transition: all 0.3s; display: block; margin-bottom: 14px; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+
+        /* Mobile optimizations */
+@media (max-width: 768px) {
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    padding: 30px 0 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .penalty-card {
+    padding: 18px;
+  }
+
+  .penalty-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-card,
+  .feature-box,
+  .media-card {
+    border-radius: 18px;
+  }
+
+  .accordion-button {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .input-group {
+    justify-content: center;
+  }
+}
+
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+
+        /* Keep only the first hero block in light mode */
+        [data-bs-theme="dark"] .hero {
+            background: linear-gradient(135deg, #ff9933cc 0%, #ffffffee 48%, #138808cc 100%) !important;
+        }
+        [data-bs-theme="dark"] .hero .text-secondary {
+            color: #64748b !important;
+        }
+        [data-bs-theme="dark"] .hero .text-primary {
+            color: #0d6efd !important;
+        }
+        [data-bs-theme="dark"] .hero .timer-box {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+        }
+        [data-bs-theme="dark"] .hero .timer-box label {
+            color: #475569 !important;
+        }
+        [data-bs-theme="dark"] .hero .penalty-card {
+            background: #ffffff !important;
+            border: 2px solid #fee2e2 !important;
+            box-shadow: 0 18px 36px -10px rgba(0,0,0,0.09) !important;
+        }
+        [data-bs-theme="dark"] .hero .penalty-card .bg-light {
+            background-color: #f3f4f6 !important;
+            color: #6b7280 !important;
+        }
+     
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+    <script type="application/ld+json" id="schema-website">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DPDPA TN",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NSU Secure Solutions"
+      },
+      "inLanguage": "en-IN"
+    }
+    </script>
+    <script type="application/ld+json" id="schema-faq">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Digital Personal Data Protection Act (DPDPA), 2023?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DPDPA 2023 is India's core privacy law that sets obligations for organizations handling digital personal data and grants rights to individuals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is the full DPDPA compliance deadline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current implementation timelines indicate full operational readiness is expected by May 13, 2027 for most obligations under notified rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should organizations do first for DPDPA compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with data mapping, notice and consent design, grievance and rights workflows, security controls, and incident response readiness."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1100">
+                    <span class="badge bg-primary-subtle text-primary px-4 py-3 rounded-pill fw-bold mb-4 fs-5">2026 ENFORCEMENT COUNTDOWN</span>
+                    <h1 class="hero-title">Secure Your Digital Future<br>with NSU Solutions</h1>
+                    <p class="text-secondary fs-4 mb-5 fw-medium">India’s premier advisory for DPDPA 2023. We transform complex regulatory requirements into seamless business growth.</p>
+                   
+                    <h5 class="text-primary fw-bold mb-3">DPDPA Compliance Countdown</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-4 mb-5 flex-wrap">
+                        <div class="timer-box" data-aos="zoom-in" data-aos-delay="200"><span id="days">00</span><label>Days</label></div>
+                        <div class="timer-box" data-aos="zoom-in" data-aos-delay="300"><span id="hours">00</span><label>Hours</label></div>
+                        <div class="timer-box" data-aos="zoom-in" data-aos-delay="400"><span id="mins">00</span><label>Mins</label></div>
+                        <div class="timer-box" data-aos="zoom-in" data-aos-delay="500"><span id="secs">00</span><label>Secs</label></div>
+                    </div>
+                    <a href="#contact" class="btn btn-main shadow-lg px-5 py-3" >Start Compliance Journey</a>
+                </div>
+                <div class="col-lg-5" data-aos="flip-left" data-aos-duration="1300">
+                    <div class="penalty-card text-center">
+                        
+                        <div class="mb-4"><i class="fas fa-exclamation-triangle text-danger fa-5x animate-pulse"></i></div>
+                        <h4 class="fw-bold text-danger mb-3 fs-3">Are You Ready for the Rs 250 Crore Penalty Risk? </h4>
+                        <h2 class="display-3 fw-black mb-2">Rs 250 <span class="fs-4">CRORE FINE!</span></h2>
+                        <p class="text-secondary mb-0 fw-bold fs-5">Maximum penalty per violation under the DPDP Act 2023.</p>
+                        <div class="mt-5 p-3 bg-light rounded-pill fw-bold text-muted">DPDPA Compliance Is Now Mandatory</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white border-top">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="media-card p-4 p-lg-5">
+                        <h2 class="fw-bold mb-3">What is the DPDP Act?</h2>
+                        <p class="text-secondary">The Digital Personal Data Protection Act, 2023 is India's data protection law designed to regulate the collection, storage, processing, and sharing of personal data.</p>
+                        <h6 class="fw-bold mt-3 mb-2">Who must comply?</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> All businesses operating in India.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Organizations offering goods or services to individuals in India.</li>
+                            <li class="mb-0"><i class="fas fa-check-circle text-primary me-2"></i> Startups, MSMEs, and Enterprises alike.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="media-card p-4 p-lg-5">
+                        <h2 class="fw-bold mb-3">Why DPDPA Compliance Matters</h2>
+                        <p class="text-secondary">With digital transformation expanding, the DPDP Act mandates strict data protection practices. A clear compliance framework minimizes legal exposure and builds customer trust.</p>
+                        <p class="text-secondary mb-0">Non-compliance leads to heavy fines and reputational risks. Secure your data governance today to stay ahead.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h2 class="fw-bold">Our Core DPDPA Services</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-search"></i></div><h5 class="fw-bold">Gap Assessment</h5><p class="small text-muted">Complete audit of current data lifecycle vs DPDPA requirements.</p></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-file-contract"></i></div><h5 class="fw-bold">Consent Framework</h5><p class="small text-muted">Designing specific, informed, and easy-to-withdraw consent systems.</p></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-user-lock"></i></div><h5 class="fw-bold">Security Safeguards</h5><p class="small text-muted">Implementing technical measures to prevent personal data breaches.</p></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-users-cog"></i></div><h5 class="fw-bold">Data Rights Portal</h5><p class="small text-muted">Mechanisms for users to access, correct, or erase their data.</p></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-child"></i></div><h5 class="fw-bold">Children's Data Plan</h5><p class="small text-muted">Verifiable parental consent for users under 18 years of age.</p></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300"><div class="grid-card p-5 shadow-sm"><div class="icon-circle"><i class="fas fa-clipboard-list"></i></div><h5 class="fw-bold">Data Audit Service</h5><p class="small text-muted">Independent audits as required for Significant Data Fiduciaries.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h2 class="fw-bold">The NSU Advantage</h2>
+                <p class="text-muted">Why leading Indian firms choose our advisory</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-balance-scale"></i></div><h5 class="fw-bold">Legal Expertise</h5><p class="small text-muted mb-0">Direct interpretation of DPDPA Rules 2025 into business workflows.</p></div></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-microchip"></i></div><h5 class="fw-bold">Tech-First Approach</h5><p class="small text-muted mb-0">Automated tools for consent management and data discovery.</p></div></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-user-shield"></i></div><h5 class="fw-bold">vDPO Support</h5><p class="small text-muted mb-0">On-demand access to certified Data Protection Officers.</p></div></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-language"></i></div><h5 class="fw-bold">Multi-Lingual Notice</h5><p class="small text-muted mb-0">Notices in all 22 scheduled languages as per Section 6.</p></div></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-sync"></i></div><h5 class="fw-bold">Continuous Monitoring</h5><p class="small text-muted mb-0">Stay compliant with real-time tracking of regulatory updates.</p></div></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300"><div class="grid-card p-5"><div class="icon-circle"><i class="fas fa-handshake"></i></div><h5 class="fw-bold">Trust Building</h5><p class="small text-muted mb-0">Privacy-first design that increases customer conversion.</p></div></div>
+            </div>
+        </div>
+    </section>
+    
+<section class="section-padding bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-down">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="accordion mx-auto" id="faqAccordion" style="max-width: 900px;" data-aos="fade-up">
+
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#f1"
+                  aria-expanded="false">
+            What is the Digital Personal Data Protection Act (DPDPA), 2023?
+          </button>
+        </h2>
+
+        <div id="f1"
+             class="accordion-collapse collapse"
+             data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            The Digital Personal Data Protection Act, 2023 is India's comprehensive
+            data protection legislation that governs the processing of digital
+            personal data.
+          </div>
+        </div>
+      </div>
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">When is the full DPDPA compliance deadline?</button></h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Organizations have until 13 May 2027 to fully comply with the DPDPA rules.</div></div>
+                </div>
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f3">What are the requirements for valid consent under DPDPA?</button></h2>
+                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Valid consent under DPDPA must be free, informed, specific, clear, prior to processing, and easily withdrawable.</div></div>
+                </div>
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f4">What happens if there is a data breach?</button></h2>
+                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Fiduciaries must notify the Data Protection Board and affected individuals.</div></div>
+                </div>
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f5">What rights do Data Principals have under DPDPA?</button></h2>
+                    <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Data Principals have the right to access, correct, delete, and port their data. They also have the right to object to processing and withdraw consent.</div></div>
+                </div>
+                   <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed fw-bold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f6">
+      How does DPDPA define a "child"?
+    </button>
+  </h2>
+  <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body text-secondary">
+      A child, according to DPDPA, is any individual who has not yet reached 18 years of age.
+    </div>
+  </div>
+</div>
+                                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f7">What records should organizations maintain for DPDPA compliance?</button></h2>
+                    <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Organizations must maintain records of consent, data processing, breaches, sharing, DPIAs, complaints, and policy updates for DPDP compliance.</div></div>
+                </div>
+                                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f8">How should companies update their privacy policies for DPDPA?</button></h2>
+                    <div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Companies should update their privacy policies under DPDP to clearly explain data collection, processing, consent, rights, retention, and contact details.</div></div>
+                </div>
+                                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f9">What is the relationship between DPDPA and IT Act 2000?</button></h2>
+                    <div id="f9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">The DPDPA complements the IT Act 2000 by providing a dedicated framework for personal data protection and privacy in India.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-white">
+        <div class="container">
+            <div class="contact-card shadow-lg" data-aos="zoom-in-up">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4">Ready for an Audit?</h2>
+                        <p class="opacity-75 mb-4">Connect with our Lead Compliance Officers for a discovery call regarding your roadmap.</p>
+                       <div class="d-flex align-items-center mb-4"><i class="fas fa-envelope text-primary me-3 fs-4"></i><a href="mailto:info@nsusecure.com" style="color:#fff; text-decoration:none;">info@nsusecure.com</a></div>
+                        <div class="d-flex align-items-center mb-4"><i class="fas fa-phone text-primary me-3 fs-4"></i><a href="tel:+918248850356" style="color:#fff; text-decoration:none;">+91 82488 50356</a></div>
+ 
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="row g-3" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="b3d5e16c-0108-417b-aef8-94c664239f7b">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Business Email</label>
+                                <input type="email" class="form-control" name="email" placeholder="john@company.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" name="company" placeholder="Enter your organization name">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Briefly describe your compliance needs..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-main w-100 py-3 mt-3 fs-5">Request Free Consultation</button>
+                            </div>
+                            <div class="col-12">
+                                <div id="indexFormStatus" class="alert d-none mt-2 mb-0" role="status" aria-live="polite"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">DPDPA <span class="text-primary">TN</span></span>
+                    <p class="small">Securing India's digital economy through precision governance and expert advisory. We help businesses navigate the DPDPA 2023 landscape with confidence.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="/rules" class="footer-link">Compliance Rules</a>
+                    <a href="/templates" class="footer-link">DPDP Templates</a>
+                    <a href="/checklists" class="footer-link">Audit Checklist</a>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="/about" class="footer-link">About Us</a>
+                    <a href="/ourteam" class="footer-link">Advisory Team</a>
+                    <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+            <div class="text-center small opacity-50">© 2026 DPDPA TN. Built for the Indian Digital Economy.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 120 });
+
+
+        // Countdown Timer
+        function updateTimer() {
+            const deadline = new Date("May 13, 2027 23:59:59").getTime();
+            const now = new Date().getTime();
+            const diff = deadline - now;
+
+            if (diff <= 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("mins").innerText = "00";
+                document.getElementById("secs").innerText = "00";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+            document.getElementById("mins").innerText = m.toString().padStart(2, '0');
+            document.getElementById("secs").innerText = s.toString().padStart(2, '0');
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Submit Web3Forms via fetch and clear fields after success.
+        const web3Forms = document.querySelectorAll('form[action="https://api.web3forms.com/submit"]');
+        web3Forms.forEach((form) => {
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const statusBox = form.querySelector('#indexFormStatus');
+                if (submitBtn) submitBtn.disabled = true;
+                if (statusBox) {
+                    statusBox.className = 'alert d-none mt-2 mb-0';
+                    statusBox.textContent = '';
+                }
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: { Accept: "application/json" }
+                    });
+                    const data = await response.json();
+                    if (data.success) {
+                        form.reset();
+                        if (statusBox) {
+                            statusBox.className = 'alert alert-success mt-2 mb-0';
+                            statusBox.textContent = 'Form submitted successfully! We will contact you as soon as possible';
+                        }
+                    } else {
+                        if (statusBox) {
+                            statusBox.className = 'alert alert-danger mt-2 mb-0';
+                            statusBox.textContent = 'Form submission failed. Please try again.';
+                        }
+                    }
+                } catch (err) {
+                    if (statusBox) {
+                        statusBox.className = 'alert alert-danger mt-2 mb-0';
+                        statusBox.textContent = 'Network error. Please try again.';
+                    }
+                } finally {
+                    if (submitBtn) submitBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const html = document.documentElement;
+    const knob = themeToggle.querySelector('.toggle-knob');
+
+    const updateIcon = (theme) => {
+        if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+    };
+
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-bs-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-bs-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+    });
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-bs-theme', savedTheme);
+    updateIcon(savedTheme);
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Evaluate your DPDPA readiness with a role-based compliance assessment for DPOs, legal teams, HR, IT security, and grievance officers.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/asses">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/asses">
+    <meta property="og:title" content="DPDPA Role-Based Assessment | DPDPA TN">
+    <meta property="og:description" content="Evaluate your DPDPA readiness with a role-based compliance assessment for DPOs, legal teams, HR, IT security, and grievance officers.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDPA Role-Based Assessment | DPDPA TN">
+    <meta name="twitter:description" content="Evaluate your DPDPA readiness with a role-based compliance assessment for DPOs, legal teams, HR, IT security, and grievance officers.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDPA Role-Based Assessment | DPDPA TN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --border: #e2e8f0;
+            --body-bg: #f8faff;
+            --card-bg: #ffffff;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #e2e8f0;
+            --slate: #94a3b8;
+            --border: #334155;
+            --body-bg: #0a0f1d;
+            --card-bg: #161e2d;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--body-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+.role-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            height: 100%;
+        }
+        .role-card:hover, .role-card.active {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,82,204,0.1);
+        }
+        .role-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+        .assessment-section {
+            display: none;
+            margin-top: 50px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .assessment-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+        }
+
+        .question-block { 
+            margin-bottom: 2.25rem; 
+            padding-bottom: 1.75rem; 
+            border-bottom: 1px solid var(--border); 
+        }
+        .question-text { 
+            font-weight: 700; 
+            font-size: 1.1rem; 
+            margin-bottom: 1.25rem; 
+            display: block;
+            color: var(--dark); 
+        }
+
+        .progress { height: 10px; border-radius: 10px; background-color: var(--border); }
+
+        footer {
+            background: #070b14;
+            color: #94a3b8;
+            padding: 60px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-logo { font-size: 1.5rem; font-weight: 900; color: white; margin-bottom: 20px; display: block; }
+        .footer-link { color: #94a3b8; display: block; margin-bottom: 14px; text-decoration: none; transition: all 0.3s; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 130px; padding-bottom: 100px;">
+        <div class="container">
+            
+            <div id="roleSelectionSection">
+                <div class="text-center mb-5">
+                    <h1 class="fw-900 display-5 mb-3">DPDPA Assessment Portal</h1>
+                    <p class="text-muted lead">Choose your role to complete a 10-question compliance assessment.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('dpo', this)">
+                            <span class="role-icon"><i class="fas fa-id-badge" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">Data Protection Officer</h5>
+                            <p class="small text-muted mb-0">Audits, DPIA, Accountability</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('legal', this)">
+                            <span class="role-icon"><i class="fas fa-scale-balanced" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">Legal Counsel</h5>
+                            <p class="small text-muted mb-0">Contracts, Rights, Liability</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('hr', this)">
+                            <span class="role-icon"><i class="fas fa-people-group" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">HR Manager</h5>
+                            <p class="small text-muted mb-0">Employee Data & Consent</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('it', this)">
+                            <span class="role-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">IT & Security</h5>
+                            <p class="small text-muted mb-0">Breach & Technical Controls</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('marketing', this)">
+                            <span class="role-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">Marketing Lead</h5>
+                            <p class="small text-muted mb-0">Consent & Ad-tech</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="role-card" onclick="loadAssessment('support', this)">
+                            <span class="role-icon"><i class="fas fa-headset" aria-hidden="true"></i></span>
+                            <h5 class="fw-bold">Grievance Officer</h5>
+                            <p class="small text-muted mb-0">Rights Requests & Redressal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="assessmentSection" class="assessment-section">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <div class="assessment-card">
+                            <h3 id="formTitle" class="fw-bold mb-4 text-primary text-center">Compliance Assessment</h3>
+                            
+                            <div class="progress mb-5">
+                                <div id="progressBar" class="progress-bar bg-primary" role="progressbar" style="width: 0%;"></div>
+                            </div>
+
+                            <form id="assessmentForm" novalidate>
+                                <div id="questionContainer" class="mb-5"></div>
+
+                                <div class="d-flex justify-content-between mt-5 gap-3 flex-wrap">
+                                    <button type="button" id="prevBtn" class="btn btn-outline-secondary px-5 py-2 fw-bold" style="display:none;">Previous</button>
+                                    <button type="button" id="nextBtn" class="btn btn-primary px-5 py-2 fw-bold">Next</button>
+                                    <button type="button" id="submitBtn" class="btn btn-primary btn-lg fw-bold px-5 shadow-sm" style="display:none;">
+                                        Calculate Score
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div id="resultArea" class="mt-5 text-center" style="display: none;">
+                                <hr class="my-4">
+                                <h2 class="fw-900 mb-3">Readiness Score: <span id="scoreValue">0</span>/100</h2>
+                                <div id="feedbackMessage" class="alert mt-3 p-4 rounded-4"></div>
+                                <button onclick="resetAssessment()" class="btn btn-outline-secondary btn-sm mt-3 px-4">
+                                    Start New Assessment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">
+                        DPDPA <span class="text-primary">TN</span>
+                    </span>
+                    <p class="small">
+                        Securing India's digital economy through precision governance and expert advisory.
+                        We help businesses navigate the DPDPA 2023 landscape with confidence.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="/rules" class="footer-link">DPDP Rules</a>
+                    <a href="/templates" class="footer-link">DPDP Templates</a>
+                    <a href="/checklists" class="footer-link">Audit Checklist</a>
+                </div>
+
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="/about" class="footer-link">About Us</a>
+                    <a href="/ourteam" class="footer-link">Advisory Team</a>
+                    <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                </div>
+
+                <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+
+            <div class="text-center small opacity-50">
+                © 2026  DPDPA TN. Built for the Indian Digital Economy.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- THEME LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeBtn = document.getElementById('themeToggle');
+            if (!themeBtn) return;
+            const html = document.documentElement;
+            const knob = themeBtn.querySelector('.toggle-knob');
+
+            function updateIcon(theme) {
+                if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+            }
+
+            themeBtn.addEventListener('click', () => {
+                const current = html.getAttribute('data-bs-theme') || 'light';
+                const newTheme = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateIcon(newTheme);
+            });
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-bs-theme', savedTheme);
+            updateIcon(savedTheme);
+        });
+
+        // --- ASSESSMENT DATA ---
+        const roleQuestions = {
+            dpo: [
+                { type: 'mcq', text: "Personal data should be processed only when:", options: ["A. For any business purpose", "B. When convenient", "C. For lawful, specific, and clearly defined purposes", "D. For marketing unless objected"], correct: "C" },
+                { type: 'mcq', text: "Records of Processing Activities (RoPA) should be maintained by:", options: ["A. Only Significant Data Fiduciaries", "B. Every Data Fiduciary", "C. Only government entities", "D. Only foreign companies"], correct: "B" },
+                { type: 'mcq', text: "Who is primarily accountable for demonstrating compliance?", options: ["A. IT department", "B. Data Protection Officer", "C. Marketing team", "D. HR department"], correct: "B" },
+                { type: 'mcq', text: "Grievance redressal should be completed within:", options: ["A. 30 days", "B. 60 days", "C. As soon as possible", "D. No specific timeline"], correct: "A" },
+                { type: 'mcq', text: "The DPO should report directly to:", options: ["A. The IT Manager", "B. The senior management or board", "C. The marketing department", "D. No one"], correct: "B" },
+                { type: 'mcq', text: "DPIA is required for:", options: ["A. All data processing", "B. High-risk processing", "C. Low-risk processing", "D. No processing"], correct: "B" },
+                { type: 'mcq', text: "Accountability under DPDP means:", options: ["A. Ignoring compliance", "B. Demonstrating compliance", "C. Only collecting data", "D. Deleting data"], correct: "B" },
+                { type: 'mcq', text: "The DPO must be involved in:", options: ["A. Sales meetings", "B. Data processing assessments", "C. Product design only", "D. HR hiring"], correct: "B" },
+                { type: 'mcq', text: "Internal audits should be conducted:", options: ["A. Never", "B. Periodically", "C. Only after breach", "D. Once in 10 years"], correct: "B" },
+                { type: 'mcq', text: "Data Principal rights include:", options: ["A. Access and correction", "B. Only access", "C. Only deletion", "D. No rights"], correct: "A" }
+            ],
+            legal: [
+                { type: 'mcq', text: "Data Processor contracts must include:", options: ["A. No clauses", "B. DPDP compliance clauses", "C. Only payment terms", "D. Marketing details"], correct: "B" },
+                { type: 'mcq', text: "Legitimate uses for processing are for:", options: ["A. Any purpose", "B. Employment and corporate affairs", "C. Marketing only", "D. Future use only"], correct: "B" },
+                { type: 'mcq', text: "Children's data requires:", options: ["A. No consent", "B. Verifiable parental consent", "C. Only notice", "D. Child consent only"], correct: "B" },
+                { type: 'mcq', text: "Purpose limitation means data collected for:", options: ["A. Any future use", "B. Lawful, specific purposes", "C. Unlimited use", "D. Marketing only"], correct: "B" },
+                { type: 'mcq', text: "Data breach notification is required when:", options: ["A. Any breach", "B. Likely to cause harm", "C. Only major breaches", "D. Never"], correct: "B" },
+                { type: 'mcq', text: "International data transfers require:", options: ["A. No mechanism", "B. Compliant mechanisms", "C. Only notice", "D. Consent only"], correct: "B" },
+                { type: 'mcq', text: "Data Principal rights include:", options: ["A. Access, correction, erasure", "B. Only access", "C. Only correction", "D. No rights"], correct: "A" },
+                { type: 'mcq', text: "Liability clauses in contracts should be:", options: ["A. Ignored", "B. DPDP-compliant", "C. Unlimited liability", "D. No liability"], correct: "B" },
+                { type: 'mcq', text: "Privacy notice must be updated when:", options: ["A. Purposes change", "B. Never", "C. Annually only", "D. Only on request"], correct: "A" },
+                { type: 'mcq', text: "Non-consent processing requires:", options: ["A. Legitimate use assessment", "B. No assessment", "C. Marketing consent", "D. All consent"], correct: "A" }
+            ],
+            hr: [
+                { type: 'mcq', text: "Employee sensitive data processing requires:", options: ["A. No consent", "B. Explicit consent", "C. Implied consent", "D. No data"], correct: "B" },
+                { type: 'mcq', text: "Employee monitoring is allowed with:", options: ["A. No notice", "B. Prior clear notice", "C. Secretly", "D. After work hours"], correct: "B" },
+                { type: 'mcq', text: "Employee data retention should be:", options: ["A. Indefinite", "B. Based on documented schedule", "C. Manager decision", "D. No retention"], correct: "B" },
+                { type: 'mcq', text: "Background verification requires:", options: ["A. No consent", "B. Explicit consent & disclosure", "C. Verbal consent", "D. Referee consent only"], correct: "B" },
+                { type: 'mcq', text: "HR data minimization means collecting:", options: ["A. All data", "B. Only necessary data", "C. Future use data", "D. Marketing data"], correct: "B" },
+                { type: 'mcq', text: "Privacy notices for employees should be in:", options: ["A. English only", "B. Language employees understand", "C. Legal jargon", "D. No notice"], correct: "B" },
+                { type: 'mcq', text: "Employee rights exercise should be:", options: ["A. Difficult", "B. Easy", "C. Impossible", "D. Fee-based"], correct: "B" },
+                { type: 'mcq', text: "HR staff should be trained on:", options: ["A. DPDPA obligations", "B. Sales skills", "C. Cooking", "D. No training"], correct: "A" },
+                { type: 'mcq', text: "Retention schedule should include:", options: ["A. Deletion mechanism", "B. No deletion", "C. Indefinite storage", "D. Manager choice"], correct: "A" },
+                { type: 'mcq', text: "Monitoring notice should be:", options: ["A. Clear", "B. Hidden", "C. Verbal only", "D. No notice"], correct: "A" }
+            ],
+            it: [
+                { type: 'mcq', text: "Personal data should be encrypted:", options: ["A. Never", "B. At rest and in transit", "C. Only at rest", "D. Only in transit"], correct: "B" },
+                { type: 'mcq', text: "Data minimization should be implemented at:", options: ["A. Collection only", "B. Database & application level", "C. Marketing only", "D. Never"], correct: "B" },
+                { type: 'mcq', text: "Role-based access control (RBAC) should be:", options: ["A. Optional", "B. Enforced", "C. Ignored", "D. For admins only"], correct: "B" },
+                { type: 'mcq', text: "Breach notification system should be:", options: ["A. Manual only", "B. Automated where possible", "C. Optional", "D. Only for major breaches"], correct: "B" },
+                { type: 'mcq', text: "Vulnerability scans and pen-tests should be:", options: ["A. Never", "B. Regular", "C. Once a year", "D. After breach"], correct: "B" },
+                { type: 'mcq', text: "Access logs for personal data should be:", options: ["A. Never kept", "B. Maintained and reviewed", "C. 30 days only", "D. Public"], correct: "B" },
+                { type: 'mcq', text: "Third-party vendors should be bound by:", options: ["A. No clauses", "B. DPDPA security clauses", "C. Payment terms only", "D. Marketing agreements"], correct: "B" },
+                { type: 'mcq', text: "Secure disposal of data should be:", options: ["A. Optional", "B. Documented and enforced", "C. Paper only", "D. Not required"], correct: "B" },
+                { type: 'mcq', text: "Incident response plan for breaches is:", options: ["A. Optional", "B. Required", "C. For IT only", "D. No plan"], correct: "B" },
+                { type: 'mcq', text: "Security audits should be:", options: ["A. Never", "B. Regular", "C. After breach", "D. Optional"], correct: "B" }
+            ],
+            marketing: [
+                { type: 'mcq', text: "Marketing consent withdrawal should be:", options: ["A. Difficult", "B. One simple action", "C. Fee-based", "D. Impossible"], correct: "B" },
+                { type: 'mcq', text: "Behavioral advertising requires:", options: ["A. No consent", "B. Explicit informed consent", "C. Only notice", "D. Implied consent"], correct: "B" },
+                { type: 'mcq', text: "Trackers/cookies must be disclosed in:", options: ["A. No disclosure", "B. Privacy notice", "C. Emails only", "D. Ads only"], correct: "B" },
+                { type: 'mcq', text: "Promotional messages must include:", options: ["A. No unsubscribe", "B. Clear unsubscribe/opt-out", "C. Company name only", "D. Price only"], correct: "B" },
+                { type: 'mcq', text: "Lead forms should collect:", options: ["A. All data", "B. Minimal data with notice", "C. Future use data", "D. No data"], correct: "B" },
+                { type: 'mcq', text: "Do Not Call requests should be:", options: ["A. Ignored", "B. Honoured promptly", "C. Delayed", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "Granular consent for channels is:", options: ["A. Optional", "B. Required", "C. Not needed", "D. For email only"], correct: "B" },
+                { type: 'mcq', text: "Consent evidence should be:", options: ["A. Not stored", "B. Stored and retrievable", "C. Shared", "D. Verbal only"], correct: "B" },
+                { type: 'mcq', text: "Cookie banner should be:", options: ["A. Not implemented", "B. Properly implemented", "C. Hidden", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "New ad-tech vendors should be:", options: ["A. Not reviewed", "B. Reviewed for compliance", "C. Ignored", "D. Immediate use"], correct: "B" }
+            ],
+            support: [
+                { type: 'mcq', text: "Grievance officer contact should be:", options: ["A. Hidden", "B. Publicly available", "C. Email only", "D. No contact"], correct: "B" },
+                { type: 'mcq', text: "Grievances should be acknowledged within:", options: ["A. 7 days", "B. 24–72 hours", "C. 30 days", "D. No timeline"], correct: "B" },
+                { type: 'mcq', text: "Data Principal rights requests should be handled:", options: ["A. Only by email", "B. Through clear mechanism", "C. Ignored if inconvenient", "D. After 60 days"], correct: "B" },
+                { type: 'mcq', text: "Escalation path for grievances should be:", options: ["A. Non-existent", "B. Clearly defined", "C. Only to CEO", "D. Optional"], correct: "B" },
+                { type: 'mcq', text: "Language support for grievances should include:", options: ["A. Only English", "B. Scheduled languages as needed", "C. No support", "D. Only Hindi"], correct: "B" },
+                { type: 'mcq', text: "Grievance records should be:", options: ["A. Not maintained", "B. Maintained for review", "C. Deleted immediately", "D. Shared publicly"], correct: "B" },
+                { type: 'mcq', text: "Staff should be trained on:", options: ["A. No training", "B. Handling data rights requests", "C. Sales", "D. Cooking"], correct: "B" },
+                { type: 'mcq', text: "Grievance resolution timeline should be:", options: ["A. No timeline", "B. Documented", "C. Infinite", "D. Manager choice"], correct: "B" },
+                { type: 'mcq', text: "Grievance data should be analyzed for:", options: ["A. No analysis", "B. Recurring issues", "C. Marketing", "D. Deletion"], correct: "B" },
+                { type: 'mcq', text: "Grievance redressal should be integrated with:", options: ["A. No integration", "B. DPO oversight", "C. Sales team", "D. IT only"], correct: "B" }
+            ]
+        };
+
+        let currentStep = 0;
+        let currentRole = null;
+        let totalQuestions = 0;
+        const QUESTIONS_PER_STEP = 5;
+        let answers = {};  // Stores selected answers
+
+        function loadAssessment(role, element) {
+            document.querySelectorAll('.role-card').forEach(c => c.classList.remove('active'));
+            element.classList.add('active');
+
+            currentRole = role;
+            totalQuestions = roleQuestions[role].length;
+            answers = {};
+
+            document.getElementById('formTitle').textContent = 
+                role === 'support' ? 'Grievance Officer Assessment' : role.toUpperCase() + ' Assessment';
+
+            document.getElementById('assessmentSection').style.display = 'block';
+            document.getElementById('resultArea').style.display = 'none';
+
+            currentStep = 0;
+            renderStep(currentStep);
+            
+            setTimeout(() => {
+                document.getElementById('assessmentSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        function renderStep(step) {
+            currentStep = step;
+            const container = document.getElementById('questionContainer');
+            container.innerHTML = '';
+
+            const start = step * QUESTIONS_PER_STEP;
+            const end = Math.min(start + QUESTIONS_PER_STEP, totalQuestions);
+            const questions = roleQuestions[currentRole];
+
+            for (let i = start; i < end; i++) {
+                const q = questions[i];
+                let html = `
+                    <div class="question-block">
+                        <span class="question-text">${i+1}. ${q.text}</span>`;
+
+                html += '<div class="mt-2">';
+                q.options.forEach((opt) => {
+                    const letter = opt.trim().charAt(0).toUpperCase();
+                    const checked = answers[i] === letter ? ' checked' : '';
+                    html += `
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q${i}" id="q${i}_${letter}" value="${letter}"${checked}>
+                            <label class="form-check-label" for="q${i}_${letter}">${opt}</label>
+                        </div>`;
+                });
+                html += '</div>';
+                html += '</div>';
+                container.innerHTML += html;
+            }
+
+            // Add event listeners to save answers
+            container.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    const index = parseInt(e.target.name.replace('q', ''));
+                    answers[index] = e.target.value;
+                });
+            });
+
+            const totalSteps = Math.ceil(totalQuestions / QUESTIONS_PER_STEP);
+            const progress = ((step + 1) / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
+
+            document.getElementById('prevBtn').style.display = step > 0 ? 'inline-block' : 'none';
+            document.getElementById('nextBtn').style.display = end < totalQuestions ? 'inline-block' : 'none';
+            document.getElementById('submitBtn').style.display = end === totalQuestions ? 'inline-block' : 'none';
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStep > 0) renderStep(currentStep - 1);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const start = currentStep * QUESTIONS_PER_STEP;
+            const end = Math.min(start + QUESTIONS_PER_STEP, totalQuestions);
+
+            let allAnswered = true;
+            for (let i = start; i < end; i++) {
+                if (!answers[i]) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allAnswered) {
+                alert("Please answer all questions in this step before proceeding.");
+                return;
+            }
+
+            renderStep(currentStep + 1);
+        });
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const start = currentStep * QUESTIONS_PER_STEP;
+            const end = Math.min(start + QUESTIONS_PER_STEP, totalQuestions);
+
+            let allAnswered = true;
+            for (let i = start; i < end; i++) {
+                if (!answers[i]) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allAnswered) {
+                alert("Please answer all questions on this page before calculating the score.");
+                return;
+            }
+
+            calculateScore();
+        });
+
+        function calculateScore() {
+            let score = 0;
+            const questions = roleQuestions[currentRole];
+
+            for (let i = 0; i < totalQuestions; i++) {
+                const selected = answers[i];
+                if (!selected) continue;
+
+                const correct = questions[i].correct.trim().toUpperCase();
+                if (selected.trim().toUpperCase() === correct) {
+                    score += 10;
+                }
+            }
+
+            document.getElementById('scoreValue').textContent = score;
+
+            const msg = document.getElementById('feedbackMessage');
+            msg.className = 'alert mt-3 p-4 rounded-4';
+
+            if (score === 100) {
+                msg.classList.add('alert-success');
+                msg.textContent = "Outstanding – Excellent compliance readiness!";
+            } else if (score >= 80) {
+                msg.classList.add('alert-success');
+                msg.textContent = "Strong – Minor refinements may be needed.";
+            } else if (score >= 60) {
+                msg.classList.add('alert-warning');
+                msg.textContent = "Moderate – Several areas require attention.";
+            } else if (score >= 40) {
+                msg.classList.add('alert-warning');
+                msg.textContent = "Significant gaps – Action plan recommended.";
+            } else {
+                msg.classList.add('alert-danger');
+                msg.textContent = "High risk – Immediate remedial measures necessary.";
+            }
+
+            const resultArea = document.getElementById('resultArea');
+            resultArea.style.display = 'block';
+
+            // Scroll to the result block with room for the fixed navbar.
+            requestAnimationFrame(() => {
+                const navOffset = 120;
+                const top = resultArea.getBoundingClientRect().top + window.pageYOffset - navOffset;
+                window.scrollTo({ top, behavior: 'smooth' });
+                resultArea.setAttribute('tabindex', '-1');
+                resultArea.focus({ preventScroll: true });
+            });
+        }
+
+        function resetAssessment() {
+            document.getElementById('assessmentSection').style.display = 'none';
+            document.getElementById('resultArea').style.display = 'none';
+            document.querySelectorAll('.role-card').forEach(c => c.classList.remove('active'));
+            document.getElementById('questionContainer').innerHTML = '';
+            document.getElementById('progressBar').style.width = '0%';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

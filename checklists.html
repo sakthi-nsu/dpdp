@@ -1,0 +1,843 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Use structured 2026 DPDPA compliance checklists to plan and track readiness across sectors, teams, and implementation milestones.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/checklists">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/checklists">
+    <meta property="og:title" content="DPDPA 2026 Compliance Checklists | DPDPA TN">
+    <meta property="og:description" content="Use structured 2026 DPDPA compliance checklists to plan and track readiness across sectors, teams, and implementation milestones.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDPA 2026 Compliance Checklists | DPDPA TN">
+    <meta name="twitter:description" content="Use structured 2026 DPDPA compliance checklists to plan and track readiness across sectors, teams, and implementation milestones.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDPA 2026 Compliance Checklists | DPDPA TN</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --body-bg: #f8faff;
+            --text: #0a0f1d;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --success-light: #ecfdf5;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9;
+            --card-bg: #1e293b;
+            --border: #334155;
+            --success-light: #064e3b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--body-bg);
+            color: var(--text);
+            padding-top: 90px;
+            line-height: 1.7;
+            transition: all 0.4s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main { flex: 1; }
+
+        /* Navbar */
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+/* Checklist UI */
+        .checklist-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+
+        .step-badge {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 30px;
+            background: var(--success-light);
+            color: #10b981;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        [data-bs-theme="dark"] .step-badge {
+            color: #34d399;
+        }
+
+        .form-check-input {
+            width: 1.4em;
+            height: 1.4em;
+            cursor: pointer;
+            border: 2px solid var(--border);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .text-slate { color: var(--slate); }
+
+        /* Sector Selector Styling & Animation */
+        .sector-selector-card {
+            background: linear-gradient(135deg, var(--primary), #007bff);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,82,204,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sector-selector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,82,204,0.4);
+        }
+
+        .form-select {
+            background-color: rgba(255,255,255,0.95);
+            color: #0a0f1d;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        #sectorSelect option {
+            color: #0a0f1d;
+            background-color: #ffffff;
+        }
+        #sectorSelect option:disabled {
+            color: #6b7280;
+        }
+
+        [data-bs-theme="dark"] #sectorSelect {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            border: 1px solid rgba(255,255,255,0.35);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+        }
+
+        [data-bs-theme="dark"] #sectorSelect:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 0.25rem rgba(96,165,250,0.2);
+        }
+
+        [data-bs-theme="dark"] #sectorSelect option {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.5);
+            transform: scale(1.02);
+        }
+
+        /* Fade-in Animation for Dynamic Content */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-section {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        footer {
+            background: #070b14;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+            transform: translateX(6px);
+        }
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div class="text-center mb-5">
+                <h1 class="fw-bold display-5 mb-3">
+                    2026 DPDPA <span class="text-primary">Sector Compliance Checklists</span>
+                </h1>
+                <p class="lead text-slate">
+                    Tailored statutory requirements for key industries under DPDPA 2023 & DPDP Rules 2025.<br>
+                    Select your sector below to view expanded phased audit items.
+                </p>
+            </div>
+
+            <div class="checklist-card sector-selector-card text-white text-center shadow-lg mb-5">
+                <h2 class="fw-900 mb-4">Select Your Industry Sector</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <select class="form-select form-select-lg" id="sectorSelect">
+                            <option value="" selected disabled>-- Choose Sector --</option>
+                            <option value="fintech">FinTech & NBFCs</option>
+                            <option value="healthcare">Healthcare & Diagnostics</option>
+                            <option value="ecommerce">E-Commerce & Retail</option>
+                            <option value="logistics">Logistics & Supply Chain</option>
+                            <option value="it_ites">IT, ITES & BPOs</option>
+                            <option value="real_estate">Real Estate & PropTech</option>
+                            <option value="manufacturing">Manufacturing & Industrial</option>
+                            <option value="hospitality">Hospitality & Tourism</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dynamicChecklist" style="display: none;">
+                <div id="sectorTitle" class="mb-5 text-center fade-in-section"></div>
+
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.1s;">
+                            <span class="step-badge">Phase 01: Governance & Accountability</span>
+                            <h4 class="fw-bold mb-4">Framework Setup</h4>
+                            <div id="phase1List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.2s;">
+                            <span class="step-badge">Phase 02: Data Inventory & Minimization</span>
+                            <h4 class="fw-bold mb-4">Mapping & Reduction</h4>
+                            <div id="phase2List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.3s;">
+                            <span class="step-badge">Phase 03: Notice & Consent Management</span>
+                            <h4 class="fw-bold mb-4">Transparency & Approval</h4>
+                            <div id="phase3List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.4s;">
+                            <span class="step-badge">Phase 04: Data Principal Rights</span>
+                            <h4 class="fw-bold mb-4">Access, Correction & Erasure</h4>
+                            <div id="phase4List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.5s;">
+                            <span class="step-badge">Phase 05: Security & Breach Response</span>
+                            <h4 class="fw-bold mb-4">Safeguards & Incident Handling</h4>
+                            <div id="phase5List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.6s;">
+                            <span class="step-badge">Phase 06: Vendor Management & Transfers</span>
+                            <h4 class="fw-bold mb-4">Third-Party & Cross-Border</h4>
+                            <div id="phase6List" class="mt-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="checklist-card fade-in-section" style="animation-delay: 0.7s;">
+                            <span class="step-badge">Phase 07: Training & Continuous Compliance</span>
+                            <h4 class="fw-bold mb-4">Ongoing Monitoring & Education</h4>
+                            <div id="phase7List" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <span class="footer-logo">
+                    DPDPA <span class="text-primary">TN</span>
+                </span>
+                <p class="small">
+                    Securing India's digital economy through precision governance and expert advisory.
+                    We help businesses navigate the DPDPA 2023 landscape with confidence.
+                </p>
+            </div>
+
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="text-white fw-bold mb-3">Resources</h6>
+                <a href="/rules" class="footer-link">DPDP Rules</a>
+                <a href="/templates" class="footer-link">DPDP Templates</a>
+                <a href="/checklists" class="footer-link">Audit Checklist</a>
+            </div>
+
+            <div class="col-lg-2">
+                <h6 class="text-white fw-bold mb-3">Company</h6>
+                <a href="/about" class="footer-link">About Us</a>
+                <a href="/ourteam" class="footer-link">Advisory Team</a>
+                <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+            </div>
+
+            <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+
+        <div class="text-center small opacity-50">
+            © 2026  DPDPA TN. Built for the Indian Digital Economy.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Expanded Sector Data with More Phases
+    const sectorData = {
+        fintech: {
+            name: "FinTech & NBFCs",
+            p1: [
+                { t: "RBI-DPDPA Inventory", d: "Align data mapping with RBI Master Directions on KYC and Data Localisation." },
+                { t: "Consent Manager Integration", d: "Enable API connectivity with registered Account Aggregators (AA) for financial data sharing." },
+                { t: "SDF Assessment", d: "Determine if your entity qualifies as a Significant Data Fiduciary and appoint DPO accordingly." }
+            ],
+            p2: [
+                { t: "Data Flow Mapping", d: "Map all financial data fields to minimize collection of unnecessary PII like full addresses for KYC." },
+                { t: "Retention Policy Update", d: "Set automated deletion for transaction data after RBI-mandated periods (e.g., 7 years)." }
+            ],
+            p3: [
+                { t: "Purpose Separation", d: "Separate consent for credit evaluation from marketing insurance or third-party products." },
+                { t: "Loan Disbursement Notice", d: "Provide clear notice in 22 scheduled languages explaining PII usage in loan recovery." },
+                { t: "Opt-Out Mechanisms", d: "Implement easy withdrawal for marketing consents via app or SMS." }
+            ],
+            p4: [
+                { t: "Rights Workflow Automation", d: "Automate access requests for transaction histories and correction of account details." },
+                { t: "Erasure Requests Handling", d: "Process deletion requests for inactive accounts while retaining audit trails." }
+            ],
+            p5: [
+                { t: "PII Masking", d: "Mask PAN and Aadhaar numbers in all transaction logs and customer support dashboards." },
+                { t: "Anti-Deepfake KYC", d: "Implement liveness detection to protect biometric data processed during video KYC." },
+                { t: "Breach Notification Plan", d: "Prepare 72-hour reporting to DP Board for any financial data incidents." }
+            ],
+            p6: [
+                { t: "Vendor DPA Clauses", d: "Update contracts with payment gateways to include DPDPA processor obligations." },
+                { t: "Cross-Border Restrictions", d: "Ensure no unauthorized transfers of sensitive financial data outside India." }
+            ],
+            p7: [
+                { t: "Employee Training Programs", d: "Conduct quarterly sessions on DPDPA for compliance and fraud teams." },
+                { t: "Annual Compliance Audits", d: "Perform DPIA and independent audits for high-risk processing activities." }
+            ]
+        },
+        healthcare: {
+            name: "Healthcare & Diagnostics",
+            p1: [
+                { t: "Nomination Protocols", d: "Enable workflows for data principals to appoint nominees for health records management." },
+                { t: "SDF Status Audit", d: "Hospitals processing massive health data must appoint a local DPO and independent auditor." },
+                { t: "Grievance Officer Appointment", d: "Designate a DPO for handling patient data complaints." }
+            ],
+            p2: [
+                { t: "Health Data Inventory", d: "Map sensitive health data like medical histories and minimize non-essential collection." },
+                { t: "Data Minimization in EMR", d: "Limit storage of patient demographics to what's required for treatment." }
+            ],
+            p3: [
+                { t: "Verifiable Parental Consent", d: "Implement age-verification for pediatric patients and obtain guardian consent via OTP/Digital Sign." },
+                { t: "Emergency Processing SOP", d: "Document Section 7 exemptions for processing medical data during life-threatening emergencies." },
+                { t: "Multi-Language Notices", d: "Provide privacy notices in regional languages for patient consent forms." }
+            ],
+            p4: [
+                { t: "Access to Health Records", d: "Allow patients to request and view their medical records within defined timelines." },
+                { t: "Correction & Erasure", d: "Handle updates to inaccurate health data and deletions post-retention period." }
+            ],
+            p5: [
+                { t: "Doctor-Processor Contracts", d: "Update agreements with diagnostic labs to ensure end-to-end encryption of patient reports." },
+                { t: "Medical Record Retention", d: "Sync automated erasure cycles with legal medical retention periods (e.g., 3-10 years)." },
+                { t: "Incident Response Plan", d: "Develop protocols for breach notifications involving sensitive health data." }
+            ],
+            p6: [
+                { t: "Third-Party Lab Agreements", d: "Include DPDPA clauses in contracts with external labs and insurers." },
+                { t: "Cross-Border Telemedicine", d: "Restrict transfers of health data abroad unless consented and compliant." }
+            ],
+            p7: [
+                { t: "Staff Privacy Training", d: "Train medical staff on DPDPA obligations annually." },
+                { t: "Periodic Audits", d: "Conduct regular compliance reviews and DPIAs for high-volume data processing." }
+            ]
+        },
+        ecommerce: {
+            name: "E-Commerce & Retail",
+            p1: [
+                { t: "Processor Accountability", d: "Audit 3PL (Third Party Logistics) vendors to ensure they delete customer addresses after delivery." },
+                { t: "Abandoned Cart Deletion", d: "Set automated 30-day deletion for guest user data where no purchase was finalized." },
+                { t: "DPO Designation", d: "Appoint a Data Protection Officer for large-scale platforms." }
+            ],
+            p2: [
+                { t: "Customer Data Mapping", d: "Inventory purchase history and preferences, minimizing retention of unused data." },
+                { t: "Minimization in Profiles", d: "Limit collection of optional fields like DOB unless justified." }
+            ],
+            p3: [
+                { t: "Dark Pattern Removal", d: "Eliminate pre-ticked 'Subscribe' boxes; ensure 'one-click' withdrawal of consent is active." },
+                { t: "Itemized Notices", d: "Show exactly which third parties (e.g. ad networks) will receive data at checkout." },
+                { t: "Consent for Recommendations", d: "Obtain separate consent for personalized product suggestions." }
+            ],
+            p4: [
+                { t: "Order History Access", d: "Provide easy access to purchase records and correction of shipping details." },
+                { t: "Data Erasure Requests", d: "Process 'forget me' requests for inactive users." }
+            ],
+            p5: [
+                { t: "Ad-Tracker Monitoring", d: "Conduct weekly audits of web-pixels to prevent unauthorized data scraping by ad-tech providers." },
+                { t: "Tokenized Checkouts", d: "Ensure payment card details and addresses are stored in a non-readable tokenized format." },
+                { t: "Breach Protocols", d: "Notify affected customers and DP Board within 72 hours of incidents." }
+            ],
+            p6: [
+                { t: "Vendor Contracts Update", d: "Add DPDPA obligations to agreements with logistics and payment partners." },
+                { t: "International Data Flows", d: "Assess and restrict cross-border transfers for global marketplaces." }
+            ],
+            p7: [
+                { t: "Employee Awareness Sessions", d: "Train customer service teams on handling data rights requests." },
+                { t: "Compliance Monitoring", d: "Perform annual audits and update policies based on DP Board guidelines." }
+            ]
+        },
+        logistics: {
+            name: "Logistics & Supply Chain",
+            p1: [
+                { t: "Delivery Partner Training", d: "Statutory training for last-mile riders regarding the handling of customer PII on mobile apps." },
+                { t: "Geofence Logging", d: "Ensure GPS/Location data of customers is deleted immediately after delivery confirmation." },
+                { t: "Accountability Framework", d: "Establish governance for supply chain data processing." }
+            ],
+            p2: [
+                { t: "Shipment Data Inventory", d: "Map address and contact data, minimizing storage post-delivery." },
+                { t: "Data Reduction Policies", d: "Limit retention of tracking data to necessary periods." }
+            ],
+            p3: [
+                { t: "SMS/Call Masking", d: "Provide a 'Privacy-First' call masking system so riders cannot see a customer's real phone number." },
+                { t: "Service-Only Consent", d: "Restrict consent strictly to the fulfillment of the shipping contract (Section 7b)." },
+                { t: "Notice at Booking", d: "Display privacy notices during shipment booking." }
+            ],
+            p4: [
+                { t: "Access to Tracking History", d: "Allow customers to view and correct shipment details." },
+                { t: "Erasure Post-Delivery", d: "Handle deletion requests for completed shipments." }
+            ],
+            p5: [
+                { t: "Real-time Access Control", d: "Restrict warehouse staff from accessing full customer profiles; only name/address visible." },
+                { t: "Manifest Encryption", d: "Encrypt all digital shipping manifests and bill-of-lading documents containing personal data." },
+                { t: "Incident Management", d: "Prepare breach response with 72-hour notifications." }
+            ],
+            p6: [
+                { t: "Supplier Contracts", d: "Include DPDPA clauses in agreements with third-party carriers." },
+                { t: "Cross-Border Logistics", d: "Ensure compliant data transfers for international shipments." }
+            ],
+            p7: [
+                { t: "Rider & Staff Training", d: "Annual DPDPA training for field personnel." },
+                { t: "Audit Cycles", d: "Conduct periodic compliance checks on data handling." }
+            ]
+        },
+        it_ites: {
+            name: "IT, ITES & BPOs",
+            p1: [
+                { t: "Global-to-Local Mapping", d: "Map data received from foreign clients to ensure it meets Indian DPDPA standards for processing." },
+                { t: "Employee Data Protection", d: "Update HR policies for staff processing sensitive offshore client PII." },
+                { t: "Governance Structure", d: "Set up DPO and accountability frameworks for data processing." }
+            ],
+            p2: [
+                { t: "Client Data Inventory", d: "Map processed data and minimize storage of unnecessary PII." },
+                { t: "Data Minimization in CRM", d: "Limit retention in call center logs." }
+            ],
+            p3: [
+                { t: "Processor Notice Flow", d: "Ensure notices clearly define your role as a 'Data Processor' on behalf of global Data Fiduciaries." },
+                { t: "Grievance Redressal Cell", d: "Set up a specialized desk to handle data principal requests from both domestic and global users." },
+                { t: "Consent for Outsourcing", d: "Obtain consents where acting as fiduciary." }
+            ],
+            p4: [
+                { t: "Rights Handling for Clients", d: "Process access and correction requests from end-users." },
+                { t: "Erasure Protocols", d: "Implement deletions per client instructions." }
+            ],
+            p5: [
+                { t: "VDI Security", d: "Implement Virtual Desktop Infrastructure (VDI) to prevent data copying by BPO employees." },
+                { t: "One-Year Log Retention", d: "Maintain detailed access logs for at least 1 year to satisfy DPB audit requirements." },
+                { t: "Breach Response", d: "Notify clients and DP Board promptly." }
+            ],
+            p6: [
+                { t: "Sub-Processor Agreements", d: "Update contracts with cloud providers for DPDPA compliance." },
+                { t: "Offshore Data Flows", d: "Manage international transfers with adequate safeguards." }
+            ],
+            p7: [
+                { t: "Employee Training", d: "Regular sessions on data protection for IT staff." },
+                { t: "Compliance Audits", d: "Annual DPIA for high-risk operations." }
+            ]
+        },
+        real_estate: {
+            name: "Real Estate & PropTech",
+            p1: [
+                { t: "Lead Generation Audit", d: "Audit all real estate portals for how user 'Interests' are captured and shared with builders." },
+                { t: "Nomination Rights", d: "Enable workflows for property buyers to manage digital property documents posthumously." },
+                { t: "DPO Appointment", d: "Designate for large PropTech platforms." }
+            ],
+            p2: [
+                { t: "Buyer Data Mapping", d: "Inventory leads and minimize storage of non-essential data." },
+                { t: "Retention Limits", d: "Set deletion for unconverted leads after 6 months." }
+            ],
+            p3: [
+                { t: "Explicit Marketing Consent", d: "Ensure site-visit registrations don't automatically trigger spam calls from home-loan partners." },
+                { t: "Regional Language Notices", d: "Provide property documents and privacy notices in the local language of the site location." },
+                { t: "Consent for Viewings", d: "Obtain separate consent for sharing details with agents." }
+            ],
+            p4: [
+                { t: "Access to Agreements", d: "Allow buyers to view and correct registration details." },
+                { t: "Erasure for Leads", d: "Process deletions for non-converted inquiries." }
+            ],
+            p5: [
+                { t: "Financial Document Security", d: "Encrypt digital copies of Registry documents, Sale Deeds, and PAN/Aadhaar of buyers." },
+                { t: "Automated Erasure", d: "Establish 3-year deletion cycles for 'Cold Leads' who did not convert to property buyers." },
+                { t: "Incident Protocols", d: "Breach response plan for sensitive documents." }
+            ],
+            p6: [
+                { t: "Broker Contracts", d: "Include DPDPA in agreements with agents and financiers." },
+                { t: "International Buyer Transfers", d: "Handle NRI data with consent for cross-border." }
+            ],
+            p7: [
+                { t: "Agent Training", d: "Educate on DPDPA for handling buyer data." },
+                { t: "Annual Reviews", d: "Conduct compliance audits for data practices." }
+            ]
+        },
+        manufacturing: {
+            name: "Manufacturing & Industrial",
+            p1: [
+                { t: "Vendor PII Management", d: "Audit individual vendor/proprietor data stored in ERP systems for DPDPA compliance." },
+                { t: "Workforce Biometrics", d: "Secure facial/fingerprint attendance data and provide 'Legitimate Use' notices for employment." },
+                { t: "Governance Setup", d: "Establish DPDPA policies for industrial data." }
+            ],
+            p2: [
+                { t: "Employee Data Inventory", d: "Map workforce PII and minimize non-essential collection." },
+                { t: "Vendor Data Reduction", d: "Limit storage of supplier contacts post-contract." }
+            ],
+            p3: [
+                { t: "HR Policy Update", d: "Rewrite employment contracts to include DPDPA rights for manufacturing staff and laborers." },
+                { t: "Distributor Notices", d: "Provide itemized notices for individual distributors regarding how their credit data is used." },
+                { t: "Consent for Biometrics", d: "Obtain explicit consent for attendance systems." }
+            ],
+            p4: [
+                { t: "Employee Rights Access", d: "Allow workers to access and correct HR records." },
+                { t: "Erasure Post-Employment", d: "Delete data after statutory retention." }
+            ],
+            p5: [
+                { t: "CCTV Data Governance", d: "Implement clear signage for CCTV and set a 30-day auto-purge policy for security footage." },
+                { t: "OT System Isolation", d: "Ensure personal data in the 'Smart Factory' (IoT) is isolated from open internet vulnerabilities." },
+                { t: "Breach Handling", d: "Prepare notifications for industrial data incidents." }
+            ],
+            p6: [
+                { t: "Supply Chain Contracts", d: "Add DPDPA clauses to vendor agreements." },
+                { t: "Export Data Transfers", d: "Manage international supplier data compliantly." }
+            ],
+            p7: [
+                { t: "Worker Training", d: "Sessions on data protection for factory staff." },
+                { t: "Compliance Audits", d: "Regular reviews of ERP and IoT data handling." }
+            ]
+        },
+        hospitality: {
+            name: "Hospitality & Tourism",
+            p1: [
+                { t: "OTA Data Contracts", d: "Audit data-sharing agreements with Online Travel Agents (OTAs) like MMT or Booking.com." },
+                { t: "Guest Profile Archival", d: "Establish timelines to delete guest preferences (food/pillow choices) after 5 years of inactivity." },
+                { t: "DPO for Chains", d: "Appoint for large hotel groups." }
+            ],
+            p2: [
+                { t: "Guest Data Mapping", d: "Inventory booking details and minimize retention post-stay." },
+                { t: "Minimization in Loyalty Programs", d: "Limit collection of preferences to opted-in guests." }
+            ],
+            p3: [
+                { t: "Check-in Consent", d: "Implement digital check-in forms that capture explicit consent for passport/ID storage." },
+                { t: "Marketing Opt-out", d: "Enable guests to unsubscribe from 'Hotel Loyalty' programs easily via WhatsApp or Email." },
+                { t: "Notice at Booking", d: "Provide privacy notices during reservations." }
+            ],
+            p4: [
+                { t: "Access to Stay Records", d: "Allow guests to view billing and stay details." },
+                { t: "Erasure for Inactive Profiles", d: "Delete data for non-returning guests." }
+            ],
+            p5: [
+                { t: "Wi-Fi Log Protection", d: "Secure and encrypt Guest Wi-Fi logs which capture user MAC addresses and browsing metadata." },
+                { t: "POS Payment Security", d: "Ensure Point-of-Sale (POS) systems do not store unencrypted card or phone data in the local server." },
+                { t: "Breach Response Plan", d: "Notify guests and authorities promptly." }
+            ],
+            p6: [
+                { t: "OTA Agreements Update", d: "Include DPDPA in contracts with booking platforms." },
+                { t: "International Guest Data", d: "Handle transfers for global chains compliantly." }
+            ],
+            p7: [
+                { t: "Staff Training", d: "Annual DPDPA education for front-desk and IT teams." },
+                { t: "Audit Programs", d: "Regular compliance checks on guest data systems." }
+            ]
+        }
+    };
+
+    // Sector selector logic
+    document.getElementById('sectorSelect').addEventListener('change', function() {
+        const val = this.value;
+        if (!val) {
+            document.getElementById('dynamicChecklist').style.display = 'none';
+            return;
+        }
+
+        const data = sectorData[val];
+        document.getElementById('dynamicChecklist').style.display = 'block';
+
+        document.getElementById('sectorTitle').innerHTML = `
+            <h2 class="fw-900"><span class="text-primary">${data.name}</span> Compliance Audit</h2>
+            <p class="text-slate">Expanded phases for 2026 Enforcement Standards (post DPDP Rules 2025 notification).</p>
+        `;
+
+        const renderList = (items, containerId) => {
+            document.getElementById(containerId).innerHTML = items.map(item => `
+                <div class="d-flex align-items-start mb-4 checklist-item">
+                    <input class="form-check-input mt-1 me-3" type="checkbox">
+                    <div>
+                        <h6 class="fw-bold mb-1">${item.t}</h6>
+                        <p class="small text-slate mb-0">${item.d}</p>
+                    </div>
+                </div>
+            `).join('');
+        };
+
+        renderList(data.p1, 'phase1List');
+        renderList(data.p2, 'phase2List');
+        renderList(data.p3, 'phase3List');
+        renderList(data.p4, 'phase4List');
+        renderList(data.p5, 'phase5List');
+        renderList(data.p6, 'phase6List');
+        renderList(data.p7, 'phase7List');
+
+        // Smooth scroll to content
+        document.getElementById('dynamicChecklist').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Theme toggle with persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const knob = themeToggle.querySelector('.toggle-knob');
+    const syncToggleIcon = (theme) => {
+        if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+    };
+
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-bs-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-bs-theme', next);
+        syncToggleIcon(next);
+        localStorage.setItem('theme', next);
+    });
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        html.setAttribute('data-bs-theme', savedTheme);
+        syncToggleIcon(savedTheme);
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

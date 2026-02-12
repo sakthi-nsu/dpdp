@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Contact NSU Secure Solutions for DPDPA compliance advisory, implementation support, and practical guidance for your organization.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/contact">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/contact">
+    <meta property="og:title" content="Contact DPDPA Advisory Team | NSU Secure Solutions">
+    <meta property="og:description" content="Contact NSU Secure Solutions for DPDPA compliance advisory, implementation support, and practical guidance for your organization.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact DPDPA Advisory Team | NSU Secure Solutions">
+    <meta name="twitter:description" content="Contact NSU Secure Solutions for DPDPA compliance advisory, implementation support, and practical guidance for your organization.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>Contact DPDPA Advisory Team | NSU Secure Solutions</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --body-bg: #f8faff;
+            --text: #0a0f1d;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9;
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--body-bg);
+            color: var(--text);
+            padding-top: 90px;
+            line-height: 1.7;
+            transition: all 0.4s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main { flex: 1; }
+
+        /* Navbar */
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+/* Contact Page Styles */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #003366 100%);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+
+        [data-bs-theme="dark"] .contact-hero {
+            background: linear-gradient(135deg, #4d9aff 0%, #0052cc 100%);
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .info-item {
+            margin-bottom: 1.8rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(var(--primary), 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid var(--border);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(0,82,204,0.15);
+        }
+
+        .btn-primary {
+            padding: 0.75rem 2rem;
+            font-weight: 700;
+            border-radius: 50px;
+        }
+        .btn-main {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.25s;
+        }
+        .btn-main:hover {
+            background: #0041a3;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 16px 32px rgba(0,82,204,0.4);
+        }
+
+        footer {
+            background: #070b14;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+            transform: translateX(6px);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+[data-bs-theme="dark"] .assessment-card,
+        [data-bs-theme="dark"] .role-card,
+        [data-bs-theme="dark"] .feature-box,
+        [data-bs-theme="dark"] .grid-card,
+        [data-bs-theme="dark"] .media-card,
+        [data-bs-theme="dark"] .penalty-card,
+        [data-bs-theme="dark"] .timer-box,
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .contact-card,
+        [data-bs-theme="dark"] .checklist-card,
+        [data-bs-theme="dark"] .timeline-card,
+        [data-bs-theme="dark"] .template-card,
+        [data-bs-theme="dark"] .rule-card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Get in Touch</h1>
+            <p class="lead mb-0 opacity-90">
+                We're here to help businesses in Tamil Nadu and across India achieve DPDPA compliance.<br>
+                Reach out for advisory, templates, checklists, or custom support.
+            </p>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-5 justify-content-center">
+            <!-- Contact Info Cards -->
+            <div class="col-lg-4">
+                <div class="contact-card text-center fade-in">
+                    <div class="info-icon mx-auto"><i class="fas fa-map-marker-alt"></i></div>
+                    <h5 class="fw-bold mb-3">Our Location</h5>
+                    <p class="mb-2">NSU Secure Solutions</p>
+                    <p class="text-slate mb-0">
+                        87, Pallavan Nagar,<br>
+                        2nd Street, Maduravoyal,<br>
+                        Chennai, Tamil Nadu 600095,<br>
+                        India
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="contact-card text-center fade-in">
+                    <div class="info-icon mx-auto"><i class="fas fa-envelope"></i></div>
+                    <h5 class="fw-bold mb-3">Email Us</h5>
+                    <p class="mb-2">For inquiries & advisory:</p>
+                    <a href="mailto:contact@dpdpatn.com" class="text-primary fw-bold fs-5 text-decoration-none">
+                        contact@dpdpatn.com
+                    </a>
+                    <p class="small text-slate mt-3 mb-0">We typically respond within 24–48 hours</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="contact-card text-center fade-in">
+                    <div class="info-icon mx-auto"><i class="fas fa-phone-alt"></i></div>
+                    <h5 class="fw-bold mb-3">Call Us</h5>
+                    <p class="mb-2">Mon–Sat: 9:30 AM – 6:30 PM IST</p>
+                    <a href="tel:+918248850356" class="text-primary fw-bold fs-5 text-decoration-none">
+                        +91 82488 50356
+                    </a>
+                    <p class="small text-slate mt-3 mb-0">For urgent compliance queries</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form (Full Width) -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <div class="contact-card fade-in">
+                    <h3 class="fw-bold mb-4 text-center">Send us a Message</h3>
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b3d5e16c-0108-417b-aef8-94c664239f7b">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Business Email</label>
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" name="company" placeholder="Your Company Name">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-main w-100 py-3 mt-3 fs-5">Request Free Consultation</button>
+                            </div>
+                            <div class="col-12">
+                                <div id="indexFormStatus" class="alert d-none mt-2 mb-0" role="status" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="text-center mt-5 fade-in">
+            <h5 class="fw-bold mb-4">Connect With Us</h5>
+            <div class="d-flex justify-content-center gap-4 fs-3">
+                <a href="https://in.linkedin.com/company/nsusolutions" class="text-slate hover-primary"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/61585863080185/" class="text-slate hover-primary"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nsusecuresolutions/" class="text-slate hover-primary"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <span class="footer-logo">
+                    DPDPA <span class="text-primary">TN</span>
+                </span>
+                <p class="small">
+                    Securing India's digital economy through precision governance and expert advisory.
+                    We help businesses navigate the DPDPA 2023 landscape with confidence.
+                </p>
+            </div>
+
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="text-white fw-bold mb-3">Resources</h6>
+                <a href="/rules" class="footer-link">DPDP Rules</a>
+                <a href="/templates" class="footer-link">DPDP Templates</a>
+                <a href="/checklists" class="footer-link">Audit Checklist</a>
+            </div>
+
+            <div class="col-lg-2">
+                <h6 class="text-white fw-bold mb-3">Company</h6>
+                <a href="/about" class="footer-link">About Us</a>
+                <a href="/ourteam" class="footer-link">Advisory Team</a>
+                <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+            </div>
+
+            <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+
+        <div class="text-center small opacity-50">
+            © 2026 NSU Secure Solutions. Built for the Indian Digital Economy.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Theme toggle with persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const knob = themeToggle ? themeToggle.querySelector('.toggle-knob') : null;
+    const syncToggleIcon = (theme) => {
+        if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+    };
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-bs-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-bs-theme', next);
+            syncToggleIcon(next);
+            localStorage.setItem('theme', next);
+        });
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        html.setAttribute('data-bs-theme', savedTheme);
+        syncToggleIcon(savedTheme);
+    }
+
+    // Submit Web3Forms via fetch and clear fields after success.
+    const web3Forms = document.querySelectorAll('form[action="https://api.web3forms.com/submit"]');
+    web3Forms.forEach((form) => {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const statusBox = form.querySelector('#indexFormStatus');
+            if (submitBtn) submitBtn.disabled = true;
+            if (statusBox) {
+                statusBox.className = 'alert d-none mt-2 mb-0';
+                statusBox.textContent = '';
+            }
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { Accept: "application/json" }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    form.reset();
+                    if (statusBox) {
+                        statusBox.className = 'alert alert-success mt-2 mb-0';
+                        statusBox.textContent = 'Form submitted successfully! Thank you for your submission. We will contact you as soon as possible';
+                    }
+                } else {
+                    if (statusBox) {
+                        statusBox.className = 'alert alert-danger mt-2 mb-0';
+                        statusBox.textContent = 'Form submission failed. Please try again.';
+                    }
+                }
+            } catch (err) {
+                if (statusBox) {
+                    statusBox.className = 'alert alert-danger mt-2 mb-0';
+                    statusBox.textContent = 'Network error. Please try again.';
+                }
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

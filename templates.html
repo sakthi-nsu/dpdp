@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Access structured DPDPA templates and drafting resources to accelerate compliant documentation and operational rollout.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0052CC">
+    
+    <link rel="canonical" href="/templates">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/templates">
+    <meta property="og:title" content="DPDPA Templates Library | NSU Secure Solutions">
+    <meta property="og:description" content="Access structured DPDPA templates and drafting resources to accelerate compliant documentation and operational rollout.">
+    <meta property="og:image" content="/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDPA Templates Library | NSU Secure Solutions">
+    <meta name="twitter:description" content="Access structured DPDPA templates and drafting resources to accelerate compliant documentation and operational rollout.">
+    <meta name="twitter:image" content="/og-image.svg">
+    <title>DPDPA Templates Library | NSU Secure Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --dark: #0a0f1d;
+            --slate: #475569;
+            --body-bg: #ffffff;
+            --text: var(--dark);
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        [data-bs-theme="dark"] {
+            --primary: #4d9aff;
+            --dark: #f8fafc;
+            --slate: #94a3b8;
+            --light-bg: #0f172a;
+            --body-bg: #0a0f1d;
+            --text: #f1f5f9; /* Fixed: was too dark */
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--body-bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        /* Navbar */
+        .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.52), transparent 40%),
+                radial-gradient(circle at 86% 22%, rgba(0,82,204,0.18), transparent 42%),
+                linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.24)) !important;
+            backdrop-filter: blur(16px) saturate(165%);
+            -webkit-backdrop-filter: blur(16px) saturate(165%);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-top: 0;
+            box-shadow: 0 10px 30px rgba(10,15,29,0.12);
+            padding: 0.7rem 0;
+            z-index: 1050;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(148,163,184,0.22), transparent 40%),
+                radial-gradient(circle at 84% 16%, rgba(77,154,255,0.28), transparent 42%),
+                linear-gradient(135deg, rgba(15,23,42,0.62), rgba(15,23,42,0.36)) !important;
+            border-color: rgba(148,163,184,0.28);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.34);
+        }
+        .navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--text) !important; }
+        .nav-link { font-size: 0.8rem; font-weight: 700; color: var(--slate) !important; text-transform: uppercase; margin: 0 12px; }
+        .nav-link:hover { color: var(--primary) !important; }
+
+        /* Theme Toggle */
+                        #themeToggle {
+            position: relative;
+            width: 72px;
+            height: 38px;
+            padding: 0;
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.35);
+            background: linear-gradient(180deg, #eef2f7, #dbe3ee);
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 8px rgba(2,6,23,0.18);
+            overflow: hidden;
+            margin-right: -22px;
+        }
+        #themeToggle:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        #themeToggle .toggle-moon,
+        #themeToggle .toggle-sun {
+            display: none;
+        }
+        #themeToggle .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        
+        [data-bs-theme="dark"] #themeToggle .toggle-knob {
+            transform: translateX(34px);
+            background: #f8fafc;
+            color: #0f172a;
+        }
+/* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 255, 255, 1) 48%, rgba(19, 136, 8, 0.1) 100%);
+            position: relative;
+        }
+        [data-bs-theme="dark"] .hero {
+            background: linear-gradient(135deg, rgba(200, 100, 40, 0.15) 0%, rgba(10, 15, 29, 1) 48%, rgba(20, 110, 70, 0.15) 100%);
+        }
+        .hero-title {
+            font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1.1;
+            margin-bottom: 1.5rem; color: var(--text);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #0052CC, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Features */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        [data-bs-theme="dark"] .card {
+            border-color: rgba(255, 255, 255, 0.45) !important;
+        }
+        .card:hover { transform: translateY(-10px); }
+
+        /* Footer */
+        footer { background: #070b14; color: #94a3b8; padding: 60px 0 30px; margin-top: 80px; }
+        .footer-logo { font-size: 1.8rem; font-weight: 900; color: white; margin-bottom: 28px; }
+        .footer-link { color: #94a3b8; text-decoration: none; transition: all 0.3s; display: block; margin-bottom: 14px; }
+        .footer-link:hover { color: var(--primary); transform: translateX(8px); }
+    
+        footer a,
+        .footer-link,
+        .footer-link:hover,
+        .footer-link:focus {
+            text-decoration: none !important;
+        }
+    </style>
+
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NSU Secure Solutions",
+      "brand": "DPDPA TN",
+      "description": "DPDPA compliance advisory and implementation support for organizations in India.",
+      "areaServed": "IN"
+    }
+    </script>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DPDPA <span class="text-primary">TN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/rules">DPDP Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">DPDP Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/implementation">Implementation Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/checklists">2026 Checklists</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                
+                                        <a href="/contact" class="btn btn-primary fw-bold px-4">GET ADVISORY</a>
+                    <button id="themeToggle" class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="toggle-knob" aria-hidden="true">☀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1 class="hero-title">Master India's <span class="text-gradient">DPDPA 2023</span> Compliance</h1>
+                    <p class="lead mb-4 opacity-75">Navigate the Digital Personal Data Protection Act with expert precision. We provide the tools, templates, and advisory needed for the 2025 roadmap.</p>
+                    <div class="d-flex gap-3">
+                        <a href="/asses" class="btn btn-primary btn-lg px-4 shadow-sm">Start Assessment</a>
+                        <a href="/tem" class="btn btn-outline-secondary btn-lg px-4">View Templates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100">
+                        <i class="fas fa-shield-halved fa-2x text-primary mb-3"></i>
+                        <h4>Data Audits</h4>
+                        <p class="small opacity-75">Complete gap analysis of your current data processing activities against DPDPA mandates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <i class="fas fa-file-signature fa-2x text-primary mb-3"></i>
+                        <h4>Consent Frameworks</h4>
+                        <p class="small opacity-75">Automated notice and consent management systems built for Indian regional languages.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <i class="fas fa-user-check fa-2x text-primary mb-3"></i>
+                        <h4>DPO as a Service</h4>
+                        <p class="small opacity-75">Expert Data Protection Officers to handle grievances and Board interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="footer-logo">DPDPA <span class="text-primary">TN</span></span>
+                    <p class="small">Securing India's digital economy through precision governance and expert advisory. We help businesses navigate the DPDPA 2023 landscape with confidence.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Resources</h6>
+                    <a href="/rules" class="footer-link">DPDP Rules</a>
+                    <a href="/templates" class="footer-link">DPDP Templates</a>
+                    <a href="/checklists" class="footer-link">Audit Checklist</a>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <a href="/about" class="footer-link">About Us</a>
+                    <a href="/ourteam" class="footer-link">Advisory Team</a>
+                    <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3">
+                <h6 class="text-white fw-bold mb-3">Contact Information</h6>
+                <p class="small mb-2"><i class="fas fa-envelope me-2 text-primary"></i><a href="mailto:info@nsusecure.com" class="footer-link d-inline m-0">info@nsusecure.com</a></p>
+                <p class="small mb-0"><i class="fas fa-phone me-2 text-primary"></i><a href="tel:+918248850356" class="footer-link d-inline m-0">+91 82488 50356</a></p>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+            <div class="text-center small opacity-50">© 2026 NSU Secure Solutions. Built for the Indian Digital Economy.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ duration: 800, once: true });
+
+        // Theme Toggle Logic (defensive)
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        function setThemeIcon(theme) {
+            try {
+                const knob = themeToggle ? themeToggle.querySelector('.toggle-knob') : null;
+                if (knob) knob.textContent = theme === 'dark' ? '☽' : '☀';
+            } catch(e) { /* ignore if icon missing */ }
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-bs-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                html.setAttribute('data-bs-theme', newTheme);
+                setThemeIcon(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-bs-theme', savedTheme);
+            setThemeIcon(savedTheme);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
